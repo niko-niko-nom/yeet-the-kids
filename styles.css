@@ -1,0 +1,32 @@
+:root {
+    --yeet: #86cecb;
+    --the: #137a7f;
+    --kids: #e12885;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(var(--yeet), var(--the), var(--kids));
+}
+
+header {
+    position: absolute;
+    top: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
