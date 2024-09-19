@@ -18,7 +18,7 @@ body {
 
 .wrapper{ 
     width: 420px;
-    background: transparent;
+    background: transparent ;
     border: 2px solid rgba(56, 109, 255, 0.964);
     backdrop-filter: blur 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
@@ -27,6 +27,10 @@ body {
     padding: 30px 40px;
 
 }
+
+.wrapper {
+    background-color: rgba(255,255,255,0.5);
+  }
 
 
 
