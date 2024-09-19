@@ -83,7 +83,7 @@ body {
     outline: none;
     cursor: pointer;
     transition: all 0.4s;
-    float: inline-end;
+    margin-left: 80px;
   }
   
   .btn:hover {
@@ -94,3 +94,28 @@ body {
     background: #073b4c;
     color: #fff;
   }
+
+
+  .wrapper .forgot-password {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -30px 0 15px;
+    float: right;
+}
+
+.forgot-password label input {
+    accent-color: #e12885  ;
+    margin-right: 3px;
+}
+
+.forgot-password a {
+    color: #e12885  ;
+    text-decoration: underline;
+    
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+
+}
