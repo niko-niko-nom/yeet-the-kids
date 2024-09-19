@@ -109,7 +109,7 @@ body {
 
 .forgot-password a {
     color: #e12885  ;
-    text-decoration: underline;
+    text-decoration: none;
     
 }
 
