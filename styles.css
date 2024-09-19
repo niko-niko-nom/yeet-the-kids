@@ -131,13 +131,13 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: 0.5s;
 }
 
 .rounded-card:hover {
     box-shadow:  0 0 0 4px var(--yeet), 
                  0 0 0 8px var(--the),
                  0 0 0 12px var(--kids);
-    transition: 0.5s;
 }
 
 .rounded-card a {
