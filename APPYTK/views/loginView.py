@@ -9,7 +9,8 @@ class LoginView(View):
     def post(self, request):
         form = LoginForm(request.POST)
         if not form.is_valid():
-            return render(request, "inlog.html", { 'form': LoginForm(), 'message': 'Invalid request, contact admin' })
+            return render(request, "inlog.html", { 'form': form })
 
+        print(form.cleaned_data)
         return HttpResponse("You did a post!")
 
