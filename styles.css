@@ -24,6 +24,13 @@ body {
     height: 100%;
     width: 100%;
     background: linear-gradient(var(--yeet), var(--the), var(--kids));
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.new-child {
+    flex-grow: 1;
 }
 
 /* header elements */
@@ -35,6 +42,7 @@ header {
     height: 60px;
     display: flex;
     align-items: center;
+    font-size: auto;
 }
 
 nav {
@@ -74,7 +82,6 @@ header img {
 
 /* footer elements */
 footer {
-    position: absolute;
     width: 100%;
     bottom: 0;
     height: 60px;
