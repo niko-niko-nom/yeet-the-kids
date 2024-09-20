@@ -137,16 +137,18 @@ footer p {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    background: var(--light);
+    background: var(--darker);
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
     scroll-snap-align: start;
     transition: all 0.2s;
+    color: var(--light);
   }
   
   .card:hover {
-    color: var(--light);
-    background: var(--yeet);
+    box-shadow:  0 0 0 4px var(--yeet), 
+                 0 0 0 8px var(--the),
+                 0 0 0 12px var(--kids);
   }
   
   .card .card-title {
