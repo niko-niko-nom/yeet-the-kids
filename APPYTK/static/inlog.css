@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(./images/hatsunemike-header.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.wrapper{ 
+    width: 420px;
+    background: transparent ;
+    border: 2px solid #9161CD;
+    backdrop-filter: blur 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+
+}
+
+.wrapper {
+    background-color: rgba(255,255,255,0.5);
+  }
+
+
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    color: #000;
+
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: #137a7f;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16-px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+
+}
+
+
+.input-box input::placeholder {
+    color: #fff;
+
+}
+
+.input-box i{
+    position:absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+
+}
+
+
+
+.btn {
+    width: 170px;
+    height: 60px;
+    font-size: 18px;
+    background: #fff;
+    border: none;
+    border-radius: 50px;
+    color: #000;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-left: 80px;
+  }
+  
+  .btn:hover {
+    box-shadow: inset 0 0 0 4px #e12885 , 
+                inset 0 0 0 8px #373b3e ,
+                inset 0 0 0 12px #86cecb,
+                inset 0 0 0 16px #bec8d1;
+    background: #073b4c;
+    color: #fff;
+  }
+
+
+  .wrapper .forgot-password {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -30px 0 15px;
+    float: right;
+}
+
+.forgot-password label input {
+    accent-color: #e12885  ;
+    margin-right: 3px;
+}
+
+.forgot-password a {
+    color: #e12885  ;
+    text-decoration: none;
+    
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+
+}
+
+footer {
+    margin-top: auto;
+    align-self: stretch;
+    position: absolute !important;
+    color: transparent;
+    text-decoration: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.2);
+}
+
