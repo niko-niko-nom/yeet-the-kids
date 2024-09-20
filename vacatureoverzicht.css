@@ -174,8 +174,13 @@ footer p {
     transition: background 0.2s;
   }
   
-  .card:hover .card-link {
-    background: var(--the);
+
+
+  .card-link:hover {
+    box-shadow: inset 0 0 0 4px var(--kids), 
+                inset 0 0 0 8px var(--the);
+    background: var(--yeet);
+    transition: 0.2s;
   }
   
   .cards::-webkit-scrollbar {
