@@ -9,3 +9,13 @@ html {
     min-height: 100vh;
     min-width: 100vw;
 }
+
+nav {
+  height: 100%;
+    min-width: 150px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
