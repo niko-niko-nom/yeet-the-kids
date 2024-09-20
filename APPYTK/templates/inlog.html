@@ -3,6 +3,7 @@
 <form method="POST">
     {% csrf_token %}
     <div class="input-box">
+        {{ form.email.errors }}
         {{ form.email }}
         <i class='bx bxs-user'></i>
     </div>
