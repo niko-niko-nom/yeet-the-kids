@@ -105,3 +105,31 @@ footer p {
     justify-content: center;
     gap: 5px;
 }
+
+
+
+.rounded-card {
+    background-color: var(--darker);
+    height: 50vw;
+    max-height: 500px;
+    width: 50vw;
+    max-width: 500px;
+    border-radius: 5%;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+.rounded-card:hover {
+    box-shadow:  0 0 0 4px var(--yeet), 
+                 0 0 0 8px var(--the),
+                 0 0 0 12px var(--kids);
+}
+
+.rounded-card a {
+    color: var(--kids);
+    font-weight: bold;
+}
