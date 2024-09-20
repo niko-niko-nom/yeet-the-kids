@@ -106,30 +106,109 @@ footer p {
     gap: 5px;
 }
 
+/* vacature overzicht */
 
 
-.rounded-card {
-    background-color: var(--darker);
-    height: 50vw;
-    max-height: 500px;
-    width: 50vw;
-    max-width: 500px;
-    border-radius: 5%;
-    text-align: center;
-    padding: 15px;
+.container {
+    max-width: 1400px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 32px;
+    margin-bottom: 1em;
+  }
+  
+  .cards {
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-column-gap: 10px;
+    grid-auto-flow: column;
+    padding: 25px 0px;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    transition: 0.5s;
-}
-
-.rounded-card:hover {
-    box-shadow:  0 0 0 4px var(--yeet), 
-                 0 0 0 8px var(--the),
-                 0 0 0 12px var(--kids);
-}
-
-.rounded-card a {
-    color: var(--kids);
-    font-weight: bold;
-}
+    padding: 20px;
+    background: var(--light);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+    scroll-snap-align: start;
+    transition: all 0.2s;
+  }
+  
+  .card:hover {
+    color: var(--light);
+    background: var(--yeet);
+  }
+  
+  .card .card-title {
+    font-size: 20px;
+  }
+  
+  .card .card-content {
+    margin: 20px 0;
+    max-width: 85%;
+  }
+  
+  .card .card-link-wrapper {
+    margin-top: auto;
+  }
+  
+  .card .card-link {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: var(--yeet);
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  
+  .card:hover .card-link {
+    background: var(--the);
+  }
+  
+  .cards::-webkit-scrollbar {
+    height: 12px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb,
+  .cards::-webkit-scrollbar-track {
+    border-radius: 92px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb {
+    background: var(--light);
+  }
+  
+  .cards::-webkit-scrollbar-track {
+    background: var(--darker);
+  }
+  
+  @media (min-width: 500px) {
+    .cards {
+      grid-auto-columns: calc(50% - 10px);
+      grid-column-gap: 20px;
+    }
+  }
+  
+  @media (min-width: 700px) {
+    .cards {
+      grid-auto-columns: calc(calc(100% / 3) - 20px);
+      grid-column-gap: 30px;
+    }
+  }
+  
+  @media (min-width: 1100px) {
+    .cards {
+      grid-auto-columns: calc(25% - 30px);
+      grid-column-gap: 40px;
+    }
+  }
+  
