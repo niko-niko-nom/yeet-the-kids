@@ -49,12 +49,5 @@ nav div{
 
 nav img {
   max-height: 60px;
-  justify-content: right;
-  align-items: center;
 }
 
-body {
-  min-height: 100vh;
-  height: 100%;
-  width: 100%;
-}
