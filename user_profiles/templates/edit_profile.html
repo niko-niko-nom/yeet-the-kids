@@ -5,7 +5,7 @@
      
     <script src="components/head.js"></script>
     <head-component>
-        <link rel="stylesheet" href="profile_styles.css"> <!-- Link to external stylesheets -->
+        <link rel="stylesheet" href="/static/profile_styles.css"> <!-- Link to external stylesheets -->
     </head-component>
 
     <body>
@@ -21,9 +21,6 @@
                 <h2>Profielinformatie</h2>
                 <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
-                    
-                    {{ form.pfp.label }}<br>
-                    {{ form.pfp }}<br>
                 
                     {{ form.name.label }}<br>
                     {{ form.name }}<br>

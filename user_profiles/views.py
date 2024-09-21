@@ -3,12 +3,11 @@ from .forms import UserData
 
 def profile_view(request):
     # Check if the user is authenticated
-    if not request.user.is_authenticated:
-        return redirect('login')  # Redirect to login if not authenticated
+    # if not request.user.is_authenticated:
+    #    return redirect('login')  # Redirect to login if not authenticated
 
     # Get the user's current data (replace this with your actual user data retrieval logic)
     current_data = {
-        'pfp': request.user.profile.pfp,  # Assuming you have a profile model
         'name': request.user.get_full_name(),
         'age': request.user.profile.age,
         'city': request.user.profile.city,
@@ -30,7 +29,6 @@ def profile_view(request):
         if form.is_valid():
             # Save the data (you'll need to implement the logic to update the user's profile)
             user_profile = request.user.profile  # Assuming you have a Profile model linked to User
-            user_profile.pfp = form.cleaned_data['pfp']
             user_profile.age = form.cleaned_data['age']
             user_profile.city = form.cleaned_data['city']
             user_profile.gender = form.cleaned_data['gender']
@@ -48,3 +46,9 @@ def profile_view(request):
         form = UserData(initial=current_data)
 
     return render(request, 'profile.html', {'form': form})
+
+def edit_profile(request, current_name):
+
+    form = UserData()
+
+    return render(request, 'edit_profile.html', {'form': form})
