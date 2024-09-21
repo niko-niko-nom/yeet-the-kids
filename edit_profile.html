@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Head -->
+     
+    <script src="components/head.js"></script>
+    <head-component>
+        <link rel="stylesheet" href="profile_styles.css"> <!-- Link to external stylesheets -->
+    </head-component>
+
+    <body>
+
+        <!-- Header -->
+        <script src="components/header.js"></script>
+        <header-component></header-component>
+
+        <!-- Main Content -->
+        <script src="user_profiles/user_profile_submission.js"></script>
+        <div id="main-content">
+            <div id="profile-container">
+                <h2>Profielinformatie</h2>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                    {{ form.pfp.label }}<br>
+                    {{ form.pfp }}<br>
+                
+                    {{ form.name.label }}<br>
+                    {{ form.name }}<br>
+                
+                    {{ form.age.label }}<br>
+                    {{ form.age }}<br>
+                
+                    {{ form.city.label }}<br>
+                    {{ form.city }}<br>
+                
+                    {{ form.gender.label }}<br>
+                    {{ form.gender }}<br>
+                
+                    {{ form.pronouns.label }}<br>
+                    {{ form.pronouns }}<br>
+                
+                    {{ form.number.label }}<br>
+                    {{ form.number }}<br>
+                
+                    {{ form.email.label }}<br>
+                    {{ form.email }}<br>
+                
+                    {{ form.roles.label }}<br>
+                    {{ form.roles }}<br>
+                
+                    {{ form.bio.label }}<br>
+                    {{ form.bio }}<br>
+                
+                    {{ form.trivia1.label }}<br>
+                    {{ form.trivia1 }}<br>
+                
+                    {{ form.trivia2.label }}<br>
+                    {{ form.trivia2 }}<br>
+                
+                    {{ form.trivia3.label }}<br>
+                    {{ form.trivia3 }}<br>
+                
+                    {{ form.trivia4.label }}<br>
+                    {{ form.trivia4 }}<br>
+                
+                    {{ form.trivia5.label }}<br>
+                    {{ form.trivia5 }}<br>
+                
+                    <input type="submit" value="Opslaan">
+                </form>
+            </div>
+        </div>
+
+        <div class="new-child"></div>
+        <!-- Footer -->
+        <script src="components/footer.js"></script>
+        <footer-component></footer-component>
+
+    </body>
+</html>

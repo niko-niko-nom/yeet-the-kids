@@ -5,6 +5,7 @@
     --light: #fef5f7;
     --dark: #1a4c5d;
     --darker: #073b4c;
+    --borderRadius: 18px;
 }
 
 * {
@@ -33,79 +34,6 @@ body {
     flex-grow: 1;
 }
 
-/* header elements */
-header {
-    background-color: var(--the);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    font-size: auto;
-}
-
-nav {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    color: var(--light);
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--light);
-}
-
-nav div {
-    height: 100%;
-    min-width: 150px;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
-
-nav div:hover {
-    box-shadow: inset 0 0 0 4px var(--yeet), 
-                inset 0 0 0 8px var(--the);
-    background: var(--darker);
-    transition: 0.2s;
-}
-
-header img {
-    max-height: 60px;
-}
-
-/* footer elements */
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: 60px;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--light);
-    padding: 10px;
-}
-
-footer p {
-    width: 100%;
-    height: 50%;
-    text-align: center;
-}
-
-#footer-container {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-}
-
 /* main content */
 #main-content {
     display: flex;
@@ -120,7 +48,7 @@ footer p {
     gap: 50px;
     width: 100%;
     max-width: 1100px;
-    padding-top: 100px;
+    padding: 125px 0 125px 0;
     color: white;
     font-size: 1.2em;
     margin-right: auto;
@@ -129,11 +57,10 @@ footer p {
 
 .rounded-card {
     background-color: var(--darker);
-    height: 50vw;
-    max-height: 500px;
-    width: 50vw;
-    max-width: 500px;
-    border-radius: 5%;
+    height: auto;
+    width: 500px;
+    height: 500px;
+    border-radius: var(--borderRadius);
     text-align: center;
     padding: 15px;
     display: flex;
@@ -142,13 +69,27 @@ footer p {
     transition: 0.5s;
 }
 
+.rounded-card h1 {
+    margin-bottom: 15px;
+    margin-top: 15px !important;
+}
+
+.rounded-card h2 {
+    margin-bottom: 15px;
+    transition: 0.5s;
+}
+
+.rounded-card h2:hover {
+    transform: scale(1.3);
+}
+
 .rounded-card:hover {
     box-shadow:  0 0 0 4px var(--yeet), 
                  0 0 0 8px var(--the),
                  0 0 0 12px var(--kids);
 }
 
-.rounded-card a {
+.rounded-card a, #profile-edit-link {
     color: var(--kids);
     font-weight: bold;
 }
@@ -159,7 +100,7 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5%;
+    border-radius: var(--borderRadius);
 }
 
 .client {
@@ -188,7 +129,7 @@ footer p {
     margin-left: 15px;
     background-color: var(--dark);
     height: 4em;
-    border-radius: 5%;
+    border-radius: var(--borderRadius);
     width: 85%;
 
 }
@@ -199,7 +140,7 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5%;
+    border-radius: var(--borderRadius);
 }
 
 .roll-link {
@@ -212,6 +153,13 @@ footer p {
     font-size: xx-large;
 }
 
+#profiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
 
 #profile-links {
     display: flex;
@@ -219,7 +167,9 @@ footer p {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 15px
+    gap: 15px;
+    width: 90%;
+    padding: 20px;
 }
 
 #profile-links img {
@@ -234,4 +184,180 @@ footer p {
 
 #profile-links img:hover {
     transform: scale(1.3);
+}
+
+/* profile.html styling */
+
+#profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    max-width: 1100px;
+    padding: 125px 0 125px 0;
+    color: white;
+    font-size: 1.2em;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.profile-row {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#profile-pfp {
+    width: 400px;
+    height: 500px;
+}
+
+#profile-pfp:hover {
+    transform: scale(1.1);
+}
+
+#profile-pfp img {
+    border-radius: var(--borderRadius);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#profile-info {
+    height: auto !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#profile-info div {
+    margin: 10px;
+}
+
+#profile-info-left {
+    text-align: left;
+}
+
+#profile-info-right {
+    text-align: right;
+}
+
+#row2 {
+    margin-top: auto;
+}
+
+#profile-roles {
+    height: auto;
+    width: 25%;
+    padding: 25px;
+    gap: 10px;
+}
+
+#profile-roles div {
+    background-color: var(--dark);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--borderRadius);
+    padding: 5px;
+}
+
+#profile-about-me {
+    height: auto;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile-about-me h1 {
+    height: 10%;
+    margin-bottom: 0.9em;
+}
+
+#profile-about-me p {
+    height: 90%;
+    width: 90%;
+    background-color: var(--dark);
+    border-radius: var(--borderRadius);
+    padding: 25px;
+    margin-bottom: 0.8em;
+}
+
+#row3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#profile-trivia {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-trivia h1 {
+    height: 10%;
+}
+
+#profile-trivia li {
+    background-color: var(--dark);
+    border-radius: var(--borderRadius);
+    margin: 5px;
+    height: 90%;
+    width: 90%;
+    padding-top: 1em;
+}
+
+#profile-edit-box {
+    height: auto;
+    width: auto;
+    background-color: var(--dark);
+    padding: 25px;
+    transition: 0.3s;
+}
+
+#profile-edit-box:hover {
+    background-color: var(--light);
+    
+}
+
+/* When screen is thinner than 1200px */
+@media screen and ( max-width: 1200px) {
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rounded-card {
+        min-height: 250px;
+        width: 80vw !important;
+    }
+
+    #profile-pfp {
+        height: 60vw !important;
+        width: 60vw !important;
+    }
+
+    .profile-row {
+        flex-direction: column;
+    }
+
+    #row2 {
+        margin-top: auto;        
+    }
+
+    footer {
+        height: auto !important;
+    }
+
 }
