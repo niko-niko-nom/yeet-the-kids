@@ -15,31 +15,44 @@
         <header-component></header-component>
 
         <!-- Main Content -->
+        <script src="user_profiles/user_profile_submission.js"></script>
         <div id="main-content">
             <div id="profile-container">
-                <form action="/upload" method="POST" enctype="multipart/form-data">
+                <form id="profile-data-submission" action="/placeholder" method="POST" enctype="multipart/form-data">
                     <div class="profile-row" id="row1">
+                        
                         <div class="rounded-card" id="profile-pfp">
                             <label for="imageUpload">Voeg hier jouw eigen profielfoto toe:</label>
                             <input type="file" id="imageUpload" name="image" accept="image/*">
                         </div>
+
                         <div class="rounded-card" id="profile-info">
-                            <div id="profile-info-left">
+                            <div class="info-inputs">
                                 <label for="profile-name" class="profile-info-box" id="profile-names">Naam</label>
-                                <label for="profile-age" class="profile-info-box" id="profile-ages">Verjaardag</label>
-                                <label for="profile-city" class="profile-info-box" id="profile-cities">Woonplaats</label>
-                                <label for="profile-gender" class="profile-info-box" id="profile-genders">Geslacht</label>
-                                <label for="profile-pronoun" class="profile-info-box" id="profile-pronouns">Voornaamwoorden</label>
-                                <label for="profile-number" class="profile-info-box" id="profile-numbers">Telefoonnummer</label>
-                                <label for="profile-email" class="profile-info-box" id="profile-emails">Emailadres</label>
-                            </div>
-                            <div id="profile-info-right">
                                 <input type="text" id="profile-name" name="profile-name" value="Voor- en achternaam..." />
+                            </div>
+                            <div class="info-inputs">
+                                <label for="profile-age" class="profile-info-box" id="profile-ages">Verjaardag</label>
                                 <input type="text" id="profile-age" name="profile-age" value="Leeftijd..." />
+                            </div>
+                            <div class="info-inputs">
+                                <label for="profile-city" class="profile-info-box" id="profile-cities">Woonplaats</label>
                                 <input type="text" id="profile-city" name="profile-city" value="Woonplaats..." />
+                            </div>
+                            <div class="info-inputs">
+                                <label for="profile-gender" class="profile-info-box" id="profile-genders">Geslacht</label>
                                 <input type="text" id="profile-gender" name="profile-gender" value="Geslacht..." />
+                            </div>
+                            <div class="info-inputs">
+                                <label for="profile-pronoun" class="profile-info-box" id="profile-pronouns">Voornaamwoorden</label>
                                 <input type="text" id="profile-pronoun" name="profile-pronoun" value="Voornaamwoorden..." />
+                            </div>
+                            <div class="info-inputs">
+                                <label for="profile-number" class="profile-info-box" id="profile-numbers">Telefoonnummer</label>
                                 <input type="text" id="profile-number" name="profile-number" value="Telefoonnummer..." />
+                            </div>
+                            <div class="info-inputs">
+                                <label for="profile-email" class="profile-info-box" id="profile-emails">Emailadres</label>
                                 <input type="text" id="profile-email" name="profile-email" value="Emailadres..." />
                             </div>
                         </div>
@@ -81,20 +94,18 @@
                             </div>
                         </div>
                         <div class="rounded-card" id="profile-about-me">
-                            <h1>Alles Over Mij</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dignissimos aspernatur vel ea magnam. Sed vitae velit tempore repellat dolore eius modi consequatur ipsam ab, corporis neque, veniam, culpa vel!
-                            </p>
+                            <label for="profile-description">Alles Over Mij:</label>
+                            <input type="text" id="profile-description" name="profile-description" value="Schrijf een teskst over jezelf waarin jij je voorstelt aan je collega's." maxlength="1000" />
                         </div>
                     </div>
                     <div class="profile-row" id="row3">
                         <div class="rounded-card" id="profile-trivia">
-                            <h1>Trivia</h1>
-                            <li>trivia1</li>
-                            <li>trivia2</li>
-                            <li>trivia3</li>
-                            <li>trivia4</li>
-                            <li>trivia5</li>
+                            <label for="input-trivia1">Trivia over mij:</label>
+                            <input type="text" id="input-trivia1" name="input-trivia1" value="Wat is een leuk feitje over jou?" maxlength="100" />
+                            <input type="text" id="input-trivia2" name="input-trivia2" value="Wat is nog een leuk feitje over jou?" maxlength="100" />
+                            <input type="text" id="input-trivia3" name="input-trivia3" value="Wat is een ander leuk feitje over jou?" maxlength="100" />
+                            <input type="text" id="input-trivia4" name="input-trivia4" value="Wat is een nog leuker feitje over jou?" maxlength="100" />
+                            <input type="text" id="input-trivia5" name="input-trivia5" value="Wat is het laatste leuke feitje over jou?" maxlength="100" />
                         </div>
                         <input type="submit" value="Upload" id="submit-button"/>
                     </div>
