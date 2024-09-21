@@ -5,6 +5,7 @@
     --light: #fef5f7;
     --dark: #1a4c5d;
     --darker: #073b4c;
+    --borderRadius: 18px;
 }
 
 * {
@@ -59,7 +60,7 @@ body {
     height: auto;
     width: 500px;
     height: 500px;
-    border-radius: 5%;
+    border-radius: var(--borderRadius);
     text-align: center;
     padding: 15px;
     display: flex;
@@ -70,6 +71,7 @@ body {
 
 .rounded-card h1 {
     margin-bottom: 15px;
+    margin-top: 15px !important;
 }
 
 .rounded-card h2 {
@@ -98,7 +100,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5%;
+    border-radius: var(--borderRadius);
 }
 
 .client {
@@ -127,7 +129,7 @@ body {
     margin-left: 15px;
     background-color: var(--dark);
     height: 4em;
-    border-radius: 5%;
+    border-radius: var(--borderRadius);
     width: 85%;
 
 }
@@ -138,7 +140,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5%;
+    border-radius: var(--borderRadius);
 }
 
 .roll-link {
@@ -184,6 +186,8 @@ body {
     transform: scale(1.3);
 }
 
+/* profile.html styling */
+
 #profile-container {
     display: flex;
     flex-direction: column;
@@ -202,18 +206,24 @@ body {
     display: flex;
     gap: 50px;
     align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
 
 #profile-pfp {
-    transform: scale(0.75);
+    width: 400px;
+    height: 500px;
 }
 
 #profile-pfp:hover {
-    transform: scale(0.85);
+    transform: scale(1.1);
 }
 
 #profile-pfp img {
-    border-radius: 5%;
+    border-radius: var(--borderRadius);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #profile-info {
@@ -235,9 +245,15 @@ body {
     text-align: right;
 }
 
+#row2 {
+    margin-top: auto;
+}
+
 #profile-roles {
-    width: 250px;
-    padding: 50px;
+    height: auto;
+    width: 25%;
+    padding: 25px;
+    gap: 10px;
 }
 
 #profile-roles div {
@@ -246,21 +262,87 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5%;
+    border-radius: var(--borderRadius);
     padding: 5px;
 }
 
+#profile-about-me {
+    height: auto;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile-about-me h1 {
+    height: 10%;
+    margin-bottom: 0.9em;
+}
+
+#profile-about-me p {
+    height: 90%;
+    width: 90%;
+    background-color: var(--dark);
+    border-radius: var(--borderRadius);
+    padding: 25px;
+    margin-bottom: 0.8em;
+}
+
+#row3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-trivia {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-trivia h1 {
+    height: 10%;
+}
+
+#profile-trivia li {
+    background-color: var(--dark);
+    border-radius: var(--borderRadius);
+    margin: 5px;
+    height: 90%;
+    width: 90%;
+    padding-top: 1em;
+}
+
+/* When screen is thinner than 1200px */
 @media screen and ( max-width: 1200px) {
 
     #container {
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
     .rounded-card {
-        min-height: 500px;
-        width: 75vw;
+        min-height: 250px;
+        width: 80vw !important;
+    }
+
+    #profile-pfp {
+        height: 60vw !important;
+        width: 60vw !important;
+    }
+
+    .profile-row {
+        flex-direction: column;
+    }
+
+    #row2 {
+        margin-top: auto;        
+    }
+
+    footer {
+        height: auto !important;
     }
 
 }

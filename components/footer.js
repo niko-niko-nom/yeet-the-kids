@@ -8,7 +8,6 @@ class Footer extends HTMLElement {
         <style>
             /* footer elements */
             footer {
-                position: fixed;
                 width: 100%;
                 bottom: 0;
                 height: 60px;

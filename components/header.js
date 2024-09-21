@@ -17,6 +17,7 @@ class Header extends HTMLElement {
                 display: flex;
                 align-items: center;
                 font-size: auto;
+                z-index: 1000;
             }
 
             nav {
