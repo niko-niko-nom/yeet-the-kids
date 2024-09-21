@@ -18,97 +18,56 @@
         <script src="user_profiles/user_profile_submission.js"></script>
         <div id="main-content">
             <div id="profile-container">
-                <form id="profile-data-submission" action="/placeholder" method="POST" enctype="multipart/form-data">
-                    <div class="profile-row" id="row1">
-                        
-                        <div class="rounded-card" id="profile-pfp">
-                            <label for="imageUpload">Voeg hier jouw eigen profielfoto toe:</label>
-                            <input type="file" id="imageUpload" name="image" accept="image/*">
-                        </div>
-
-                        <div class="rounded-card" id="profile-info">
-                            <div class="info-inputs">
-                                <label for="profile-name" class="profile-info-box" id="profile-names">Naam</label>
-                                <input type="text" id="profile-name" name="profile-name" value="Voor- en achternaam..." />
-                            </div>
-                            <div class="info-inputs">
-                                <label for="profile-age" class="profile-info-box" id="profile-ages">Verjaardag</label>
-                                <input type="text" id="profile-age" name="profile-age" value="Leeftijd..." />
-                            </div>
-                            <div class="info-inputs">
-                                <label for="profile-city" class="profile-info-box" id="profile-cities">Woonplaats</label>
-                                <input type="text" id="profile-city" name="profile-city" value="Woonplaats..." />
-                            </div>
-                            <div class="info-inputs">
-                                <label for="profile-gender" class="profile-info-box" id="profile-genders">Geslacht</label>
-                                <input type="text" id="profile-gender" name="profile-gender" value="Geslacht..." />
-                            </div>
-                            <div class="info-inputs">
-                                <label for="profile-pronoun" class="profile-info-box" id="profile-pronouns">Voornaamwoorden</label>
-                                <input type="text" id="profile-pronoun" name="profile-pronoun" value="Voornaamwoorden..." />
-                            </div>
-                            <div class="info-inputs">
-                                <label for="profile-number" class="profile-info-box" id="profile-numbers">Telefoonnummer</label>
-                                <input type="text" id="profile-number" name="profile-number" value="Telefoonnummer..." />
-                            </div>
-                            <div class="info-inputs">
-                                <label for="profile-email" class="profile-info-box" id="profile-emails">Emailadres</label>
-                                <input type="text" id="profile-email" name="profile-email" value="Emailadres..." />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="profile-row" id="row2">
-                        <div class="rounded-card" id="profile-roles">
-                            <h1>Mijn Rollen</h1>
-                            <div class="role-checkboxes">
-                                <input type="checkbox" id="role-ceo" name="role-ceo" value="CEO"/>
-                                <label for="role-ceo">Chief Executive Officer</label>
-                            </div>
-                            <div class="role-checkboxes">
-                                <input type="checkbox" id="role-cco" name="role-cco" value="CCO"/>
-                                <label for="role-ceo">Chief Cheese Officer</label>
-                            </div>
-                            <div class="role-checkboxes">
-                                <input type="checkbox" id="role-kaaskop" name="role-kaaskop" value="Kaaskop"/>
-                                <label for="role-ceo">Kaaskop</label>
-                            </div>
-                            <div class="role-checkboxes">
-                                <input type="checkbox" id="role-kaastester" name="role-kaastester" value="Kaastester"/>
-                                <label for="role-ceo">Kaastester</label>
-                            </div>
-                            <div class="role-checkboxes">
-                                <input type="checkbox" id="role-dev" name="role-dev" value="Developer"/>
-                                <label for="role-ceo">Developer</label>
-                            </div>
-                            <div class="role-checkboxes">
-                                <input type="checkbox" id="role-master" name="role-master" value="SCRUM_Master"/>
-                                <label for="role-ceo">SCRUM Master</label>
-                            </div>
-                            <div class="role-checkboxes">
-                                <input type="checkbox" id="role-owner" name="role-owner" value="Product_Owner"/>
-                                <label for="role-ceo">Product Owner</label>
-                            </div>
-                            <div class="role-checkboxes">
-                                <input type="checkbox" id="role-caf" name="role-caf" value="Cafetaria_Medewerker"/>
-                                <label for="role-ceo">Cafetaria Medewerker</label>
-                            </div>
-                        </div>
-                        <div class="rounded-card" id="profile-about-me">
-                            <label for="profile-description">Alles Over Mij:</label>
-                            <input type="text" id="profile-description" name="profile-description" value="Schrijf een teskst over jezelf waarin jij je voorstelt aan je collega's." maxlength="1000" />
-                        </div>
-                    </div>
-                    <div class="profile-row" id="row3">
-                        <div class="rounded-card" id="profile-trivia">
-                            <label for="input-trivia1">Trivia over mij:</label>
-                            <input type="text" id="input-trivia1" name="input-trivia1" value="Wat is een leuk feitje over jou?" maxlength="100" />
-                            <input type="text" id="input-trivia2" name="input-trivia2" value="Wat is nog een leuk feitje over jou?" maxlength="100" />
-                            <input type="text" id="input-trivia3" name="input-trivia3" value="Wat is een ander leuk feitje over jou?" maxlength="100" />
-                            <input type="text" id="input-trivia4" name="input-trivia4" value="Wat is een nog leuker feitje over jou?" maxlength="100" />
-                            <input type="text" id="input-trivia5" name="input-trivia5" value="Wat is het laatste leuke feitje over jou?" maxlength="100" />
-                        </div>
-                        <input type="submit" value="Upload" id="submit-button"/>
-                    </div>
+                <h2>Profielinformatie</h2>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                    {{ form.pfp.label }}<br>
+                    {{ form.pfp }}<br>
+                
+                    {{ form.name.label }}<br>
+                    {{ form.name }}<br>
+                
+                    {{ form.age.label }}<br>
+                    {{ form.age }}<br>
+                
+                    {{ form.city.label }}<br>
+                    {{ form.city }}<br>
+                
+                    {{ form.gender.label }}<br>
+                    {{ form.gender }}<br>
+                
+                    {{ form.pronouns.label }}<br>
+                    {{ form.pronouns }}<br>
+                
+                    {{ form.number.label }}<br>
+                    {{ form.number }}<br>
+                
+                    {{ form.email.label }}<br>
+                    {{ form.email }}<br>
+                
+                    {{ form.roles.label }}<br>
+                    {{ form.roles }}<br>
+                
+                    {{ form.bio.label }}<br>
+                    {{ form.bio }}<br>
+                
+                    {{ form.trivia1.label }}<br>
+                    {{ form.trivia1 }}<br>
+                
+                    {{ form.trivia2.label }}<br>
+                    {{ form.trivia2 }}<br>
+                
+                    {{ form.trivia3.label }}<br>
+                    {{ form.trivia3 }}<br>
+                
+                    {{ form.trivia4.label }}<br>
+                    {{ form.trivia4 }}<br>
+                
+                    {{ form.trivia5.label }}<br>
+                    {{ form.trivia5 }}<br>
+                
+                    <input type="submit" value="Opslaan">
                 </form>
             </div>
         </div>
