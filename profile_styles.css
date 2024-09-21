@@ -1,0 +1,363 @@
+:root {
+    --yeet: #89cdc6;
+    --the: #338296;
+    --kids: #e43d82;
+    --light: #fef5f7;
+    --dark: #1a4c5d;
+    --darker: #073b4c;
+    --borderRadius: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+body {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(var(--yeet), var(--the), var(--kids));
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.new-child {
+    flex-grow: 1;
+}
+
+/* main content */
+#main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 50px;
+    width: 100%;
+    max-width: 1100px;
+    padding: 125px 0 125px 0;
+    color: white;
+    font-size: 1.2em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.rounded-card {
+    background-color: var(--darker);
+    height: auto;
+    width: 500px;
+    height: 500px;
+    border-radius: var(--borderRadius);
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+.rounded-card h1 {
+    margin-bottom: 15px;
+    margin-top: 15px !important;
+}
+
+.rounded-card h2 {
+    margin-bottom: 15px;
+    transition: 0.5s;
+}
+
+.rounded-card h2:hover {
+    transform: scale(1.3);
+}
+
+.rounded-card:hover {
+    box-shadow:  0 0 0 4px var(--yeet), 
+                 0 0 0 8px var(--the),
+                 0 0 0 12px var(--kids);
+}
+
+.rounded-card a, #profile-edit-link {
+    color: var(--kids);
+    font-weight: bold;
+}
+
+#announcements div {
+    background-color: var(--dark);
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--borderRadius);
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-name {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 15px;
+}
+
+.client img {
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+    background-color: var(--kids);
+    border-radius: 50%;
+}
+
+.client-name {
+    margin-left: 15px;
+    background-color: var(--dark);
+    height: 4em;
+    border-radius: var(--borderRadius);
+    width: 85%;
+
+}
+
+#roles div {
+    background-color: var(--dark);
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--borderRadius);
+}
+
+.roll-link {
+    color: white !important;
+    font-weight: 100 !important;
+    transition: 0.2s;
+}
+
+.roll-link:hover {
+    font-size: xx-large;
+}
+
+#profiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#profile-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 90%;
+    padding: 20px;
+}
+
+#profile-links img {
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+    background-color: var(--kids);
+    border-radius: 50%;
+    transition: 0.35s;
+}
+
+#profile-links img:hover {
+    transform: scale(1.3);
+}
+
+/* profile.html styling */
+
+#profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    max-width: 1100px;
+    padding: 125px 0 125px 0;
+    color: white;
+    font-size: 1.2em;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.profile-row {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#profile-pfp {
+    width: 400px;
+    height: 500px;
+}
+
+#profile-pfp:hover {
+    transform: scale(1.1);
+}
+
+#profile-pfp img {
+    border-radius: var(--borderRadius);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#profile-info {
+    height: auto !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#profile-info div {
+    margin: 10px;
+}
+
+#profile-info-left {
+    text-align: left;
+}
+
+#profile-info-right {
+    text-align: right;
+}
+
+#row2 {
+    margin-top: auto;
+}
+
+#profile-roles {
+    height: auto;
+    width: 25%;
+    padding: 25px;
+    gap: 10px;
+}
+
+#profile-roles div {
+    background-color: var(--dark);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--borderRadius);
+    padding: 5px;
+}
+
+#profile-about-me {
+    height: auto;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile-about-me h1 {
+    height: 10%;
+    margin-bottom: 0.9em;
+}
+
+#profile-about-me p {
+    height: 90%;
+    width: 90%;
+    background-color: var(--dark);
+    border-radius: var(--borderRadius);
+    padding: 25px;
+    margin-bottom: 0.8em;
+}
+
+#row3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#profile-trivia {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-trivia h1 {
+    height: 10%;
+}
+
+#profile-trivia li {
+    background-color: var(--dark);
+    border-radius: var(--borderRadius);
+    margin: 5px;
+    height: 90%;
+    width: 90%;
+    padding-top: 1em;
+}
+
+#profile-edit-box {
+    height: auto;
+    width: auto;
+    background-color: var(--dark);
+    padding: 25px;
+    transition: 0.3s;
+}
+
+#profile-edit-box:hover {
+    background-color: var(--light);
+    
+}
+
+/* When screen is thinner than 1200px */
+@media screen and ( max-width: 1200px) {
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rounded-card {
+        min-height: 250px;
+        width: 80vw !important;
+    }
+
+    #profile-pfp {
+        height: 60vw !important;
+        width: 60vw !important;
+    }
+
+    .profile-row {
+        flex-direction: column;
+    }
+
+    #row2 {
+        margin-top: auto;        
+    }
+
+    footer {
+        height: auto !important;
+    }
+
+}

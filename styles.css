@@ -89,7 +89,7 @@ body {
                  0 0 0 12px var(--kids);
 }
 
-.rounded-card a {
+.rounded-card a, #profile-edit-link {
     color: var(--kids);
     font-weight: bold;
 }
@@ -293,6 +293,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #profile-trivia {
@@ -313,6 +314,19 @@ body {
     height: 90%;
     width: 90%;
     padding-top: 1em;
+}
+
+#profile-edit-box {
+    height: auto;
+    width: auto;
+    background-color: var(--dark);
+    padding: 25px;
+    transition: 0.3s;
+}
+
+#profile-edit-box:hover {
+    background-color: var(--light);
+    
 }
 
 /* When screen is thinner than 1200px */
