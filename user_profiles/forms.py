@@ -7,6 +7,7 @@ class UserData(forms.Form):
         ('man', 'Mannelijk'),
         ('nb', 'Non-Binair'),
     ]
+    
     ROLES = {
         'ceo': 'Chief Executive Officer',
         'cco': 'Chief Cheese Officer',
