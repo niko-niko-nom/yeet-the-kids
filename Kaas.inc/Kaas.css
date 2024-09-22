@@ -18,6 +18,7 @@ header{
     height: 50px;
     display: flex;
     align-items: center;
+    
 }
 
 nav{
@@ -43,9 +44,12 @@ header img {
   padding: 5px;
 }
 
-#main-conten{
+#main-content{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.container {
+  padding-top: 50px;
+}
