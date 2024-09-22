@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import UserData
+from .models import UserProfile
 
 def profile_view(request):
     # Check if the user is authenticated
@@ -52,3 +53,7 @@ def edit_profile(request, current_name):
     form = UserData()
 
     return render(request, 'edit_profile.html', {'form': form})
+
+def user_profile_list(request):
+    profiles = UserProfile.objects.all()
+    return render(request, 'profiles/list.html', {'profiles': profiles})
