@@ -1,106 +1,90 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Edit uw profielpagina</title>
-        <link rel="stylesheet" href="{% static '\edit_profile.css' %}">
-    </head>
-    <body>
+{% extends 'core/base.html' %}
+{% load static from static %}
 
-        <!-- Header -->
-        <header>
-            <nav id="nav">
-                <a href="/dashboard.html"><div>Home</div></a>
-                <a href="/index.html"><div>SCRUM</div></a>
-                <a href="/index.html"><div>hbo-ICT</div></a>
-                <a href="/index.html"><div>Help Ik Groei</div></a>
-                <a href="/Kaas.inc/kaas.html"><div>🧀</div></a>
-            </nav>
-            <a href="/dashboard.html"><img src="{% static 'images/NextStep no bg.png' %}" alt="NextStep Logo" /></a>
-        </header>
-
-        <div id="main-content">
-            <div id="profile-container">
-                <form method="post" enctype="multipart/form-data">
-                    <div class="profile-row" id="row1">
-                        {% csrf_token %}
-                        <div class="rounded-card" id="profile-pfp">                        
-                            <h1><label for="{{ form.pfp.label }}">Upload uw profielfoto:</label></h1><br>
-                            {{ form.pfp }}<br>
-                        </div>
-                        <div class="rounded-card" id="profile-info">
-                            <h1>Uw Informatie</h1>
-                            <div id="profile-info-left">
-                                <label for="{{ form.name.label }}">Uw naam:</label><br>
-                                <label for="{{ form.age.label }}">Uw geboortedag:</label><br>
-                                <label for="{{ form.city.label }}">Uw woonplaats:</label><br>
-                                <label for="{{ form.gender.label }}">Uw gender:</label><br>
-                                <label for="{{ form.pronouns.label }}">Uw voornaamwoorden:</label><br>
-                                <label for="{{ form.number.label }}">Uw telefoonnummer:</label><br>
-                                <label for="{{ form.email.label }}">Uw e-mailadres:</label><br>
-                            </div>
-                            <div id="profile-info-right">
-                                {{ form.name }}<br>
-                                {{ form.age }}<br>
-                                {{ form.city }}<br>
-                                {{ form.gender }}<br>
-                                {{ form.pronouns }}<br>
-                                {{ form.number }}<br>
-                                {{ form.email }}<br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="profile-row" id="row2">
-                        <div class="rounded-card" id="profile-roles">
-                            <h1>Uw Rollen</h1>
-
-                            <!-- Render each role as a checkbox -->
-                            <label for="{{ form.ceo.label }}">Chief Executive Officer (CEO)</label>
-                            {{ form.ceo }}
-                            <label for="{{ form.cco.label }}">Chief Cheese Officer (CCO)</label>
-                            {{ form.cco }}
-                            <label for="{{ form.kaaskop.label }}">Kaaskop</label>
-                            {{ form.kaaskop }}
-                            <label for="{{ form.kaastester.label }}">Kaastester</label>
-                            {{ form.kaastester }}
-                            <label for="{{ form.dev.label }}">Developer</label>
-                            {{ form.dev }}
-                            <label for="{{ form.master.label }}">SCRUM Master</label>
-                            {{ form.master }}
-                            <label for="{{ form.owner.label }}">Product Owner</label>
-                            {{ form.owner }}
-                            <label for="{{ form.caf.label }}">Cafetariamedewerker</label> 
-                            {{ form.caf }}
-
-                        </div>
-                        <div class="rounded-card" id="profile-about-me">
-                            <h1>Biografie</h1>
-                            <h2><label for="{{ form.bio.label }}">Schrijf een mooie tekst over uzelf, of laat ChatGPT het doen.</label></h2><br>
-                            {{ form.bio }}<br>
-                        </div>
-                    </div>
-                    <div class="profile-row" id="row3">
-                        <div class="rounded-card" id="profile-trivia">
-                            <h1>Trivia</h1>
-                            <label for="{{ form.trivia1.label }}">Een leuk feitje over u.</label><br>
-                            {{ form.trivia1 }}<br>
-                            <label for="{{ form.trivia2.label }}">Een leuker feitje over u.</label><br>
-                            {{ form.trivia2 }}<br>
-                            <label for="{{ form.trivia3.label }}">Een nóg leuker feitje over u.</label><br>
-                            {{ form.trivia3 }}<br>
-                            <label for="{{ form.trivia4.label }}">Een haast onmogelijk leuk feitje over u.</label><br>
-                            {{ form.trivia4 }}<br>
-                            <label for="{{ form.trivia5.label }}">Het allerleukste feitje over u.</label><br>
-                            {{ form.trivia5 }}<br>
-                        </div>
-                        <div class="rounded-card" id="profile-edit-box">
-                            <input type="submit" value="Save Changes">
-                        </div>
-                    </div>
-                </form>
+{% block title %}Edit Profile{% endblock %}
+{% block head %}
+  <link rel="stylesheet" href="{% static 'edit_profile.css' %}">
+{% endblock %}
+{% block content %}
+  <div id="main-content">
+    <div id="profile-container">
+      <form method="post" enctype="multipart/form-data">
+        <div class="profile-row" id="row1">
+          {% csrf_token %}
+          <div class="rounded-card" id="profile-pfp">
+            <h1><label for="{{ form.pfp.label }}">Upload uw profielfoto:</label></h1><br>
+            {{ form.pfp }}<br>
+          </div>
+          <div class="rounded-card" id="profile-info">
+            <h1>Uw Informatie</h1>
+            <div id="profile-info-left">
+              <label for="{{ form.name.label }}">Uw naam:</label><br>
+              <label for="{{ form.age.label }}">Uw geboortedag:</label><br>
+              <label for="{{ form.city.label }}">Uw woonplaats:</label><br>
+              <label for="{{ form.gender.label }}">Uw gender:</label><br>
+              <label for="{{ form.pronouns.label }}">Uw voornaamwoorden:</label><br>
+              <label for="{{ form.number.label }}">Uw telefoonnummer:</label><br>
+              <label for="{{ form.email.label }}">Uw e-mailadres:</label><br>
             </div>
+            <div id="profile-info-right">
+              {{ form.name }}<br>
+              {{ form.age }}<br>
+              {{ form.city }}<br>
+              {{ form.gender }}<br>
+              {{ form.pronouns }}<br>
+              {{ form.number }}<br>
+              {{ form.email }}<br>
+            </div>
+          </div>
         </div>
-    </body>
-</html>
+        <div class="profile-row" id="row2">
+          <div class="rounded-card" id="profile-roles">
+            <h1>Uw Rollen</h1>
+
+            <!-- Render each role as a checkbox -->
+            <label for="{{ form.ceo.label }}">Chief Executive Officer (CEO)</label>
+            {{ form.ceo }}
+            <label for="{{ form.cco.label }}">Chief Cheese Officer (CCO)</label>
+            {{ form.cco }}
+            <label for="{{ form.kaaskop.label }}">Kaaskop</label>
+            {{ form.kaaskop }}
+            <label for="{{ form.kaastester.label }}">Kaastester</label>
+            {{ form.kaastester }}
+            <label for="{{ form.dev.label }}">Developer</label>
+            {{ form.dev }}
+            <label for="{{ form.master.label }}">SCRUM Master</label>
+            {{ form.master }}
+            <label for="{{ form.owner.label }}">Product Owner</label>
+            {{ form.owner }}
+            <label for="{{ form.caf.label }}">Cafetariamedewerker</label> 
+            {{ form.caf }}
+
+          </div>
+          <div class="rounded-card" id="profile-about-me">
+            <h1>Biografie</h1>
+            <h2><label for="{{ form.bio.label }}">Schrijf een mooie tekst over uzelf, of laat ChatGPT het doen.</label></h2><br>
+            {{ form.bio }}<br>
+          </div>
+        </div>
+        <div class="profile-row" id="row3">
+          <div class="rounded-card" id="profile-trivia">
+            <h1>Trivia</h1>
+            <label for="{{ form.trivia1.label }}">Een leuk feitje over u.</label><br>
+            {{ form.trivia1 }}<br>
+            <label for="{{ form.trivia2.label }}">Een leuker feitje over u.</label><br>
+            {{ form.trivia2 }}<br>
+            <label for="{{ form.trivia3.label }}">Een nóg leuker feitje over u.</label><br>
+            {{ form.trivia3 }}<br>
+            <label for="{{ form.trivia4.label }}">Een haast onmogelijk leuk feitje over u.</label><br>
+            {{ form.trivia4 }}<br>
+            <label for="{{ form.trivia5.label }}">Het allerleukste feitje over u.</label><br>
+            {{ form.trivia5 }}<br>
+          </div>
+          <div class="rounded-card" id="profile-edit-box">
+            <input type="submit" value="Save Changes">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

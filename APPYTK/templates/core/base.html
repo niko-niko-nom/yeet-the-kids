@@ -1,0 +1,62 @@
+{% load static from static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'layout.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>{% block title %}{% endblock %} | Yeet the Kids</title>
+
+    {% block head %} 
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+    {% endblock %}
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <a href="{% url 'home' %}">
+                <div>Home</div>
+            </a>
+            <a href="index.html">
+                <div>SCRUM</div>
+            </a>
+            <a href="index.html">
+                <div>hbo-ICT</div>
+            </a>
+            <a href="index.html">
+                <div>Help Ik Groei</div>
+            </a>
+            <a href="Kaas.inc/kaas.html">
+                <div>🧀</div>
+            </a>
+        </nav>
+        <a href="{% url 'home' %}"><img src="./images/NextStep no bg.png" /></a>
+    </header>
+
+    <div style="height: 60px"></div>
+
+    {% block content %}
+    <div style="background-color: red; font-size: 3em; margin: 16px; padding: 16px">
+        Error! No content block defined but using the base layout
+    </div>
+    {% endblock %}
+
+    <div style="flex-grow: 1"></div>
+
+    <footer>
+        <p id="copyright">&copy; 2024 Yeet The Kids</p>
+        <div id="footer-container">
+            <p class="credits">Jeroen van de Geest</p>
+            <p class="credits">Sem Out</p>
+            <p class="credits">Nicole Spierenburg</p>
+            <p class="credits">Ahmad Akkad</p>
+            <p class="credits">Thomas Middelbos</p>
+            <p class="credits">Jochem Hoekstra</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -6,30 +6,6 @@ class Footer extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <style>
-            /* footer elements */
-            footer {
-                width: 100%;
-                bottom: 0;
-                height: 60px;
-                display: flex;
-                flex-direction: column;
-                background-color: var(--light);
-                padding: 10px;
-            }
-
-            footer p {
-                width: 100%;
-                height: 50%;
-                text-align: center;
-            }
-
-            #footer-container {
-                width: 100%;
-                height: 50%;
-                display: flex;
-                justify-content: center;
-                gap: 5px;
-            }        
         </style>
 
         <footer>

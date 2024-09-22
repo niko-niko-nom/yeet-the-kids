@@ -84,12 +84,13 @@ body {
 }
 
 .rounded-card:hover {
-    box-shadow:  0 0 0 4px var(--yeet), 
-                 0 0 0 8px var(--the),
-                 0 0 0 12px var(--kids);
+    box-shadow: 0 0 0 4px var(--yeet),
+        0 0 0 8px var(--the),
+        0 0 0 12px var(--kids);
 }
 
-.rounded-card a, #profile-edit-link {
+.rounded-card a,
+#profile-edit-link {
     color: var(--kids);
     font-weight: bold;
 }
@@ -326,11 +327,11 @@ body {
 
 #profile-edit-box:hover {
     background-color: var(--light);
-    
+
 }
 
 /* When screen is thinner than 1200px */
-@media screen and ( max-width: 1200px) {
+@media screen and (max-width: 1200px) {
 
     #container {
         display: flex;
@@ -353,7 +354,7 @@ body {
     }
 
     #row2 {
-        margin-top: auto;        
+        margin-top: auto;
     }
 
     footer {

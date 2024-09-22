@@ -7,13 +7,13 @@ from . import forms
 class LoginView(View):
     def get(self, request):
         if request.user.is_authenticated:
-            return redirect('/')
+            return redirect("home")
 
         return render(request, "inlog.html", { 'form': forms.LoginForm() })
 
     def post(self, request):
         if request.user.is_authenticated:
-            return redirect('/')
+            return redirect("home")
 
         form = forms.LoginForm(request.POST)
         if not form.is_valid():
@@ -28,7 +28,7 @@ class LoginView(View):
             return render(request, "inlog.html", { 'form': form, 'error': 'No user found' })
 
         login(request, user)
-        return redirect("/")
+        return redirect("home")
 
 def logout_user(request):
     if request.user.is_authenticated:

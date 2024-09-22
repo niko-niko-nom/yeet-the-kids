@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% block title %} Inlog Pagina {% endblock %}
+{% extends "inlog/base.html" %} 
+
+{% block title %}Login{% endblock %}
 {% block content %}
 <form method="POST">
     {% csrf_token %}
