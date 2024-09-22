@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block title %} Inlog Pagina {% endblock %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="input-box">
+        {{ form.email.errors }}
+        {{ form.email }}
+        <i class='bx bxs-user'></i>
+    </div>
+    <div class="input-box">
+        {{ form.password.errors }}
+        {{ form.password }}
+        <i class='bx bxs-lock-alt'></i>
+    </div>
+
+    <div class="forgot-password">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Forgot password</a>
+    </div>
+
+    <button type="submit" class="btn">Login</button> <br>
+    {{ error }}
+</form>
+{% endblock %}
