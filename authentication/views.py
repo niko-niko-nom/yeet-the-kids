@@ -24,16 +24,10 @@ class LoginView(View):
         # we use username here because of a custom auth backend
         user = authenticate(request, username=email, password=password)
          
-        print(email)
-        print(password)
-        print(user)
-
         if user is None:
-            print("Failed login request")
             return render(request, "inlog.html", { 'form': form, 'error': 'No user found' })
 
         login(request, user)
-        print("Login request succeeded for " + user.get_username())
         return redirect("/")
 
 def logout_user(request):
