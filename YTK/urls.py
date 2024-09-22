@@ -21,4 +21,5 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path("", include("APPYTK.urls")),
+    path("profiles/", include("user_profiles.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_URL)
