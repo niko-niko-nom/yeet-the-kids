@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    'django.contrib.admin', # TODO Comment out tomorrow
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -103,6 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTHENTICATION_BACKENDS = ['authentication.backends.EmailBackend']
+# AUTH_USER_MODEL = 'user_profiles.User' # TODO Comment back in tomorrow
 
 
 # Internationalization
