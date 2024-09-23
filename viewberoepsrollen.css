@@ -105,3 +105,44 @@ footer p {
     justify-content: center;
     gap: 5px;
 }
+
+
+/* main page */
+
+.container{
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: var(--light);
+    text-align: center;
+    padding: 20px;
+}
+
+#CEO{
+    background-color: var(--dark);
+}
+
+.open-rollen{
+    background-color: var(--kids);
+    float: inline-start;
+    padding-left: 50px;
+    padding-right: 515px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.open-count{
+    background-color: var(--yeet);
+    float: inline-end;
+    padding-left: 580px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+
+
+
+
+
