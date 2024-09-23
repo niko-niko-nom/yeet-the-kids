@@ -145,6 +145,7 @@ footer p {
     margin-top: 50px;
     margin-left: 100px;
     margin-right: 100px;
+    margin-bottom: 100px;
     background-color: var(--light);
     text-align: center;
     padding: 20px;
@@ -153,6 +154,37 @@ footer p {
 #Leden-header{
     background-color: var(--darker);
 }
+
+
+.client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.client img{
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+    background-color: var(--kids);
+    border-radius: 50%;
+}
+
+#client1 {
+    background-color: var(--kids);
+    margin: 20px;
+    float: left;
+}
+
+
+#client2 {
+    background-color: var(--the);
+    float: left;
+}
+
+
 
 
 
