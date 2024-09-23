@@ -123,10 +123,10 @@ footer p {
 }
 
 .open-rollen{
-    background-color: var(--kids);
+    background-color: var(--dark);
     float: inline-start;
     padding-left: 50px;
-    padding-right: 515px;
+    padding-right: 500px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -134,7 +134,7 @@ footer p {
 .open-count{
     background-color: var(--yeet);
     float: inline-end;
-    padding-left: 580px;
+    padding-left: 500px;
     padding-right: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
