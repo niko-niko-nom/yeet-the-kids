@@ -12,6 +12,11 @@ class AnnouncementView(View):
     def get(self, request, id): 
         announcement = models.Announcement.objects.get(id=id)
         return render(request, "view_announcements.html", {'announcement':announcement})
+   
+    def delete(seld, request, id):
+        models.Announcement.objects.delete(id=id)
+        return redirect("announcements")
+        
     
 class EditAnnouncement(View):
     def get(self, request, id):
