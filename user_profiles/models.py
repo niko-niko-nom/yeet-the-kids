@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-
+import datetime
 
 class User(AbstractUser):
     GENDERS = [
@@ -15,6 +15,7 @@ class User(AbstractUser):
     
     # Name and basic info
     city = models.CharField(max_length=100)
+    birthday = models.DateField(default=datetime.datetime.now())
     gender = models.CharField(max_length=10, choices=GENDERS)
     pronouns = models.CharField(max_length=15, blank=True)
     number = models.CharField(max_length=12)
@@ -31,3 +32,9 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.name
+
+    def __setitem__(self, key, value):
+        setattr(self, key, value)
+
+    def __getitem__(self, key):
+        return getattr(self, key)

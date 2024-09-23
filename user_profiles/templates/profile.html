@@ -24,7 +24,7 @@
                 </div>
                 <div id="profile-info-right">
                     <div class="profile-info-box" id="profile-name">{{ user.username }}</div>
-                    <div class="profile-info-box" id="profile-age">{{ user.bio }}</div>
+                    <div class="profile-info-box" id="profile-age">{{ user.age }}</div>
                     <div class="profile-info-box" id="profile-city">{{ user.city }}</div>
                     <div class="profile-info-box" id="profile-gender">{{ user.gender }}</div>
                     <div class="profile-info-box" id="profile-gender">{{ user.pronouns }}</div>
@@ -50,11 +50,12 @@
         <div class="profile-row" id="row3">
             <div class="rounded-card" id="profile-trivia">
                 <h1>Trivia</h1>
-                <li>trivia1</li>
-                <li>trivia2</li>
-                <li>trivia3</li>
-                <li>trivia4</li>
-                <li>trivia5</li>
+                <p>{{ user.trivia1 }}</p>
+                <p>{{ user.trivia2 }}</p>
+                <p>{{ user.trivia3 }}</p>
+                <p>{{ user.trivia4 }}</p>
+                <p>{{ user.trivia5 }}</p>
+                <p></p>
             </div>
             <a href="edit_profile.html" id="profile-edit-link">
                 <div class="rounded-card" id="profile-edit-box">

@@ -18,7 +18,7 @@
           <div class="rounded-card" id="profile-info">
             <h1>Uw Informatie</h1>
             <div id="profile-info-left">
-              <label for="{{ form.name.label }}">Uw naam:</label><br>
+              <label for="{{ form.username.label }}">Uw naam:</label><br>
               <label for="{{ form.age.label }}">Uw geboortedag:</label><br>
               <label for="{{ form.city.label }}">Uw woonplaats:</label><br>
               <label for="{{ form.gender.label }}">Uw gender:</label><br>
@@ -27,12 +27,19 @@
               <label for="{{ form.email.label }}">Uw e-mailadres:</label><br>
             </div>
             <div id="profile-info-right">
-              {{ form.name }}<br>
-              {{ form.age }}<br>
+              {{ form.username.error }}
+              {{ form.username }}<br>
+              {{ form.birthday.error }}
+              {{ form.birthday }}<br>
+              {{ form.city.error }}
               {{ form.city }}<br>
+              {{ form.gender.error }}
               {{ form.gender }}<br>
+              {{ form.pronouns.error }}
               {{ form.pronouns }}<br>
+              {{ form.number.error }}
               {{ form.number }}<br>
+              {{ form.email.error }}
               {{ form.email }}<br>
             </div>
           </div>
@@ -40,24 +47,15 @@
         <div class="profile-row" id="row2">
           <div class="rounded-card" id="profile-roles">
             <h1>Uw Rollen</h1>
-
             <!-- Render each role as a checkbox -->
             <label for="{{ form.ceo.label }}">Chief Executive Officer (CEO)</label>
-            {{ form.ceo }}
             <label for="{{ form.cco.label }}">Chief Cheese Officer (CCO)</label>
-            {{ form.cco }}
             <label for="{{ form.kaaskop.label }}">Kaaskop</label>
-            {{ form.kaaskop }}
             <label for="{{ form.kaastester.label }}">Kaastester</label>
-            {{ form.kaastester }}
             <label for="{{ form.dev.label }}">Developer</label>
-            {{ form.dev }}
             <label for="{{ form.master.label }}">SCRUM Master</label>
-            {{ form.master }}
             <label for="{{ form.owner.label }}">Product Owner</label>
-            {{ form.owner }}
             <label for="{{ form.caf.label }}">Cafetariamedewerker</label> 
-            {{ form.caf }}
 
           </div>
           <div class="rounded-card" id="profile-about-me">
@@ -70,14 +68,19 @@
           <div class="rounded-card" id="profile-trivia">
             <h1>Trivia</h1>
             <label for="{{ form.trivia1.label }}">Een leuk feitje over u.</label><br>
+            {{ form.trivia1.error }}<br>
             {{ form.trivia1 }}<br>
             <label for="{{ form.trivia2.label }}">Een leuker feitje over u.</label><br>
+            {{ form.trivia2.error }}<br>
             {{ form.trivia2 }}<br>
             <label for="{{ form.trivia3.label }}">Een nóg leuker feitje over u.</label><br>
+            {{ form.trivia3.error }}<br>
             {{ form.trivia3 }}<br>
             <label for="{{ form.trivia4.label }}">Een haast onmogelijk leuk feitje over u.</label><br>
+            {{ form.trivia4.error }}<br>
             {{ form.trivia4 }}<br>
             <label for="{{ form.trivia5.label }}">Het allerleukste feitje over u.</label><br>
+            {{ form.trivia5.error }}<br>
             {{ form.trivia5 }}<br>
           </div>
           <div class="rounded-card" id="profile-edit-box">
