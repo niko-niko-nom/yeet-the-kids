@@ -68,7 +68,7 @@ class Header extends HTMLElement {
                 <a href="index.html"><div>Help Ik Groei</div></a>
                 <a href="Kaas.inc/kaas.html"><div>🧀</div></a>
             </nav>
-            <a href="dashboard.html"><img src="./images/NextStep no bg.png"/></a>
+            <a href="dashboard.html"><img src="./APPYTK/static/images/NextStep no bg.png"/></a>
         </header>
         `;
     }
