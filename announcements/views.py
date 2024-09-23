@@ -18,6 +18,16 @@ class EditAnnouncement(View):
         announcement = models.Announcement.objects.get(id=id)
         form = forms.Editform(initial={"title": announcement.title, "text": announcement.text})
         return render(request, "edit_announcements.html", {'form':form})
+    def post(self, request, id):
+        form = forms.Editform(request.POST)
+
+        if not form.is_valid():
+            return render(request, "edit_announcements.html", {'form':form})
+        announcement = models.Announcement.objects.get(id=id)
+        announcement.title = form.cleaned_data['title']
+        announcement.text = form.cleaned_data['text']
+        announcement.save()
+        return redirect('announcement', id=announcement.id)
         
 class CreateAnnouncement(View):
     def get(self, request):
