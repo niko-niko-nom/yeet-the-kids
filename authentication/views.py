@@ -28,6 +28,11 @@ class LoginView(View):
             return render(request, "inlog.html", { 'form': form, 'error': 'No user found' })
 
         login(request, user)
+
+        next = request.GET.get("next")
+        if next is not None:
+            return redirect(next)
+        
         return redirect("home")
 
 def logout_user(request):
