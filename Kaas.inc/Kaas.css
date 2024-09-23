@@ -24,6 +24,13 @@ html {
 }
 
  /* header elements */
+body{
+  background-image: url('kaaswallpaper.jpg');
+  display: flex;
+  flex-direction: column;
+  min-height: 125vh;
+}
+
  header {
   background-color: var(--the);
   position: fixed;
@@ -82,7 +89,7 @@ header img {
 .container {
   margin-top: 18.5px;
   padding: 60px;
-  gap: 5px;
+  gap: 25px;
   display:flex;
   flex-direction: column;
 }
@@ -94,14 +101,14 @@ header img {
  display: flex;
  justify-content: center;
  align-items: center; 
- flex-direction: row;
+ flex-direction: column;
   
 
 }
 
 .maindiv {
 height: auto;
-min-height: 5px;
+min-height: 15PX;
 background-image: linear-gradient(yellow, orange);
 padding: 15px;
 }
@@ -109,7 +116,7 @@ padding: 15px;
 #banner {
   display:flex;
   justify-content: center;
-  height: 45px;
+  height: 65px;
   flex-direction: row;
 }
 
@@ -127,13 +134,52 @@ padding: 15px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: yellow;
+  background-color: #ffff00;
   padding: -5px;
   margin-left: 60px;
   margin-right: 60px;
-  
+}
+
+.footer2 {
+  display: flex;
+  justify-content: center;
+}
+
+footer{
+  margin-top: auto;
+}
+
+.stemknop{
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  align-items: center;
+  background-color:orange
+}
+
+.stemcss{
+  text-decoration: none;
+  color: white;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 45px;
+}
+
+.stemcss{
+  height: 100%;
+  width: auto;
+  padding: 0 25px 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 
 }
 
+.stemcss:hover {
+  box-shadow: inset 0 0 0 4px var(--yeet), 
+  inset 0 0 0 8px var(--the);
+background: var(--darker);
+transition: 0.2s;
 
+}
 
