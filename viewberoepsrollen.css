@@ -105,3 +105,53 @@ footer p {
     justify-content: center;
     gap: 5px;
 }
+
+
+/* main page */
+
+.container{
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: var(--light);
+    text-align: center;
+    padding: 20px;
+}
+
+#CEO{
+    background-color: var(--dark);
+}
+
+.open-rollen{
+    background-color: var(--dark);
+    float: inline-start;
+    padding-left: 50px;
+    padding-right: 500px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.open-count{
+    background-color: var(--yeet);
+    float: inline-end;
+    padding-left: 500px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.leden{
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: var(--light);
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+
+
+
