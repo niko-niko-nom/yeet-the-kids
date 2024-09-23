@@ -95,13 +95,20 @@ body {
     font-weight: bold;
 }
 
-#announcements div {
+.announcement {
     background-color: var(--dark);
     height: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: var(--borderRadius);
+    color: white !important;
+    font-weight: 100 !important;
+    transition: 0.2s;
+}
+
+.announcement:hover {
+    font-size: xx-large;
 }
 
 .client {
