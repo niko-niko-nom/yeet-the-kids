@@ -1,6 +1,7 @@
 from django.shortcuts import render,HttpResponse
 from django.views import View
 from . import models
+from . import form
 
 class AnnouncementListView(View):
     def get(self, request):
@@ -9,5 +10,9 @@ class AnnouncementListView(View):
 
 class AnnouncementView(View):
     def get(self, request, id):
-        return HttpResponse("oui oui baguette")
+        announcement = models.Announcement.objects.get(id=id)
+        return render(request, "view_announcements.html", {'announcement':announcement})
+    
+class CreateAnnouncement(View):
+    def get(self, request):
         
