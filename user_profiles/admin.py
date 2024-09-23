@@ -3,4 +3,3 @@ from . import models
 
 # Register models here
 # ex:
-# admin.site.register(models.User)
