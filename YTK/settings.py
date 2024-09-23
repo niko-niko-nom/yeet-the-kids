@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'APPYTK',
     'user_profiles',
     'authentication',
+    'announcements',
 ]
 
 MIDDLEWARE = [
