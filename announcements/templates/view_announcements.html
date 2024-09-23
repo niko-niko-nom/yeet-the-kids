@@ -5,7 +5,8 @@
     {{announcement.text}}
     <a href="/announcements/{{ announcement.id }}/edit">Edit</a>
 
-    <form method="DELETE">
+    <form method="POST">
+        {% csrf_token %}
         <input type="submit" value="Delete">
     </form>
 </div>

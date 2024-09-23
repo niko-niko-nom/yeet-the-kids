@@ -13,8 +13,8 @@ class AnnouncementView(View):
         announcement = models.Announcement.objects.get(id=id)
         return render(request, "view_announcements.html", {'announcement':announcement})
    
-    def delete(seld, request, id):
-        models.Announcement.objects.delete(id=id)
+    def post(seld, request, id):
+        models.Announcement.objects.filter(id=id).delete()
         return redirect("announcements")
         
     
