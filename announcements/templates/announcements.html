@@ -1,6 +1,8 @@
 {% extends 'core/base.html' %}
 {% block content %}
-{% for announcement in announcements %}
-<div>{ announcement.title }</div>
-{% endfor %}
-[% endblock %]
+<div>
+    {% for announcement in announcements %}
+    <div>{ announcement.title }</div>
+    {% endfor %}
+</div>
+{% endblock %}
