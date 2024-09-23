@@ -104,6 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTHENTICATION_BACKENDS = ['authentication.backends.EmailBackend']
 AUTH_USER_MODEL = 'user_profiles.User'
+LOGIN_URL="/login"
 
 
 # Internationalization
