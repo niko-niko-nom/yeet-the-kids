@@ -7,23 +7,20 @@
                 {% for announcement in announcements %}
                 <a class="announcement" href="{% url 'announcement' id=announcement.id %}">{{announcement.title}}</a>
                 {% endfor %}
-                <h2><a href="">Meer...</a></h2>
+                <h2><a href="{% url 'announcements' %}">Meer...</a></h2>
             </div>
             <div class="rounded-card right-card" id="clients">
                 <h1>Cliënten</h1>
                 <div class="client" id="client1">
-                    <div class="client-photo"><img
-                            src="https://i.pinimg.com/236x/16/8c/57/168c57546129c909fd793a07bfacd064.jpg" /></div>
+                    <div class="client-photo"><img src="https://i.pinimg.com/236x/16/8c/57/168c57546129c909fd793a07bfacd064.jpg" /></div>
                     <div class="client-name">Miku</div>
                 </div>
                 <div class="client" id="client2">
-                    <div class="client-photo"><img
-                            src="https://i.pinimg.com/originals/1c/56/d1/1c56d1e6e3f002f4109a1f59e56cf292.jpg" /></div>
+                    <div class="client-photo"><img src="https://i.pinimg.com/originals/1c/56/d1/1c56d1e6e3f002f4109a1f59e56cf292.jpg" /></div>
                     <div class="client-name">Miku</div>
                 </div>
                 <div class="client" id="client3">
-                    <div class="client-photo"><img
-                            src="https://i1.sndcdn.com/avatars-zVjMaRtPh5rI4E7x-spqtcw-t1080x1080.jpg" /></div>
+                    <div class="client-photo"><img src="https://i1.sndcdn.com/avatars-zVjMaRtPh5rI4E7x-spqtcw-t1080x1080.jpg" /></div>
                     <div class="client-name">Miku</div>
                 </div>
                 <h2><a href="">Meer...</a></h2>
