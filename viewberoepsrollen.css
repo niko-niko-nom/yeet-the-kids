@@ -150,6 +150,10 @@ footer p {
     padding: 20px;
 }
 
+#Leden-header{
+    background-color: var(--darker);
+}
+
 
 
 
