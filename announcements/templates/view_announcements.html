@@ -4,5 +4,9 @@
     {{announcement.title}}
     {{announcement.text}}
     <a href="/announcements/{{ announcement.id }}/edit">Edit</a>
+
+    <form action="DELETE">
+        <input type="submit" value="Delete">
+    </form>
 </div>
 {% endblock %}
