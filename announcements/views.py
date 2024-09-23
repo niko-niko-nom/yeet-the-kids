@@ -9,10 +9,16 @@ class AnnouncementListView(View):
         return render(request, "announcements.html", {'announcements':announcements})
 
 class AnnouncementView(View):
-    def get(self, request, id):
+    def get(self, request, id): 
         announcement = models.Announcement.objects.get(id=id)
         return render(request, "view_announcements.html", {'announcement':announcement})
     
+class EditAnnouncement(View):
+    def get(self, request, id):
+        announcement = models.Announcement.objects.get(id=id)
+        form = forms.Editform(initial={"title": announcement.title, "text": announcement.text})
+        return render(request, "edit_announcements.html", {'form':form})
+        
 class CreateAnnouncement(View):
     def get(self, request):
         form = forms.Editform()
