@@ -23,5 +23,5 @@ urlpatterns = [
     path("", include("APPYTK.urls")),
     path("profiles/", include("user_profiles.urls")),
     path("", include("authentication.urls")),
-    path("announcements/", include("anouncements.urls")),
+    path("announcements/", include("announcements.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_URL)
