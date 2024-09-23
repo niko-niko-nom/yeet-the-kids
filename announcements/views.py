@@ -18,3 +18,4 @@ class CreateAnnouncement(View):
         form = forms.Editform()
         return render(request, "edit_announcements.html", {'form':form})
     
+
