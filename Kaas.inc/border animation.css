@@ -2,7 +2,7 @@
 @property --angle{
     syntax: "<angle>";
     initial-value: 0deg0
-    inherits; false;
+    inherits false;
   }
   .poll2::after{
     content: '';
@@ -19,7 +19,7 @@
     animation: 3s spin linear infinite;
   }
   .poll2::before{
-    filter: blur(17.5px)
+    filter: blur(17.5px);
     opacity: 0.5;
   }
   @keyframes spin{
