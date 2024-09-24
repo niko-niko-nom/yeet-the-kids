@@ -237,12 +237,17 @@ body {
 #profile-info {
     height: auto !important;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    width: auto !important; 
+    padding: 25px;
 }
 
 #profile-info div {
-    margin: 10px;
+    background-color: var(--dark);
+    border-radius: var(--borderRadius);
+    width: 100%;
 }
 
 #profile-info-left {
@@ -325,7 +330,7 @@ body {
 }
 
 #profile-edit-box {
-    height: auto;
+    height: 3em !important;
     width: auto;
     background-color: var(--dark);
     padding: 25px;
@@ -335,6 +340,36 @@ body {
 #profile-edit-box:hover {
     background-color: var(--light);
 
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    height: auto;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.info:hover {
+    transform: scale(1.1);
+}
+
+.profile-info-box-q {
+    text-align: left;
+    padding-right: 125px;
+}
+
+.profile-info-box {
+    text-align: right;
+}
+
+#profile-edit-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* When screen is thinner than 1200px */
@@ -358,6 +393,12 @@ body {
 
     .profile-row {
         flex-direction: column;
+    }
+
+    #profile-edit-box {
+        height: auto !important;
+        width: auto !important;
+        min-height: 0;
     }
 
     #row2 {
