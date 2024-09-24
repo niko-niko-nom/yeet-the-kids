@@ -1,34 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css"> <!-- Link to external stylesheets -->
-        <title>Yeet The Kids</title>
-    </head>
-    <body>
+{% extends 'core/base.html' %}
+{% load static from static %}
+{% block title %}{{ user.username }}s Profile{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'edit_profile.css' %}">
+{% endblock %}
+{% block content %}
+    <!-- Main Content -->
+    <div id="main-content">
+        <h1>Alle Medewerkers</h1>
+        <ul>
+            
+            {% for profile in profiles %}
+                <li>{{ profile.name }} - {{ profile.email }} - {{ profile.city }}</li>
+            {% endfor %}
 
-        <!-- Header -->
-        <script src="components/header.js"></script>
-        <header-component></header-component>
-
-        <!-- Main Content -->
-        <main>
-            <h1>User Profiles</h1>
-            <ul>
-                
-                {% for profile in profiles %}
-                    <li>{{ profile.name }} - {{ profile.email }} - {{ profile.city }}</li>
-                {% endfor %}
-
-            </ul>
-        </main>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2024 Your Website</p>
-            <p>Contact info or links to social media</p>
-        </footer>
-
-    </body>
-</html>
+        </ul>
+    </div>
+{% endblock %}
