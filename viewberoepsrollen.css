@@ -120,10 +120,12 @@ footer p {
 }
 
 #CEO{
-    background-color: var(--dark);
+ 
+    background: rgba(0, 0, 0, o,5);
     font-size: xx-large;
     padding: 10px;
     text-align: left;
+
 
 }
 
