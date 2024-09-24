@@ -2,15 +2,6 @@
 {% load static from static %}
 
 {% block content %}
-<div class="container">
-    <div id="banner">
-        <div class="kaasknop">
-            <h1>Kaas Incorporated</h1>
-
-        </div>
-        <img src="{% static 'images/KAASICON.png' %}" />
-    </div>
-
 
     <div class="maindiv">
         Welkom bij Kaas Incorporated!
@@ -27,29 +18,13 @@
     </div>
 
     <div class="poll2">
-        <form>
+        <form method="POST">
             <div class="stem6">
                 <h2>Breng hier uw stem uit:</h2>
             </div>
             {% csrf_token %}
             {{ form }}
-            <div>div</div>
-            <input type="radio" id="keuze1" />
-            <label for="">Ja, bombardeer Old Amsterdam Kaas (kans op faillissement Kaas Inc.)</label>
-            <div></div>
-            <input type="radio" id="keuze2" />
-            <label for="keuze2">Nee, ga in gesprek met de Old Amsterdam Kaas woordvoerder.</label>
-            <div></div>
-            <input type="radio" id="keuze3" />
-            <label for="keuze3">Nee, laat Miku het geheime recept van Old Amsterdam Kaas stelen.</label>
-            <div></div>
             <input type="submit" value="Stem" />
         </form>
     </div>
-
-
-
-
-
-</div>
 {% endblock %}

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib import messages
 from . import forms, models
 
 # Create your views here.
@@ -17,8 +18,10 @@ def stem_van_de_week(request):
             vote = models.Vote(ip=request.ip, vote=forms.cleaned_data["vote"])
             vote.save()
         except:
+            messages.add_message(request, messages.SUCCESS, "You already voted")
             return render(request, 'kaas_vote.html', {'form': form})
         
+        messages.add_message(request, messages.SUCCESS, "Added vote")
         return render(request, 'kaas_vote.html', {'form': form})
 
     form = forms.VoteForm()

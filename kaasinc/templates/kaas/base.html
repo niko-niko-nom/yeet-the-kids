@@ -36,7 +36,28 @@
 
     </header>
 
-    {% block content %} {% endblock %}
+    <div class="container">
+        <div id="banner">
+            <div class="kaasknop">
+                <h1>Kaas Incorporated</h1>
+
+            </div>
+            <img src="{% static 'images/KAASICON.png' %}" />
+        </div>
+
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                {{ message }}
+                </li>
+                {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% block content %} {% endblock %}
+    </div>
 
     <!-- Footer -->
     <footer>

@@ -1,50 +1,40 @@
 {% extends 'kaas/base.html' %}
 {% load static from static %}
 {% block content %}
-<div class="container">
-    <div id="banner">
-        <div class="kaasknop">
-            <h1>Kaas Incorporated</h1>
-
-        </div>
-        <img src="{% static 'images/KAASICON.png' %}" />
-    </div>
-
-    <div class="maindiv">
-        Kaas Incorporated is een familiebedrijf met een rijke en lange geschiedenis die teruggaat tot de vroege 18e
-        eeuw. Al generaties lang perfectioneren wij de kunst van kaas maken, en onze toewijding aan vakmanschap
-        heeft ons een legendarische reputatie opgeleverd. Wat ons echt onderscheidt, is ons geheime recept voor de
-        iconische Old Amsterdam Kaas, een recept dat al meer dan 300 jaar van generatie op generatie wordt
-        doorgegeven. Deze unieke, volle smaak, doordrenkt met traditie, maakt ons de onbetwiste leider in de
-        kaaswereld.
+<div class="maindiv">
+    Kaas Incorporated is een familiebedrijf met een rijke en lange geschiedenis die teruggaat tot de vroege 18e
+    eeuw. Al generaties lang perfectioneren wij de kunst van kaas maken, en onze toewijding aan vakmanschap
+    heeft ons een legendarische reputatie opgeleverd. Wat ons echt onderscheidt, is ons geheime recept voor de
+    iconische Old Amsterdam Kaas, een recept dat al meer dan 300 jaar van generatie op generatie wordt
+    doorgegeven. Deze unieke, volle smaak, doordrenkt met traditie, maakt ons de onbetwiste leider in de
+    kaaswereld.
 
 
-        Concurrentie? Daar houden we niet van. Kaas Incorporated staat bekend om haar dominante positie op de markt.
-        Wij zien concurrenten als niet meer dan een tijdelijk obstakel, want onze kaas blijft onverslaanbaar.
+    Concurrentie? Daar houden we niet van. Kaas Incorporated staat bekend om haar dominante positie op de markt.
+    Wij zien concurrenten als niet meer dan een tijdelijk obstakel, want onze kaas blijft onverslaanbaar.
 
-    </div>
-    <div class="maindiv">
-        Bij Kaas Incorporated nemen we kaas en concurrentie heel serieus. Zo serieus dat we onze klanten de macht
-        geven om wekelijks te stemmen op onze acties. Dit gaat verder dan alleen nieuwe kaassmaken bedenken. Een van
-        de meest populaire opties? Een letterlijk bombardement op de concurrentie.
+</div>
+<div class="maindiv">
+    Bij Kaas Incorporated nemen we kaas en concurrentie heel serieus. Zo serieus dat we onze klanten de macht
+    geven om wekelijks te stemmen op onze acties. Dit gaat verder dan alleen nieuwe kaassmaken bedenken. Een van
+    de meest populaire opties? Een letterlijk bombardement op de concurrentie.
 
 
-        Elke week kan ons trouwe publiek stemmen op welke concurrent aangepakt moet worden, en wij zorgen ervoor dat
-        de boodschap luid en duidelijk wordt overgebracht... vanuit de lucht. Wij laten onze rivalen weten dat er
-        geen ruimte is voor halfslachtige kazen op onze markt. Met Kaas Incorporated aan de top zorgen we ervoor dat
-        niemand ons in de weg staat – met alle beschikbare middelen.
+    Elke week kan ons trouwe publiek stemmen op welke concurrent aangepakt moet worden, en wij zorgen ervoor dat
+    de boodschap luid en duidelijk wordt overgebracht... vanuit de lucht. Wij laten onze rivalen weten dat er
+    geen ruimte is voor halfslachtige kazen op onze markt. Met Kaas Incorporated aan de top zorgen we ervoor dat
+    niemand ons in de weg staat – met alle beschikbare middelen.
 
-    </div>
+</div>
+<div class="stemknop">
     <div class="stemknop">
-        <div class="stemknop">
-            <a class="stemcss" href="{% url 'kaas-vote' %}">Stem van de week</a>
-
-        </div>
+        <a class="stemcss" href="{% url 'kaas-vote' %}">Stem van de week</a>
 
     </div>
 
-    <div>
-        <p style="background-image:url({% static 'images/kaaswallpaper.jpg' %});">
-    </div>
+</div>
+
+<div>
+    <p style="background-image:url({% static 'images/kaaswallpaper.jpg' %});">
 </div>
 {% endblock %}
