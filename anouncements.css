@@ -117,8 +117,14 @@ footer p {
     padding: 20px;
     font-size: 20px;
     border-radius: 5px;
+    max-width: 800px;
+    margin: auto;
     margin-bottom: 15px;
 }
+.announcement:hover {
+background-color: #white;
+}
+
 
 .add-button {
     background-color: #40E0D0; /* Turquoise color */
@@ -138,6 +144,7 @@ footer p {
     justify-content: center;
     align-items: center;
     text-align: center; /* Ensure the plus sign is centered */
+    margin-bottom: 40px;
 }
 
 .add-button:hover {
