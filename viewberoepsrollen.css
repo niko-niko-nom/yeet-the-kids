@@ -113,32 +113,43 @@ footer p {
     margin-top: 100px;
     margin-left: 100px;
     margin-right: 100px;
-    background-color: var(--light);
+    background-color: transparent;
     text-align: center;
     padding: 20px;
+    
 }
 
 #CEO{
     background-color: var(--dark);
+    font-size: xx-large;
+    padding: 10px;
+    text-align: left;
+
 }
 
 .open-rollen{
-    background-color: var(--dark);
+    background-color: transparent;
     float: inline-start;
     padding-left: 50px;
     padding-right: 500px;
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: larger;
+    border: 5px solid var(--kids);
+    border-radius: 89px;
+    font-size: x-large;
 }
 
 .open-count{
-    background-color: var(--yeet);
+    background-color: transparent;
     float: inline-end;
-    padding-left: 500px;
+    padding-left: 50px;
     padding-right: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
-
+    font-size: larger;
+    border: 5px solid var(--kids);
+    border-radius: 89px;
 }
 
 .leden{
