@@ -265,6 +265,31 @@ header img {
     flex-direction: column;
 }
 
+#profile-info {
+    height: auto !important;
+}
+
+#form-labels-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-info-left {
+    text-align: left;
+    margin-right: 250px;
+}
+
+#profile-info-right {
+    text-align: right;
+}
+
+#profile-edit-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* When screen is thinner than 1200px */
 @media screen and ( max-width: 1200px) {
 
