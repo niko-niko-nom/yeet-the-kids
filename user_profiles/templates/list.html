@@ -1,14 +1,17 @@
+
 {% extends 'core/base.html' %}
+{% load static from static %}
+{% block title %}{{ user.username }}s Profile{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'profiles_list.css' %}">
+{% endblock %}
 {% block content %}
-    <div id="main-content">
-        <div id="container">
-            <div class="rounded-card left-card" id="announcements">
-                <h1>Aankondigingen</h1>
-                {% for announcement in announcements %}
-                <a class="announcement" href="{% url 'announcement' id=announcement.id %}">{{announcement.title}}</a>
-                {% endfor %}
-                <h2><a href="{% url 'announcements' %}">Meer...</a></h2>
-            </div>
-        </div>
+<!-- Main Content -->
+<div id="main-content">
+    <div>
+        {% for profile in profiles %}
+        <div>{{ profile.first_name }}</div>
+        {% endfor %}
     </div>
+</div>
 {% endblock %}
