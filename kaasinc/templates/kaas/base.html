@@ -1,0 +1,63 @@
+{% load static from static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Kaas.css' %}"> <!-- Link to external stylesheets -->
+    <title>Kaas.INC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <a href="{% url 'home' %}">
+                <div>Home</div>
+            </a>
+            <a href="{% url 'home' %}">
+                <div>SCRUM</div>
+            </a>
+            <a href="{% url 'home' %}">
+                <div>hbo-ICT</div>
+            </a>
+            <a href="{% url 'home' %}">
+                <div>Help Ik Groei</div>
+            </a>
+            <a href="{% url 'kaas' %}">
+                <div>🧀</div>
+            </a>
+        </nav>
+        <a href="{% url 'home' %}"><img src="{% static 'images/NextStep no bg.png' %}" /></a>
+
+    </header>
+
+    {% block content %} {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <div class="mainfooter">
+
+
+
+            </p>Contact met Kaas INC.</p>
+
+            <p></p> Telefoon: +31 222633532
+            <p></p> E-Mail: kaasdominantie@kaasinc.nl
+
+            </p>
+        </div>
+
+        <div class="footer2">
+            <p>&copy; YeetTheKids
+        </div>
+    </footer>
+
+</body>
+
+
+</html>

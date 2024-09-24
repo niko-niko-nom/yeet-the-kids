@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'authentication',
     'announcements',
     'roles',
-    'kaasinc'
+    'kaasinc',
 ]
 
 MIDDLEWARE = [
