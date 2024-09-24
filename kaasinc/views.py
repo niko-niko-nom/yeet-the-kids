@@ -11,15 +11,15 @@ def stem_van_de_week(request):
         form = forms.VoteForm(request.POST)
 
         if not form.is_valid():
-            return render(render, 'kaas_vote.html', { 'form': form })
+            return render(request, 'kaas_vote.html', { 'form': form })
 
         try:
             vote = models.Vote(ip=request.ip, vote=forms.cleaned_data["vote"])
             vote.save()
         except:
-            return render(render, 'kaas_vote.html', {'form': form})
+            return render(request, 'kaas_vote.html', {'form': form})
         
-        return render(render, 'kaas_vote.html', {'form': form})
+        return render(request, 'kaas_vote.html', {'form': form})
 
     form = forms.VoteForm()
-    return render(render, 'kaas_vote.html', {'form': form})
+    return render(request, 'kaas_vote.html', {'form': form})
