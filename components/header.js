@@ -63,7 +63,7 @@ class Header extends HTMLElement {
         <header>
             <nav id="nav">
                 <a href="dashboard.html"><div>Home</div></a>
-                <a href="index.html"><div>SCRUM</div></a>
+                <a href="scrum.html"><div>SCRUM</div></a>
                 <a href="index.html"><div>hbo-ICT</div></a>
                 <a href="./vacatureoverzicht.html"><div>Help Ik Groei</div></a>
                 <a href="Kaas.inc/kaas.html"><div>🧀</div></a>
