@@ -113,7 +113,8 @@ footer p {
 }
 
 .announcement {
-    background-color: #b0c4de;
+    color: white;
+    background-color:#338296;
     padding: 20px;
     font-size: 20px;
     border-radius: 5px;
@@ -122,10 +123,8 @@ footer p {
     margin-bottom: 15px;
 }
 .announcement:hover {
-background-color: #white;
-}
-
-
+font-size: xx-large;
+}    
 .add-button {
     background-color: #40E0D0; /* Turquoise color */
     color: white;
