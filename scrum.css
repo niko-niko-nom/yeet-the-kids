@@ -118,6 +118,8 @@ footer p {
     padding: 15px;
     background-color: var(--light);
     text-align: center;
+    border: 5px solid var(--kids) ;
+    border-radius: 89px;
 }
 
 #InfoforScrum {
@@ -127,6 +129,56 @@ footer p {
     margin-right: 400px;
     font-size: large;
     text-align: center;
+    background: transparent ;
+    border: 5px solid var(--kids);
+    border-radius: 89px;
+    backdrop-filter: blur 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+}
+
+.Rollenlist {
+    text-align: center;
+    list-style-position: inside;
+    padding: 20px;
+}
+
+.Rollen {
+    background-color: var(--light);
+    margin-top: 3%;
+    text-align: center;
+    border: 5px solid var(--kids) ;
+    border-radius: 89px;
+}
+
+.Productowner {
+    background-color: var(--kids);
+  padding: 0px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+.Scrum-master {
+    background-color: var(--kids);
+    padding: 0px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+}
+.Stakeholder {
+    background-color: var(--kids);
+    padding: 0px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+}
+.Developer {
+    background-color: var(--kids);
+    padding: 0px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 20px;
 }
 
 
