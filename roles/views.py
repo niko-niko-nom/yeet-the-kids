@@ -49,4 +49,3 @@ class CreateRoles(View):
         role.save()
 
         return redirect("role", id=role.id)
-            
