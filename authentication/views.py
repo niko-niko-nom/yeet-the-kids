@@ -7,6 +7,9 @@ from . import forms
 class LoginView(View):
     def get(self, request):
         if request.user.is_authenticated:
+            next = request.GET.get("next")
+            if next is not None:
+                return redirect(next)
             return redirect("home")
 
         return render(request, "inlog.html", { 'form': forms.LoginForm() })
