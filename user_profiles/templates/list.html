@@ -8,6 +8,21 @@
 <!-- Main Content -->
 <div id="main-content">
     <div class="all-profiles">
+        
+        <div class="user" id="newUser">
+            <div class="initials-icon">
+                <div class="initials">+</div>
+            </div>
+            <div class="basic-info-block">
+                <form id="newUserForm">
+                    <label for="name">Voeg een nieuwe collega toe:</label>
+                    <input type="text" id="name" name="name" required>
+                    <button type="submit">Opslaan</button>
+                </form>
+                <script src="new_user.js></script>
+            </div>
+        </div>
+
         {% for profile in profiles %}
         <a href="/profiles/{{ profile.first_name }}" class="user-profile-link">
             <div class="user">
@@ -22,6 +37,7 @@
             </div>
         </a>
         {% endfor %}
+
     </div>
 </div>
 {% endblock %}

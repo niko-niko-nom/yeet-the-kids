@@ -3,7 +3,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import UserData
 from .models import User
-import time
 
 @login_required
 def profile_view(request, current_name):
@@ -66,3 +65,8 @@ def edit_profile(request, current_name):
 def user_profile_list(request):
     profiles = User.objects.all()
     return render(request, 'list.html', {'profiles': profiles})
+
+@login_required
+def new_user(request):
+    name = request.GET.get('name', '')
+    return render(request, 'edit_profile.html', {'name': name})
