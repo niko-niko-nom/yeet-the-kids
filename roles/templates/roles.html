@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load static from static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'vacatureoverzicht.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Beschikbare Rollen</h2>
+    <ul class="cards">
+        {% for role in roles %}
+      <li class="card">
+        <div>
+          <h3 class="card-title">{{ role.title }} </h3>
+          <div class="card-content">
+            <p>{{ role.text }}</p>
+          </div>
+        </div>
+        <div class="card-link-wrapper">
+          <a href="{% url 'role' id=role.id %}" class="card-link">Learn More</a>
+        </div>
+      </li>   
+      {% endfor %}
+    </ul>
+
+    <h2>Rollen</h2>
+
+    <ul class="cards">
+        <li class="card">
+          <div>
+            <h3 class="card-title">KaasChief</h3>
+            <div class="card-content">
+              <p>.blah blah blah</p>
+            </div>
+          </div>
+          <div class="card-link-wrapper">
+            <a href="" class="card-link">Learn More</a>
+          </div>
+        </li>
+      </ul>
+
+  </div>
+{% endblock %}

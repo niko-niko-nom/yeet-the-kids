@@ -1,92 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head></head>
+<html lang="nl">
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="Kaas.css"> <!-- Link to external stylesheets -->
         <title>Kaas.INC</title>
+        <link rel="stylesheet" href="Kaas.css"> <!-- Link naar externe stylesheets -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        
         <header>
-                <nav id="nav">
-                    <a href="dashboard.html"><div>Home</div></a>
-                    <a href="/scrum.html"><div>SCRUM</div></a>
-                    <a href="/hboict/hboict.html"><div>hbo-ICT</div></a>
-                    <a href="/vacatureoverzicht.html"><div>Help Ik Groei</div></a>
-                    <a href="Kaas.inc/kaas.html"><div>🧀</div></a>
-                </nav>
-                <a href="dashboard.html"><img src="/APPYTK\static\images\NextStep no bg.png"/></a>
-            
-    
+            <nav id="nav">
+                <a href="dashboard.html"><div>Home</div></a>
+                <a href="index.html"><div>SCRUM</div></a>
+                <a href="index.html"><div>hbo-ICT</div></a>
+                <a href="index.html"><div>Help Ik Groei</div></a>
+                <a href="Kaas.inc/kaas.html"><div>🧀</div></a>
+            </nav>
+            <a href="dashboard.html">
+                <img src="/APPYTK/static/images/NextStep no bg.png" alt="Logo van Kaas INC."/>
+            </a>
         </header>
+
         <div class="container"> 
             <div id="banner"> 
                 <div class="kaasknop">
                     <h1>Kaas Incorporated</h1>
                     <h2>Stem van de week</h2>
-                    
                 </div>
-                <img src="KAASICON.png" />
+                <img src="KAASICON.png" alt="Kaas Logo"/>
             </div>
-           
+
             <div class="maindiv">
-                Welkom bij Kaas Incorporated!
-
-Dit is de plek waar jullie, onze gewaardeerde klanten, kunnen stemmen op welke concurrent we deze week zullen uitroeien. Zoals al op de hoofdpagina is verteld, laten we bij Kaas Incorporated niets aan het toeval over. Wij zijn vastberaden om de kaasmarkt volledig te domineren, en dat doen we door onze concurrenten systematisch van de kaart te bombarderen.
-
-Elke week kiezen jullie welke rivaal we zullen aanpakken en met de grond gelijkmaken. Jullie stem bepaalt welk bedrijf deze week wordt geëlimineerd, zodat Kaas Incorporated de onbetwiste leider blijft.
-
-Breng je stem uit en help ons de concurrentie te verpletteren!
+                <p>
+                    Welkom bij Kaas Incorporated! Dit is de plek waar jullie, onze gewaardeerde klanten, kunnen stemmen op welke concurrent we deze week zullen uitroeien.
+                    Wij zijn vastberaden om de kaasmarkt volledig te domineren, en dat doen we door onze concurrenten systematisch van de kaart te bombarderen.
+                </p>
+                <p>
+                    Elke week kiezen jullie welke rivaal we zullen aanpakken en met de grond gelijkmaken. Jullie stem bepaalt welk bedrijf deze week wordt geëlimineerd, zodat Kaas Incorporated de onbetwiste leider blijft.
+                </p>
+                <p>Breng je stem uit en help ons de concurrentie te verpletteren!</p>
             </div>
-            
-            <div class="poll2">
-                <form>
-                    <div class="poll2">
-                    <div class="stem6"> <h2>Breng hier uw stem uit:</h2> </div>
-                    <input type="radio" id="keuze1" />
-                    <label for="">Ja, bombardeer groepje één punt nul (kans op faillissement Kaas Inc.)</label>  
-                    <input type="radio" id="keuze2" />
-                    <label for="keuze2">Nee, ga in gesprek met de Old Amsterdam Kaas woordvoerder.</label>
-                    <input type="radio" id="keuze3" />
-                    <label for="keuze3">Nee, laat Miku het geheime recept van Old Amsterdam Kaas stelen.</label>
-                    <input type="radio" id="keuze4" />
-                    <label for="keuze4">Ja, bombardeer Old Amsterdam kaas terwijl team één punt nul daar een rondleiding heeft.
-                    <input type="submit" />
+
+            <div class="poll-container">
+                <h2>Wat moet Kaas INC. deze week doen?</h2>
+                <div class="poll">
+                    <label>
+                        <input type="radio" name="poll" value="Ja, bombardeer groepje één punt nul (kans op faillissement Kaas Inc.)">
+                        Ja, bombardeer groepje één punt nul (kans op faillissement Kaas Inc.)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="poll" value="Nee, ga in gesprek met de Old Amsterdam Kaas ">
+                        Nee, ga in gesprek met de Old Amsterdam Kaas
+                    </label><br>
+                    <label>
+                        <input type="radio" name="poll" value="Nee, laat Miku het geheime recept van Old Amsterdam Kaas stelen.">
+                        Nee, laat Miku het geheime recept van Old Amsterdam Kaas stelen.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="poll" value="Ja, bombardeer Old Amsterdam kaas terwijl team één punt nul daar een rondleiding heeft.">
+                        Ja, bombardeer Old Amsterdam kaas terwijl team één punt nul daar een rondleiding heeft.
+                    </label>
                 </div>
-                </form>
+                <button onclick="submitPoll()">Stem</button>
+
+                <div id="poll-results">
+                    <!-- De resultaten van de poll worden hier weergegeven -->
+                </div>
             </div>
-        
-            
-            
-    
-        
         </div>
+
         <!-- Footer -->
         <footer>
-            <div class="mainfooter"> 
-
-          
-
-            </p>Contact met Kaas INC.</p>
-          
-            <p></p>    Telefoon: +31 222633532
-            <p></p>   E-Mail: kaasdominantie@kaasinc.nl
-            
-            </p>
+            <div class="mainfooter">
+                <p>Contact met Kaas INC.</p>
+                <p>Telefoon: +31 222633532</p>
+                <p>E-mail: kaasdominantie@kaasinc.nl</p>
             </div>
-
             <div class="footer2">
-                <p>&copy; YeetTheKids
+                <p>&copy; YeetTheKids</p>
             </div>
         </footer>
 
+        <script src="kaas.js"></script> <!-- Verwijzing naar het JavaScript bestand -->
     </body>
-
-
 </html>
-

@@ -1,0 +1,58 @@
+{% extends 'core/base.html' %}
+{% load static from static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'viewberoepsrollen.css' %}">
+{% endblock %}
+{% block content %}
+<div>
+    {{role.title}}
+    {{role.text}}
+    <a href="/roles/{{ role.id }}/edit">Edit</a>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
+</div>
+
+
+<div class="container">
+    <div class="role-info">
+        <h2 id="CEO">Beroep</h2>
+        <br>
+        <div class="open-rollen">
+            <span> {{role.title}}</span>   <i class='bx bx-right-arrow-alt'></i> 
+        </div>  
+        <div  class="open-count">69</div>
+        <br>
+    </div>
+</div>
+
+<div class="leden">
+    <h2 id="Leden-header">Leden</h2>
+    <div>
+
+        <div class="client" id="client1">
+            <div class="client-photo"><img
+                    src="https://i.pinimg.com/236x/16/8c/57/168c57546129c909fd793a07bfacd064.jpg" /></div>
+            <div class="client-name">Miku</div>
+            </div>
+            <br>
+            <div class="client" id="client2">
+                <div class="client-photo"><img
+                        src="https://i.pinimg.com/originals/1c/56/d1/1c56d1e6e3f002f4109a1f59e56cf292.jpg"/></div> <br>
+                <div class="client-name">Miku 2</div>
+                </div>
+                <br>
+                <div class="buttons" id="buttonsid">
+                    <a href="/roles/{{ role.id }}/edit"><button class="btn">Edit</button></a>  
+                    <button class="btn">apply</button>
+                </div>
+
+    </div>
+        </div>
+
+
+
+</div>
+{% endblock %}

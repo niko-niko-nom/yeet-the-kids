@@ -59,7 +59,7 @@ def edit_profile(request, current_name):
         'trivia5': user.trivia5,
     })
 
-    return render(request, 'edit_profile.html', {'form': form})
+    return render(request, 'edit_profile.html', {'form': form, 'profile': user})
 
 @login_required
 def user_profile_list(request):

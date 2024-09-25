@@ -7,7 +7,7 @@
     --darker: #E6302B;
     --hublauw: #00A1E1;
     --hurood: #E6302B;
-    
+
 }
 
 * {
@@ -26,11 +26,12 @@ body {
     min-height: 100vh;
     height: 100%;
     width: 100%;
-/*    background: linear-gradient(var(--yeet), var(--the), var(--kids)); */
+    /*    background: linear-gradient(var(--yeet), var(--the), var(--kids)); */
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
     background-image: url('/static/images/hl15.png');
+}
 
 .new-child {
     flex-grow: 1;
@@ -73,8 +74,8 @@ nav div {
 }
 
 nav div:hover {
-    box-shadow: inset 0 0 0 4px var(--yeet), 
-                inset 0 0 0 8px var(--the);
+    box-shadow: inset 0 0 0 4px var(--yeet),
+        inset 0 0 0 8px var(--the);
     background: var(--darker);
     transition: 0.2s;
 }
@@ -93,7 +94,7 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: #00A1E1 !important;
-    
+
     padding: 10px;
 }
 
@@ -111,52 +112,51 @@ footer p {
     gap: 5px;
 }
 
-.title{
-display: flex;
-gap: 12.5px;
-margin-top: 55px;
-height: 10px;
-font-size: 1.5em;
-padding: 5px;
-justify-content: center;
+.title {
+    display: flex;
+    gap: 12.5px;
+    height: 10px;
+    font-size: 1.5em;
+    padding: 5px;
+    justify-content: center;
 }
 
-.HU img{
-height: 40px;
+.HU img {
+    height: 40px;
 }
 
-.blue{
+.blue {
     color: var(--hublauw);
 }
 
-.white{
+.white {
     color: var(--light);
 }
 
-.red{
-color: var(--hurood);
+.red {
+    color: var(--hurood);
 }
 
-.title h2{
+.title h2 {
     display: flex;
     flex-direction: row;
     gap: 5.5px;
 }
 
-.container{
-width: 420px;
-border: 2px solid #E6302B;
-backdrop-filter: blur 20px;
-box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-color: #000000;
-border-radius: 10px;
-padding: 30px 40px;
-background-color: rgba(255,255,255,0.75);
+.container {
+    width: 420px;
+    border: 2px solid #E6302B;
+    backdrop-filter: blur 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #000000;
+    border-radius: 10px;
+    padding: 30px 40px;
+    background-color: rgba(255, 255, 255, 0.75);
 }
 
-.center{
+.center {
     display: flex;
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 75px;
-}}
+}

@@ -115,70 +115,80 @@ footer p {
 .container{
     margin-top: 100px;
     margin-bottom: 20px;
+    margin-left: 400px;
+    margin-right: 400px;
     padding: 15px;
-    background-color: var(--light);
+    background-color: transparent;
     text-align: center;
-    border: 5px solid var(--kids) ;
-    border-radius: 89px;
+
 }
 
 #InfoforScrum {
-    background-color: var(--darker);
+    background-color: rgba(255,255,255,0.1);
     padding: 20px;
     margin-left: 400px;
     margin-right: 400px;
     font-size: large;
     text-align: center;
-    background: transparent ;
-    border: 5px solid var(--kids);
+    border: 2px solid var(--kids);
     border-radius: 89px;
     backdrop-filter: blur 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    color: #fff;
+    color: #000;
 }
 
 .Rollenlist {
     text-align: center;
     list-style-position: inside;
     padding: 20px;
+    
 }
 
 .Rollen {
-    background-color: var(--light);
+    background-color: rgba(255,255,255,0.1);
     margin-top: 3%;
     text-align: center;
-    border: 5px solid var(--kids) ;
+    border: 2px solid var(--kids) ;
     border-radius: 89px;
+    
 }
 
 .Productowner {
-    background-color: var(--kids);
+    background-color: transparent;
   padding: 0px;
   margin-left: 100px;
   margin-right: 100px;
   margin-bottom: 20px;
+  border: 2px solid var(--kids);
+  border-radius: 89px;
 }
 
 .Scrum-master {
-    background-color: var(--kids);
+    background-color: transparent;
     padding: 0px;
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 20px;
+    border: 2px solid var(--kids);
+    border-radius: 89px;
 }
 .Stakeholder {
-    background-color: var(--kids);
+    background-color: transparent;
     padding: 0px;
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 20px;
+    border: 2px solid var(--kids);
+    border-radius: 89px;
 }
 .Developer {
-    background-color: var(--kids);
+    background-color: transparent;
     padding: 0px;
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 20px;
+    border: 2px solid var(--kids);
+    border-radius: 89px;
 }
 
 
