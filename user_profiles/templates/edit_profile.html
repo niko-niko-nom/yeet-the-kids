@@ -17,30 +17,51 @@
           </div>
           <div class="rounded-card" id="profile-info">
             <h1>Uw Informatie</h1>
-            <div id="profile-info-left">
-              <label for="{{ form.username.label }}">Uw naam:</label><br>
-              <label for="{{ form.age.label }}">Uw geboortedag:</label><br>
-              <label for="{{ form.city.label }}">Uw woonplaats:</label><br>
-              <label for="{{ form.gender.label }}">Uw gender:</label><br>
-              <label for="{{ form.pronouns.label }}">Uw voornaamwoorden:</label><br>
-              <label for="{{ form.number.label }}">Uw telefoonnummer:</label><br>
-              <label for="{{ form.email.label }}">Uw e-mailadres:</label><br>
-            </div>
-            <div id="profile-info-right">
-              {{ form.username.error }}
-              {{ form.username }}<br>
-              {{ form.birthday.error }}
-              {{ form.birthday }}<br>
-              {{ form.city.error }}
-              {{ form.city }}<br>
-              {{ form.gender.error }}
-              {{ form.gender }}<br>
-              {{ form.pronouns.error }}
-              {{ form.pronouns }}<br>
-              {{ form.number.error }}
-              {{ form.number }}<br>
-              {{ form.email.error }}
-              {{ form.email }}<br>
+            <div id="form-labels-inputs">
+              <div class="yet-another-class">
+                <label for="{{ form.username.label }}">Uw naam:</label><br>
+                <div class="space-filler"> </div>
+                <div class="profile-edit-inputs">
+                  {{ form.username.error }}
+                  {{ form.username }}<br>
+                </div>
+              </div>
+              <div class="yet-another-class">
+                <label for="{{ form.age.label }}">Uw geboortedag:</label><br>
+                <div class="space-filler"> </div>
+                {{ form.birthday.error }}
+                {{ form.birthday }}<br>
+              </div>
+              <div class="yet-another-class">
+                <label for="{{ form.city.label }}">Uw woonplaats:</label><br>
+                <div class="space-filler"> </div>
+                {{ form.city.error }}
+                {{ form.city }}<br>
+              </div>
+              <div class="yet-another-class">
+                <label for="{{ form.gender.label }}">Uw gender:</label><br>
+                <div class="space-filler"> </div>
+                {{ form.gender.error }}
+                {{ form.gender }}<br>
+              </div>
+              <div class="yet-another-class">
+                <label for="{{ form.pronouns.label }}">Uw voornaamwoorden:</label><br>
+                <div class="space-filler"> </div>
+                {{ form.pronouns.error }}
+                {{ form.pronouns }}<br>
+              </div>
+              <div class="yet-another-class">
+                <label for="{{ form.number.label }}">Uw telefoonnummer:</label><br>
+                <div class="space-filler"> </div>
+                {{ form.number.error }}
+                {{ form.number }}<br>
+              </div>
+              <div class="yet-another-class">
+                <label for="{{ form.email.label }}">Uw e-mailadres:</label><br>
+                <div class="space-filler"> </div>
+                {{ form.email.error }}
+                {{ form.email }}<br>
+              </div>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@
 {% load static from static %}
 {% block title %}{{ user.username }}s Profile{% endblock %}
 {% block head %}
-<link rel="stylesheet" href="{% static 'edit_profile.css' %}">
+<link rel="stylesheet" href="{% static 'styles.css' %}">
 {% endblock %}
 {% block content %}
 <!-- Main Content -->
@@ -13,22 +13,32 @@
                 <img src="" alt="Profile picture of {{ user.username }}" />
             </div>
             <div class="rounded-card" id="profile-info">
-                <div id="profile-info-left">
-                    <div class="profile-info-box" id="profile-name">Naam</div>
-                    <div class="profile-info-box" id="profile-age">Verjaardag</div>
-                    <div class="profile-info-box" id="profile-city">Woonplaats</div>
-                    <div class="profile-info-box" id="profile-gender">Geslacht</div>
-                    <div class="profile-info-box" id="profile-gender">Voornaamwoorden</div>
-                    <div class="profile-info-box" id="profile-gender">Telefoonnummer</div>
-                    <div class="profile-info-box" id="profile-gender">Emailadres</div>
+                <div class="info">
+                    <div class="profile-info-box-q" id="profile-name">Naam</div>
+                    <div class="profile-info-box" id="profile-name">{{ user.first_name }} {{user.last_name}}</div>
                 </div>
-                <div id="profile-info-right">
-                    <div class="profile-info-box" id="profile-name">{{ user.username }}</div>
+                <div class="info">
+                    <div class="profile-info-box-q" id="profile-age">Verjaardag</div>
                     <div class="profile-info-box" id="profile-age">{{ user.age }}</div>
+                </div>
+                <div class="info">
+                    <div class="profile-info-box-q" id="profile-city">Woonplaats</div>
                     <div class="profile-info-box" id="profile-city">{{ user.city }}</div>
+                </div>
+                <div class="info">
+                    <div class="profile-info-box-q" id="profile-gender">Geslacht</div>
                     <div class="profile-info-box" id="profile-gender">{{ user.gender }}</div>
+                </div>
+                <div class="info">
+                    <div class="profile-info-box-q" id="profile-gender">Voornaamwoorden</div>
                     <div class="profile-info-box" id="profile-gender">{{ user.pronouns }}</div>
+                </div>
+                <div class="info">
+                    <div class="profile-info-box-q" id="profile-gender">Telefoonnummer</div>
                     <div class="profile-info-box" id="profile-gender">{{ user.number }}</div>
+                </div>
+                <div class="info">
+                    <div class="profile-info-box-q" id="profile-gender">Emailadres</div>
                     <div class="profile-info-box" id="profile-gender">{{ user.email }}</div>
                 </div>
             </div>
@@ -57,7 +67,7 @@
                 <p>{{ user.trivia5 }}</p>
                 <p></p>
             </div>
-            <a href="edit_profile.html" id="profile-edit-link">
+            <a href="{% url 'edit_profile' current_name=user.username %}" id="profile-edit-link">
                 <div class="rounded-card" id="profile-edit-box">
                     Bewerk Dit Profiel...
                 </div>

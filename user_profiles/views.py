@@ -3,7 +3,6 @@ from django.contrib.auth.decorators import login_required
 from .forms import UserData
 from .models import User
 
-@login_required
 def profile_view(request, current_name):
 
     user = None
@@ -58,7 +57,6 @@ def edit_profile(request, current_name):
     })
     return render(request, 'edit_profile.html', {'form': form})
 
-@login_required
 def user_profile_list(request):
     profiles = User.objects.all()
-    return render(request, 'profiles/list.html', {'profiles': profiles})
+    return render(request, 'list.html', {'profiles': profiles})

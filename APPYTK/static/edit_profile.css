@@ -265,6 +265,62 @@ header img {
     flex-direction: column;
 }
 
+#profile-info {
+    height: auto !important;
+}
+
+#form-labels-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#profile-info-left {
+    text-align: left;
+    margin-right: 250px;
+}
+
+#profile-info-right {
+    text-align: right;
+}
+
+#profile-edit-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    width: auto;
+}
+
+.yet-another-class {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    width: 100%;
+    height: 2em;
+    background-color: var(--dark);
+    border-radius: var(--borderRadius);
+    text-wrap: nowrap;
+    padding: 0 15px 0 15px;
+}
+
+.space-filler {
+    width: 100%;
+}
+
+#profile-trivia {
+    height: auto;
+    width: 100%;
+}
+
+#profile-trivia label {
+    margin-bottom: -35px;
+}
+
 /* When screen is thinner than 1200px */
 @media screen and ( max-width: 1200px) {
 
