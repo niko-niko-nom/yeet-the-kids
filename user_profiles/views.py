@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .forms import UserData
 from .models import User
+import time
 
+@login_required
 def profile_view(request, current_name):
 
     user = None
@@ -34,10 +37,11 @@ def edit_profile(request, current_name):
         
         for i in form.changed_data:
             user[i] = form.cleaned_data[i]
-
-        user.save()
         
-        return redirect("profile", current_name=user.username)
+        if form.is_valid():
+            user.save()
+            messages.success(request, "Dit profiel is succesvol bijgewerkt!")
+            return redirect("profile", current_name=user.username)
 
     form = UserData(initial={
         'pfp': user.pfp,
@@ -55,8 +59,10 @@ def edit_profile(request, current_name):
         'trivia4': user.trivia4,
         'trivia5': user.trivia5,
     })
+
     return render(request, 'edit_profile.html', {'form': form})
 
+@login_required
 def user_profile_list(request):
     profiles = User.objects.all()
     return render(request, 'list.html', {'profiles': profiles})

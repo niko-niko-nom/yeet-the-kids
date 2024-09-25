@@ -23,8 +23,8 @@
             <a href="index.html">
                 <div>SCRUM</div>
             </a>
-            <a href="index.html">
-                <div>hbo-ICT</div>
+            <a href="{% url 'hbo' %}">
+                <div>HBO-ICT</div>
             </a>
             <a href="index.html">
                 <div>Help Ik Groei</div>
@@ -36,9 +36,18 @@
         <a href="{% url 'home' %}"><img src="{% static 'images/NextStep no bg.png' %}" /></a>
     </header>
 
-    <div style="height: 60px"></div>
+    <div style="height: 60px"></div>    
+    
+    <div id="messages">
+        {% for message in messages %}
+            <ul class="messages">
+                {{ message }}
+            </ul>
+        {% endfor %}
+    </div>
 
-    {% block content %}
+    {% block content %}    
+
     <div style="background-color: red; font-size: 3em; margin: 16px; padding: 16px">
         Error! No content block defined but using the base layout
     </div>
