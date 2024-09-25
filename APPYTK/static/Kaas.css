@@ -25,7 +25,7 @@ html {
 
  /* header elements */
 body{
-  background-image: url('kaaswallpaper.jpg');
+  background-image: url('/static/images/kaaswallpaper.jpg');
   display: flex;
   flex-direction: column;
   min-height: 125vh;
@@ -188,8 +188,8 @@ transition: 0.2s;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(orange,yellow);
-  height:150px;
-  font-size: 12px;
+  height:auto;
+  font-size: 17.5px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -199,5 +199,16 @@ transition: 0.2s;
   align-items: center;
   justify-content: center;
   display: flex;
+}
+
+.bars{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50px;
+  height: 100px;
+  background-image: linear-gradient(orange,yellow);
+  
 }
 

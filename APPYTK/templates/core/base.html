@@ -29,11 +29,11 @@
             <a href="index.html">
                 <div>Help Ik Groei</div>
             </a>
-            <a href="Kaas.inc/kaas.html">
+            <a href="{% url 'kaas' %}">
                 <div>🧀</div>
             </a>
         </nav>
-        <a href="{% url 'home' %}"><img src="./images/NextStep no bg.png" /></a>
+        <a href="{% url 'home' %}"><img src="{% static 'images/NextStep no bg.png' %}" /></a>
     </header>
 
     <div style="height: 60px"></div>

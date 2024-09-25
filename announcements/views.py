@@ -22,7 +22,7 @@ class EditAnnouncement(View):
     def get(self, request, id):
         announcement = models.Announcement.objects.get(id=id)
         form = forms.Editform(initial={"title": announcement.title, "text": announcement.text})
-        return render(request, "edit_announcements.html", {'form':form})
+        return render(request, "edit_announcements.html", {'form':form, 'announcement': announcement})
     def post(self, request, id):
         form = forms.Editform(request.POST)
 

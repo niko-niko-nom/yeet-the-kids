@@ -16,6 +16,7 @@
           python312
           python312Packages.django
           python312Packages.pillow
+          nodePackages.live-server
         ];
 
         shellHook = ''
