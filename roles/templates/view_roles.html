@@ -1,9 +1,9 @@
 {% extends 'core/base.html' %}
 {% block content %}
 <div>
-    {{announcement.title}}
-    {{announcement.text}}
-    <a href="/announcements/{{ announcement.id }}/edit">Edit</a>
+    {{role.title}}
+    {{role.text}}
+    <a href="/roles/{{ role.id }}/edit">Edit</a>
 
     <form method="POST">
         {% csrf_token %}
