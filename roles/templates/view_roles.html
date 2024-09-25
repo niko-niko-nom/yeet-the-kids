@@ -1,4 +1,5 @@
 {% extends 'core/base.html' %}
+{% load static from static %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'viewberoepsrollen.css' %}">
 {% endblock %}
@@ -14,20 +15,6 @@
     </form>
 </div>
 
-<div></div>
-    <form method="post">
-        {% csrf_token %}
-        <div>
-        {{form.title}}
-        </div>
-        <div>
-        {{form.text}}
-        </div>
-        <div>
-        <input type="submit">
-        </div>
-    </form>
-</div>
 
 <div class="container">
     <div class="role-info">
