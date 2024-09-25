@@ -123,7 +123,8 @@ footer p {
     margin-top: auto;
     margin-bottom: auto;
     cursor: pointer;
-
+    color: black;
+    text-decoration: none;
 }
 
 .announcement {
@@ -175,4 +176,17 @@ footer p {
 
 .add button:hover {
     background-color: #005555;
+}
+
+.center {
+    max-width: 800px;
+    margin: 16px auto;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+    padding: 16px 16px;
 }
