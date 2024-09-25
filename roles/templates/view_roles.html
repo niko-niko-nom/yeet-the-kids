@@ -18,10 +18,10 @@
 
 <div class="container">
     <div class="role-info">
-        <h2 id="CEO"> {{role.title}}</h2>
+        <h2 id="CEO">Beroep</h2>
         <br>
         <div class="open-rollen">
-            <span>Open rollen</span>   <i class='bx bx-right-arrow-alt'></i> 
+            <span> {{role.title}}</span>   <i class='bx bx-right-arrow-alt'></i> 
         </div>  
         <div  class="open-count">69</div>
         <br>
@@ -45,7 +45,7 @@
                 </div>
                 <br>
                 <div class="buttons" id="buttonsid">
-                    <button class="btn">edit</button>
+                    <a href="/roles/{{ role.id }}/edit"><button class="btn">Edit</button></a>  
                     <button class="btn">apply</button>
                 </div>
 
