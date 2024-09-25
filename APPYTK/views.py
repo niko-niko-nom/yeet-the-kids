@@ -6,3 +6,7 @@ from announcements.models import Announcement
 def home(request):
     announcements = Announcement.objects.order_by("-id")[:3]
     return render(request, "dashboard.html", { 'announcements': announcements })
+
+def hboict(request):
+    announcements = Announcement.objects.order_by("-id")[:3]
+    return render(request, "hboict.html")
