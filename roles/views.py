@@ -22,7 +22,7 @@ class EditRole(View):
     def get(self, request, id):
         role = models.Roles.objects.get(id=id)
         form = forms.Editform(initial={"title" : role.title, "text": role.text})
-        return render(request, "edit_roles.html", {'form':form})
+        return render(request, "edit_roles.html", {'form':form,})
     def post(self, request, id):
         form = forms.Editform(request.POST)
 
