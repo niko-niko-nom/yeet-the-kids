@@ -1,8 +1,23 @@
 {% extends 'core/base.html' %}
+{% load static from static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+<link rel="stylesheet" href="{% static 'anouncements.css' %}">
+{% endblock %}
 {% block content %}
-<div>
-    {% for announcement in announcements %}
-    <div>{{ announcement.title }}</div>
-    {% endfor %}
-</div>
+    <div class="container">
+        <div class="announcement-header">
+            <a class="back-button" href={% url 'home' %}>
+                &#8592;
+            </a>
+            Announcements
+        </div>
+        {% for announcement in announcements %}
+            <a class="announcement" href="{% url 'announcement' id=announcement.id %}">
+                {{ announcement.title }}
+            </a>
+        {% endfor %}
+    </div>
+
+    <a href="{% url 'new announcement' %}" class="add-button">+</a>
 {% endblock %}
