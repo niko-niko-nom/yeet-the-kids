@@ -14,7 +14,7 @@ class AnnouncementView(LoginRequiredMixin, View):
         announcement = models.Announcement.objects.get(id=id)
         return render(request, "view_announcements.html", {'announcement':announcement})
    
-    def post(seld, request, id):
+    def post(self, request, id):
         models.Announcement.objects.filter(id=id).delete()
         return redirect("announcements")
     
