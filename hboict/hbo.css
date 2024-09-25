@@ -144,17 +144,14 @@ color: var(--hurood);
 }
 
 .container{
-
-background-color: var(--light);
 width: 420px;
-background: transparent ;
 border: 2px solid #E6302B;
 backdrop-filter: blur 20px;
 box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 color: #000000;
 border-radius: 10px;
 padding: 30px 40px;
-background-color: rgba(255,255,255,0.5);
+background-color: rgba(255,255,255,0.75);
 }
 
 .center{
@@ -162,4 +159,4 @@ background-color: rgba(255,255,255,0.5);
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 75px;
-}
+}}
