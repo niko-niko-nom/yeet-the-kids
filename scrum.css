@@ -113,7 +113,7 @@ footer p {
 
 
 #hero {
-    background: #0073e6;
+    background: var(--darker);
     color: #fff;
     padding: 50px 0;
     text-align: center;
@@ -121,6 +121,7 @@ footer p {
 
 #hero h2 {
     font-size: 2rem;
+    color: var(--light);
 }
 
 #hero p {
@@ -133,7 +134,7 @@ section {
 
 .container {
     width: 80%;
-    margin: auto;
+    margin: 20px auto;
     overflow: hidden;
 }
 
