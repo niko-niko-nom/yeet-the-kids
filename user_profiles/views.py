@@ -37,7 +37,7 @@ def edit_profile(request, current_name):
 
         user.save()
         
-        return redirect("profile", current_name=user.username, "/?success=true")
+        return redirect("profile", current_name=user.username)
 
     form = UserData(initial={
         'pfp': user.pfp,
