@@ -1,17 +1,42 @@
 {% extends 'core/base.html' %}
+{% load static from static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+<link rel="stylesheet" href="{% static 'anouncements.css' %}">
+{% endblock %}
 {% block content %}
-<div>
-    <form method="post">
-        {% csrf_token %}
-        <div>
-        {{form.title}}
-        </div>
-        <div>
-        {{form.text}}
-        </div>
-        <div>
-        <input type="submit">
-        </div>
-    </form>
+<div class="container">
+    {% if announcement != None %}
+    <div class="announcement-header">
+        <a class="back-button" href={% url 'announcement' id=announcement.id %}>
+            &#8592;
+        </a>
+        Edit {{ announcement.title }}
+    </div>
+    {% else %}
+    <div class="announcement-header">
+        <a class="back-button" href={% url 'announcements' %}>
+            &#8592;
+        </a>
+        Create a new announcement
+    </div>
+    {% endif %}
+    <div class="center">
+        <form method="post">
+            {% csrf_token %}
+            <div style="margin: 16px">
+                {{form.title.error}}
+                {{form.title.label}}
+                {{form.title}}
+            </div>
+            <div class="rounded-card" style="width: 100% !important;">
+                {{form.title.error}}
+                {{form.text}}
+            </div>
+            <div class="button-container">
+            <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
 </div>
 {% endblock %}
