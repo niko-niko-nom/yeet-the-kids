@@ -115,11 +115,12 @@ footer p {
 .container{
     margin-top: 100px;
     margin-bottom: 20px;
+    margin-left: 400px;
+    margin-right: 400px;
     padding: 15px;
-    background-color: var(--light);
+    background-color: transparent;
     text-align: center;
-    border: 5px solid var(--kids) ;
-    border-radius: 89px;
+
 }
 
 #InfoforScrum {
@@ -149,36 +150,45 @@ footer p {
     text-align: center;
     border: 5px solid var(--kids) ;
     border-radius: 89px;
+    
 }
 
 .Productowner {
-    background-color: var(--kids);
+    background-color: transparent;
   padding: 0px;
   margin-left: 100px;
   margin-right: 100px;
   margin-bottom: 20px;
+  border: 5px solid var(--kids);
+  border-radius: 89px;
 }
 
 .Scrum-master {
-    background-color: var(--kids);
+    background-color: transparent;
     padding: 0px;
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 20px;
+    border: 5px solid var(--kids);
+    border-radius: 89px;
 }
 .Stakeholder {
-    background-color: var(--kids);
+    background-color: transparent;
     padding: 0px;
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 20px;
+    border: 5px solid var(--kids);
+    border-radius: 89px;
 }
 .Developer {
-    background-color: var(--kids);
+    background-color: transparent;
     padding: 0px;
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 20px;
+    border: 5px solid var(--kids);
+    border-radius: 89px;
 }
 
 
