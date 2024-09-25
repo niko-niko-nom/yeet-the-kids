@@ -67,6 +67,25 @@ def user_profile_list(request):
     return render(request, 'list.html', {'profiles': profiles})
 
 @login_required
-def new_user(request):
-    name = request.GET.get('name', '')
-    return render(request, 'edit_profile.html', {'name': name})
+def create_user(request):
+    if request.method == 'GET':
+        form = newUserForm()
+        return render(request, "edit_profile.html", {'form': form})
+
+    if request.method == 'POST':
+        form = newUserForm(request.POST)
+
+        if not form.is_valid():
+            return render(request, "list.html", {'form': form})
+        
+        name = form.cleaned_data["username"]
+
+        if User.objects.filter(name=name).exists():
+            form.add_error('name', 'Een collega met deze naam bestaat al.')
+            return render(request, "list.html", {'form': form})
+
+        user = User()
+        user.set_password('password')  # Hash the password
+        user.save()
+
+        return redirect("profile", username=user.username)
