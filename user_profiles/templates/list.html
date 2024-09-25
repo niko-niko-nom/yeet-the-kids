@@ -20,12 +20,12 @@
                 <div class="initials">+</div>
             </div>
             <div class="basic-info-block">
-                <form id="newUserForm">
-                    <label for="name">Voeg een nieuwe collega toe:</label>
-                    <input type="text" id="name" name="name" required>
+                <form method="POST">
+                    {% csrf_token %}
+                    <label for="id_first_name">First Name:</label>
+                    {{ form }}<br>
                     <button type="submit">Opslaan</button>
                 </form>
-                <script src="{% static 'new_user.js' %}"></script>
             </div>
         </div>
 

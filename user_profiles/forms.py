@@ -1,6 +1,13 @@
 from django import forms
+from .models import User
 
-class UserData(forms.Form):
+class NewUserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['first_name']
+
+
+class User(forms.Form):
     GENDERS = [
         ('geheim', 'Geheim'),
         ('vrouw', 'Vrouwelijk'),
