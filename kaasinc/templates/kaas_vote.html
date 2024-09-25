@@ -1,0 +1,34 @@
+{% extends 'kaas/base.html' %}
+{% load static from static %}
+
+{% block content %}
+
+    <div class="maindiv">
+        Welkom bij Kaas Incorporated!
+
+        Dit is de plek waar jullie, onze gewaardeerde klanten, kunnen stemmen op welke concurrent we deze week
+        zullen uitroeien. Zoals al op de hoofdpagina is verteld, laten we bij Kaas Incorporated niets aan het toeval
+        over. Wij zijn vastberaden om de kaasmarkt volledig te domineren, en dat doen we door onze concurrenten
+        systematisch van de kaart te bombarderen.
+
+        Elke week kiezen jullie welke rivaal we zullen aanpakken en met de grond gelijkmaken. Jullie stem bepaalt
+        welk bedrijf deze week wordt geëlimineerd, zodat Kaas Incorporated de onbetwiste leider blijft.
+
+        Breng je stem uit en help ons de concurrentie te verpletteren!
+    </div>
+
+    <div class="poll2">
+        <form method="POST">
+            <div class="stem6">
+                <h2>Breng hier uw stem uit:</h2>
+            </div>
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Stem" />
+        </form>
+    </div>
+
+    <div class="bars"> 
+       
+    </div>
+{% endblock %}

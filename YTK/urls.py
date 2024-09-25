@@ -25,4 +25,5 @@ urlpatterns = [
     path("profiles/", include("user_profiles.urls")),
     path("announcements/", include("announcements.urls")),
     path("roles/", include("roles.urls")),
+    path("kaas/", include("kaasinc.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_URL)
