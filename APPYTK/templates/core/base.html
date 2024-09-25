@@ -36,15 +36,17 @@
         <a href="{% url 'home' %}"><img src="./images/NextStep no bg.png" /></a>
     </header>
 
-    <div style="height: 60px"></div>
+    <div style="height: 60px"></div>    
+    
+    <div id="messages">
+        {% for message in messages %}
+            <ul class="messages">
+                {{ message }}
+            </ul>
+        {% endfor %}
+    </div>
 
     {% block content %}    
-    
-    {% for message in messages %}
-        <ul class="messages">
-            {{ message }}
-        </ul>
-    {% endfor %}
 
     <div style="background-color: red; font-size: 3em; margin: 16px; padding: 16px">
         Error! No content block defined but using the base layout

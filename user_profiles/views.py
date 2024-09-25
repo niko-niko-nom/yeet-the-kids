@@ -40,7 +40,7 @@ def edit_profile(request, current_name):
         
         if form.is_valid():
             user.save()
-            messages.success(request, "Dit profiel is succesvol bijgewerkt! U wordt automatisch teruggestuurd.")
+            messages.success(request, "Dit profiel is succesvol bijgewerkt!")
             return redirect("profile", current_name=user.username)
 
     form = UserData(initial={

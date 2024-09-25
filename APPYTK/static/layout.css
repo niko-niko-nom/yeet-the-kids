@@ -71,3 +71,23 @@ footer p {
     justify-content: center;
     gap: 5px;
 }
+
+/* Messages styles */
+#messages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1200;
+    margin: 15px;
+}
+
+.messages {
+    background-color: var(--kids);
+    color: var(--light);
+    font-weight: bold;
+    height: auto;
+    width: 50%;
+    border-radius: var(--borderRadius);
+    padding: 15px;
+    text-align: center;
+}
