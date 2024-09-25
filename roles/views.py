@@ -7,20 +7,20 @@ from . import forms
 class RoleListView(View):
     def get(self, request):
         roles = models.Roles.objects.all()
-        return HttpResponse('kaas')
+        return render(request, "roles.html", {'roles':roles})
     
 class RolesView(View):
     def get(self, request, id):
         role = models.Roles.objects.get(id=id)
-        return HttpResponse('kaas')
+        return render(request, "view_roles.html", {'role':role})
 
 class CreateRoles(View):
     def get(self, request,):
         form = forms.Editform()
-        return HttpResponse('kaas')
+        return render(request, "edit_announcements.html", {'form':form})
     
     def post(self, request):
         form = forms.Editform(request.POST)
 
         if not form.is_valid():
-            return HttpResponse('kaas')
+            return render(request, "edit_roles.html", {'form':form})
