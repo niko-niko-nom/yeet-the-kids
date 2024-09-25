@@ -1,10 +1,13 @@
 :root {
     --yeet: #89cdc6;
-    --the: #338296;
+    --the: #00A1E1 !important;
     --kids: #e43d82;
     --light: #fef5f7;
     --dark: #1a4c5d;
-    --darker: #073b4c;
+    --darker: #E6302B;
+    --hublauw: #00A1E1;
+    --hurood: #E6302B;
+    
 }
 
 * {
@@ -23,11 +26,11 @@ body {
     min-height: 100vh;
     height: 100%;
     width: 100%;
-    background: linear-gradient(var(--yeet), var(--the), var(--kids));
+/*    background: linear-gradient(var(--yeet), var(--the), var(--kids)); */
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-}
+    background-image: url('/static/images/hl15.png');
 
 .new-child {
     flex-grow: 1;
@@ -82,13 +85,15 @@ header img {
 
 /* footer elements */
 footer {
+    color: white;
     position: fixed;
     width: 100%;
     bottom: 0;
     height: 60px;
     display: flex;
     flex-direction: column;
-    background-color: var(--light);
+    background-color: #00A1E1 !important;
+    
     padding: 10px;
 }
 
@@ -106,79 +111,52 @@ footer p {
     gap: 5px;
 }
 
+.title{
+display: flex;
+gap: 12.5px;
+margin-top: 55px;
+height: 10px;
+font-size: 1.5em;
+padding: 5px;
+justify-content: center;
+}
 
+.HU img{
+height: 40px;
+}
 
+.blue{
+    color: var(--hublauw);
+}
 
-/*scrum info*/
+.white{
+    color: var(--light);
+}
 
+.red{
+color: var(--hurood);
+}
+
+.title h2{
+    display: flex;
+    flex-direction: row;
+    gap: 5.5px;
+}
 
 .container{
-    margin-top: 100px;
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: var(--light);
-    text-align: center;
-    border: 5px solid var(--kids) ;
-    border-radius: 89px;
+width: 420px;
+border: 2px solid #E6302B;
+backdrop-filter: blur 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+color: #000000;
+border-radius: 10px;
+padding: 30px 40px;
+background-color: rgba(255,255,255,0.75);
 }
 
-#InfoforScrum {
-    background-color: var(--darker);
-    padding: 20px;
-    margin-left: 400px;
-    margin-right: 400px;
-    font-size: large;
-    text-align: center;
-    background: transparent ;
-    border: 5px solid var(--kids);
-    border-radius: 89px;
-    backdrop-filter: blur 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    color: #fff;
-}
-
-.Rollenlist {
-    text-align: center;
-    list-style-position: inside;
-    padding: 20px;
-}
-
-.Rollen {
-    background-color: var(--light);
-    margin-top: 3%;
-    text-align: center;
-    border: 5px solid var(--kids) ;
-    border-radius: 89px;
-}
-
-.Productowner {
-    background-color: var(--kids);
-  padding: 0px;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: 20px;
-}
-
-.Scrum-master {
-    background-color: var(--kids);
-    padding: 0px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 20px;
-}
-.Stakeholder {
-    background-color: var(--kids);
-    padding: 0px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 20px;
-}
-.Developer {
-    background-color: var(--kids);
-    padding: 0px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 20px;
-}
-
-
+.center{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 75px;
+}}

@@ -1,13 +1,29 @@
 {% extends 'core/base.html' %}
+{% load static from static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+<link rel="stylesheet" href="{% static 'anouncements.css' %}">
+{% endblock %}
 {% block content %}
-<div>
-    {{announcement.title}}
-    {{announcement.text}}
-    <a href="/announcements/{{ announcement.id }}/edit">Edit</a>
+<div class="container">
+    <div class="announcement-header">
+        <a class="back-button" href={% url 'announcements' %}>
+            &#8592;
+        </a>
+        {{announcement.title}}
+    </div>
+    <div class="center">
+        <div class="rounded-card" style="width: 100% !important; color: white;">
+            {{announcement.text}}
+        </div>
 
-    <form method="POST">
-        {% csrf_token %}
-        <input type="submit" value="Delete">
-    </form>
+        <div class="button-container">
+            <a href="{% url 'edit announcement' id=announcement.id %}">Edit</a>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="submit" value="Delete">
+            </form>
+        </div>
+    </div>
 </div>
 {% endblock %}
