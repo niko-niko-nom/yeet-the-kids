@@ -7,108 +7,116 @@
 {% endblock %}
 {% block content %}
   <div id="main-content">
-    <div id="profile-container">
-      <form method="post" enctype="multipart/form-data">
-        <div class="profile-row" id="row1">
-          {% csrf_token %}
-          <div class="rounded-card" id="profile-pfp">
-            <h1><label for="{{ form.pfp.label }}">Upload uw profielfoto:</label></h1><br>
-            {{ form.pfp }}<br>
-          </div>
-          <div class="rounded-card" id="profile-info">
-            <h1>Uw Informatie</h1>
-            <div id="form-labels-inputs">
-              <div class="yet-another-class">
-                <label for="{{ form.username.label }}">Uw naam:</label><br>
-                <div class="space-filler"> </div>
-                <div class="profile-edit-inputs">
-                  {{ form.username.error }}
-                  {{ form.username }}<br>
+      <div>
+        <div class="page-header">
+            <a class="back-button" href={% url 'profile' current_name=profile.username %}>
+                &#8592;
+            </a>
+            Edit profile
+        </div>
+        <div id="profile-container">
+          <form method="post" enctype="multipart/form-data">
+            <div class="profile-row" id="row1">
+              {% csrf_token %}
+              <div class="rounded-card" id="profile-pfp">
+                <h1><label for="{{ form.pfp.label }}">Upload uw profielfoto:</label></h1><br>
+                {{ form.pfp }}<br>
+              </div>
+              <div class="rounded-card" id="profile-info">
+                <h1>Uw Informatie</h1>
+                <div id="form-labels-inputs">
+                  <div class="yet-another-class">
+                    <label for="{{ form.username.label }}">Uw naam:</label><br>
+                    <div class="space-filler"> </div>
+                    <div class="profile-edit-inputs">
+                      {{ form.username.error }}
+                      {{ form.username }}<br>
+                    </div>
+                  </div>
+                  <div class="yet-another-class">
+                    <label for="{{ form.age.label }}">Uw geboortedag:</label><br>
+                    <div class="space-filler"> </div>
+                    {{ form.birthday.error }}
+                    {{ form.birthday }}<br>
+                  </div>
+                  <div class="yet-another-class">
+                    <label for="{{ form.city.label }}">Uw woonplaats:</label><br>
+                    <div class="space-filler"> </div>
+                    {{ form.city.error }}
+                    {{ form.city }}<br>
+                  </div>
+                  <div class="yet-another-class">
+                    <label for="{{ form.gender.label }}">Uw gender:</label><br>
+                    <div class="space-filler"> </div>
+                    {{ form.gender.error }}
+                    {{ form.gender }}<br>
+                  </div>
+                  <div class="yet-another-class">
+                    <label for="{{ form.pronouns.label }}">Uw voornaamwoorden:</label><br>
+                    <div class="space-filler"> </div>
+                    {{ form.pronouns.error }}
+                    {{ form.pronouns }}<br>
+                  </div>
+                  <div class="yet-another-class">
+                    <label for="{{ form.number.label }}">Uw telefoonnummer:</label><br>
+                    <div class="space-filler"> </div>
+                    {{ form.number.error }}
+                    {{ form.number }}<br>
+                  </div>
+                  <div class="yet-another-class">
+                    <label for="{{ form.email.label }}">Uw e-mailadres:</label><br>
+                    <div class="space-filler"> </div>
+                    {{ form.email.error }}
+                    {{ form.email }}<br>
+                  </div>
                 </div>
               </div>
-              <div class="yet-another-class">
-                <label for="{{ form.age.label }}">Uw geboortedag:</label><br>
-                <div class="space-filler"> </div>
-                {{ form.birthday.error }}
-                {{ form.birthday }}<br>
+            </div>
+            <div class="profile-row" id="row2">
+              <div class="rounded-card" id="profile-roles">
+                <h1>Uw Rollen</h1>
+                <!-- Render each role as a checkbox -->
+                <label for="{{ form.ceo.label }}">Chief Executive Officer (CEO)</label>
+                <label for="{{ form.cco.label }}">Chief Cheese Officer (CCO)</label>
+                <label for="{{ form.kaaskop.label }}">Kaaskop</label>
+                <label for="{{ form.kaastester.label }}">Kaastester</label>
+                <label for="{{ form.dev.label }}">Developer</label>
+                <label for="{{ form.master.label }}">SCRUM Master</label>
+                <label for="{{ form.owner.label }}">Product Owner</label>
+                <label for="{{ form.caf.label }}">Cafetariamedewerker</label> 
+
               </div>
-              <div class="yet-another-class">
-                <label for="{{ form.city.label }}">Uw woonplaats:</label><br>
-                <div class="space-filler"> </div>
-                {{ form.city.error }}
-                {{ form.city }}<br>
-              </div>
-              <div class="yet-another-class">
-                <label for="{{ form.gender.label }}">Uw gender:</label><br>
-                <div class="space-filler"> </div>
-                {{ form.gender.error }}
-                {{ form.gender }}<br>
-              </div>
-              <div class="yet-another-class">
-                <label for="{{ form.pronouns.label }}">Uw voornaamwoorden:</label><br>
-                <div class="space-filler"> </div>
-                {{ form.pronouns.error }}
-                {{ form.pronouns }}<br>
-              </div>
-              <div class="yet-another-class">
-                <label for="{{ form.number.label }}">Uw telefoonnummer:</label><br>
-                <div class="space-filler"> </div>
-                {{ form.number.error }}
-                {{ form.number }}<br>
-              </div>
-              <div class="yet-another-class">
-                <label for="{{ form.email.label }}">Uw e-mailadres:</label><br>
-                <div class="space-filler"> </div>
-                {{ form.email.error }}
-                {{ form.email }}<br>
+              <div class="rounded-card" id="profile-about-me">
+                <h1>Biografie</h1>
+                <h2><label for="{{ form.bio.label }}">Schrijf een mooie tekst over uzelf, of laat ChatGPT het doen.</label></h2><br>
+                {{ form.bio }}<br>
               </div>
             </div>
-          </div>
+            <div class="profile-row" id="row3">
+              <div class="rounded-card" id="profile-trivia">
+                <h1>Trivia</h1>
+                <label for="{{ form.trivia1.label }}">Een leuk feitje over u.</label><br>
+                {{ form.trivia1.error }}<br>
+                {{ form.trivia1 }}<br>
+                <label for="{{ form.trivia2.label }}">Een leuker feitje over u.</label><br>
+                {{ form.trivia2.error }}<br>
+                {{ form.trivia2 }}<br>
+                <label for="{{ form.trivia3.label }}">Een nóg leuker feitje over u.</label><br>
+                {{ form.trivia3.error }}<br>
+                {{ form.trivia3 }}<br>
+                <label for="{{ form.trivia4.label }}">Een haast onmogelijk leuk feitje over u.</label><br>
+                {{ form.trivia4.error }}<br>
+                {{ form.trivia4 }}<br>
+                <label for="{{ form.trivia5.label }}">Het allerleukste feitje over u.</label><br>
+                {{ form.trivia5.error }}<br>
+                {{ form.trivia5 }}<br>
+              </div>
+              <div class="rounded-card" id="profile-edit-box">
+                <input type="submit" value="Save Changes">
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="profile-row" id="row2">
-          <div class="rounded-card" id="profile-roles">
-            <h1>Uw Rollen</h1>
-            <!-- Render each role as a checkbox -->
-            <label for="{{ form.ceo.label }}">Chief Executive Officer (CEO)</label>
-            <label for="{{ form.cco.label }}">Chief Cheese Officer (CCO)</label>
-            <label for="{{ form.kaaskop.label }}">Kaaskop</label>
-            <label for="{{ form.kaastester.label }}">Kaastester</label>
-            <label for="{{ form.dev.label }}">Developer</label>
-            <label for="{{ form.master.label }}">SCRUM Master</label>
-            <label for="{{ form.owner.label }}">Product Owner</label>
-            <label for="{{ form.caf.label }}">Cafetariamedewerker</label> 
-
-          </div>
-          <div class="rounded-card" id="profile-about-me">
-            <h1>Biografie</h1>
-            <h2><label for="{{ form.bio.label }}">Schrijf een mooie tekst over uzelf, of laat ChatGPT het doen.</label></h2><br>
-            {{ form.bio }}<br>
-          </div>
-        </div>
-        <div class="profile-row" id="row3">
-          <div class="rounded-card" id="profile-trivia">
-            <h1>Trivia</h1>
-            <label for="{{ form.trivia1.label }}">Een leuk feitje over u.</label><br>
-            {{ form.trivia1.error }}<br>
-            {{ form.trivia1 }}<br>
-            <label for="{{ form.trivia2.label }}">Een leuker feitje over u.</label><br>
-            {{ form.trivia2.error }}<br>
-            {{ form.trivia2 }}<br>
-            <label for="{{ form.trivia3.label }}">Een nóg leuker feitje over u.</label><br>
-            {{ form.trivia3.error }}<br>
-            {{ form.trivia3 }}<br>
-            <label for="{{ form.trivia4.label }}">Een haast onmogelijk leuk feitje over u.</label><br>
-            {{ form.trivia4.error }}<br>
-            {{ form.trivia4 }}<br>
-            <label for="{{ form.trivia5.label }}">Het allerleukste feitje over u.</label><br>
-            {{ form.trivia5.error }}<br>
-            {{ form.trivia5 }}<br>
-          </div>
-          <div class="rounded-card" id="profile-edit-box">
-            <input type="submit" value="Save Changes">
-          </div>
-        </div>
-      </form>
     </div>
   </div>
 {% endblock %}
