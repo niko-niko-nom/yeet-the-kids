@@ -35,7 +35,11 @@
         <a href="/profiles/{{ profile.username }}" class="user-profile-link">
             <div class="user">
                 <div class="initials-icon">
-                    <div class="initials">{{ profile.first_name|make_list|first }}.{{ profile.last_name|make_list|first }}.</div>
+                    {% if profile.pfp.url != None %}
+                        <img class="initials" src="{{ profile.pfp.url }}" alt="Profile pic of {{ profile.username }}">
+                    {% else %}
+                        <div class="initials">{{ profile.first_name|make_list|first }}.{{ profile.last_name|make_list|first }}.</div>
+                    {% endif %}
                 </div>
                 <div class="basic-info-block">
                     <div class="full-name">{{ profile.first_name }} {{ profile.last_name }}</div>
