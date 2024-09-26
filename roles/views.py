@@ -6,8 +6,9 @@ from . import forms
 # Create your views here.
 class RoleListView(View):
     def get(self, request):
-        roles = models.Roles.objects.all()
-        return render(request, "roles.html", {'roles':roles})
+        roles = models.Roles.objects.filter(number=0)
+        availableRoles = models.Roles.objects.filter(number__gt=0)
+        return render(request, "roles.html", {'roles': roles, 'available': availableRoles})
     
 class RolesView(View):
     def get(self, request, id):
