@@ -88,11 +88,22 @@ def user_profile_list(request):
 def upload_profile_picture(request, current_name):
     form = UploadProfilePicture()
 
+    user = None
+    try:
+        user = User.objects.get(username__iexact=current_name)
+    except User.DoesNotExist:
+        return render(request, '404.html')
+
+    if not request.user.has_perm("user.update") and request.user.id != user.id:
+        return render(request, '404.html')
+
     if request.method == 'POST':
         form = UploadProfilePicture(request.POST, request.FILES)
         if not form.is_valid():
-            return render(request, 'profile_pic.html', {'form': form})
+            return render(request, 'profile_pic.html', {'form': form, 'profile': user})
+        user.pfp = form.cleaned_data['pfp']
+        user.save()
         return redirect("profile", current_name=current_name)
 
-    return render(request, 'profile_pic.html', {'form': form})
+    return render(request, 'profile_pic.html', {'form': form, 'profile': user})
 
