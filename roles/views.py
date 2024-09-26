@@ -21,7 +21,7 @@ class RolesView(View):
 class EditRole(View):
     def get(self, request, id):
         role = models.Roles.objects.get(id=id)
-        form = forms.Editform(initial={"title" : role.title, "text": role.text})
+        form = forms.Editform(initial={"title" : role.title, "text" : role.text, "number" :role.number})
         return render(request, "edit_roles.html", {'form':form,})
 
     def post(self, request, id):
@@ -32,6 +32,7 @@ class EditRole(View):
         role = models.Roles.objects.get(id=id)
         role.title = form.cleaned_data['title']
         role.text = form.cleaned_data['text']
+        role.number = form.cleaned_data['number']
         role.save()
         return redirect('role', id=role.id)
 
@@ -51,7 +52,7 @@ class CreateRoles(View):
 
         print("hallo 1")
         
-        role = models.Roles(title=form.cleaned_data["title"], text=form.cleaned_data["text"])
+        role = models.Roles(title=form.cleaned_data["title"], text=form.cleaned_data["text"], number=form.cleaned_data['number'])
         role.save()
 
         return redirect("role", id=role.id)
