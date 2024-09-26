@@ -7,71 +7,79 @@
 {% block content %}
 <!-- Main Content -->
 <div id="main-content">
-    <div id="profile-container">
-        <div class="profile-row" id="row1">
-            <div class="rounded-card" id="profile-pfp">
-                <img src="" alt="Profile picture of {{ user.username }}" />
-            </div>
-            <div class="rounded-card" id="profile-info">
-                <div class="info">
-                    <div class="profile-info-box-q" id="profile-name">Naam</div>
-                    <div class="profile-info-box" id="profile-name">{{ user.first_name }} {{user.last_name}}</div>
-                </div>
-                <div class="info">
-                    <div class="profile-info-box-q" id="profile-age">Verjaardag</div>
-                    <div class="profile-info-box" id="profile-age">{{ user.age }}</div>
-                </div>
-                <div class="info">
-                    <div class="profile-info-box-q" id="profile-city">Woonplaats</div>
-                    <div class="profile-info-box" id="profile-city">{{ user.city }}</div>
-                </div>
-                <div class="info">
-                    <div class="profile-info-box-q" id="profile-gender">Geslacht</div>
-                    <div class="profile-info-box" id="profile-gender">{{ user.gender }}</div>
-                </div>
-                <div class="info">
-                    <div class="profile-info-box-q" id="profile-gender">Voornaamwoorden</div>
-                    <div class="profile-info-box" id="profile-gender">{{ user.pronouns }}</div>
-                </div>
-                <div class="info">
-                    <div class="profile-info-box-q" id="profile-gender">Telefoonnummer</div>
-                    <div class="profile-info-box" id="profile-gender">{{ user.number }}</div>
-                </div>
-                <div class="info">
-                    <div class="profile-info-box-q" id="profile-gender">Emailadres</div>
-                    <div class="profile-info-box" id="profile-gender">{{ user.email }}</div>
-                </div>
-            </div>
-        </div>
-        <div class="profile-row" id="row2">
-            <div class="rounded-card" id="profile-roles">
-                <h1>Mijn Rollen</h1>
-                <div class="profile-role" id="profile-role1">CEO</div>
-                <div class="profile-role" id="profile-role2">CTO</div>
-                <div class="profile-role" id="profile-role3">CFO</div>
-            </div>
-            <div class="rounded-card" id="profile-about-me">
-                <h1>Alles Over Mij</h1>
-                <p>
-                    {{ user.bio }}
-                </p>
-            </div>
-        </div>
-        <div class="profile-row" id="row3">
-            <div class="rounded-card" id="profile-trivia">
-                <h1>Trivia</h1>
-                <p>{{ user.trivia1 }}</p>
-                <p>{{ user.trivia2 }}</p>
-                <p>{{ user.trivia3 }}</p>
-                <p>{{ user.trivia4 }}</p>
-                <p>{{ user.trivia5 }}</p>
-                <p></p>
-            </div>
-            <a href="{% url 'edit_profile' current_name=user.username %}" id="profile-edit-link">
-                <div class="rounded-card" id="profile-edit-box">
-                    Bewerk Dit Profiel...
-                </div>
+    <div>
+        <div class="page-header">
+            <a class="back-button" href={% url 'user_profile_list' %}>
+                &#8592;
             </a>
+            Profiles
+        </div>
+        <div id="profile-container">
+            <div class="profile-row" id="row1">
+                <div class="rounded-card" id="profile-pfp">
+                    <img src="" alt="Profile picture of {{ user.username }}" />
+                </div>
+                <div class="rounded-card" id="profile-info">
+                    <div class="info">
+                        <div class="profile-info-box-q" id="profile-name">Naam</div>
+                        <div class="profile-info-box" id="profile-name">{{ user.first_name }} {{user.last_name}}</div>
+                    </div>
+                    <div class="info">
+                        <div class="profile-info-box-q" id="profile-age">Verjaardag</div>
+                        <div class="profile-info-box" id="profile-age">{{ user.age }}</div>
+                    </div>
+                    <div class="info">
+                        <div class="profile-info-box-q" id="profile-city">Woonplaats</div>
+                        <div class="profile-info-box" id="profile-city">{{ user.city }}</div>
+                    </div>
+                    <div class="info">
+                        <div class="profile-info-box-q" id="profile-gender">Geslacht</div>
+                        <div class="profile-info-box" id="profile-gender">{{ user.gender }}</div>
+                    </div>
+                    <div class="info">
+                        <div class="profile-info-box-q" id="profile-gender">Voornaamwoorden</div>
+                        <div class="profile-info-box" id="profile-gender">{{ user.pronouns }}</div>
+                    </div>
+                    <div class="info">
+                        <div class="profile-info-box-q" id="profile-gender">Telefoonnummer</div>
+                        <div class="profile-info-box" id="profile-gender">{{ user.number }}</div>
+                    </div>
+                    <div class="info">
+                        <div class="profile-info-box-q" id="profile-gender">Emailadres</div>
+                        <div class="profile-info-box" id="profile-gender">{{ user.email }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-row" id="row2">
+                <div class="rounded-card" id="profile-roles">
+                    <h1>Mijn Rollen</h1>
+                    <div class="profile-role" id="profile-role1">CEO</div>
+                    <div class="profile-role" id="profile-role2">CTO</div>
+                    <div class="profile-role" id="profile-role3">CFO</div>
+                </div>
+                <div class="rounded-card" id="profile-about-me">
+                    <h1>Alles Over Mij</h1>
+                    <p>
+                        {{ user.bio }}
+                    </p>
+                </div>
+            </div>
+            <div class="profile-row" id="row3">
+                <div class="rounded-card" id="profile-trivia">
+                    <h1>Trivia</h1>
+                    <p>{{ user.trivia1 }}</p>
+                    <p>{{ user.trivia2 }}</p>
+                    <p>{{ user.trivia3 }}</p>
+                    <p>{{ user.trivia4 }}</p>
+                    <p>{{ user.trivia5 }}</p>
+                    <p></p>
+                </div>
+                <a href="{% url 'edit_profile' current_name=user.username %}" id="profile-edit-link">
+                    <div class="rounded-card" id="profile-edit-box">
+                        Bewerk Dit Profiel...
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </div>

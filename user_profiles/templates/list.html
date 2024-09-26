@@ -1,6 +1,6 @@
 {% extends 'core/base.html' %}
 {% load static from static %}
-{% block title %}{{ user.username }}s Profile{% endblock %}
+{% block title %}Alle Collega's{% endblock %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'profiles_list.css' %}">
 {% endblock %}
@@ -8,6 +8,27 @@
 <!-- Main Content -->
 <div id="main-content">
     <div class="all-profiles">
+
+        <div class="page-header">
+            <a class="back-button" href={% url 'home' %}>
+                &#8592;
+            </a>
+        </div>
+        
+        <div class="user" id="newUser">
+            <div class="initials-icon">
+                <div class="initials">+</div>
+            </div>
+            <div class="basic-info-block">
+                <form method="POST">
+                    {% csrf_token %}
+                    <label for="id_first_name">First Name:</label>
+                    {{ form }}<br>
+                    <button type="submit">Opslaan</button>
+                </form>
+            </div>
+        </div>
+
         {% for profile in profiles %}
         <a href="/profiles/{{ profile.first_name }}" class="user-profile-link">
             <div class="user">

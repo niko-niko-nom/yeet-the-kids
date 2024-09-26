@@ -1,6 +1,13 @@
 from django import forms
+from .models import User
 
-class UserData(forms.Form):
+class NewUserForm(forms.Form):
+    username = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'Enter your name'
+    }))
+
+class UserForm(forms.Form):
     GENDERS = [
         ('geheim', 'Geheim'),
         ('vrouw', 'Vrouwelijk'),
