@@ -4,3 +4,5 @@ from django.db import models
 class Roles(models.Model):
     title = models.CharField(max_length=32)
     text = models.TextField()
+    number = models.IntegerField(default=1)
+    
