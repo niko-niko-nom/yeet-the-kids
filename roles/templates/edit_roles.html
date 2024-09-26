@@ -10,17 +10,23 @@
             {% csrf_token %}
             <h2 id="CEO">CEO</h2>
             <br>
-            <div class="open-rollen">
-                Title
-                {{ form.title }}
-                <i class='bx bx-right-arrow-alt'></i> 
-            </div>  
-            <div style="flex-grow: 1"></div>
-            <div  class="open-count">
-                Count
-                {{ form.number }}
+            <div style="display: flex; flex-wrap: wrap; gap: 4px">
+                <div class="open-rollen">
+                    Title
+                    {{ form.title }}
+                </div>  
+                <div style="flex-grow: 1"></div>
+                <div  class="open-count">
+                    Count
+                    {{ form.number }}
+                </div>
             </div>
             <br>
+            <div class="open-rollen">
+                Text
+                <br>
+                {{ form.text }}
+            </div>  
         </div>
     </div>
 

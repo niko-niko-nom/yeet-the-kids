@@ -17,10 +17,18 @@
     <div class="role-info">
         <h2 id="CEO">Beroep</h2>
         <br>
-        <div class="open-rollen">
-            <span> {{role.title}}</span>   <i class='bx bx-right-arrow-alt'></i> 
+        <div style="display: flex; flex-wrap: wrap; gap: 4px">
+            <div class="open-rollen">
+                {{ role.title }}
+            </div>  
+            <div style="flex-grow: 1"></div>
+            <div  class="open-count">
+                {{ role.number }}
+            </div>
+        </div>
+        <div class="open-rollen" style="margin-top: 8px;">
+            {{ role.text }}
         </div>  
-        <div  class="open-count">69</div>
         <br>
     </div>
 </div>
@@ -39,21 +47,16 @@
                 <div class="client-photo"><img
                         src="https://i.pinimg.com/originals/1c/56/d1/1c56d1e6e3f002f4109a1f59e56cf292.jpg"/></div> <br>
                 <div class="client-name">Miku 2</div>
-                </div>
-                <br>
-                <div class="buttons" id="buttonsid">
-                    <a href="/roles/{{ role.id }}/edit"><button class="btn">Edit</button></a>  
-                    <button class="btn">
-                        <form method="POST">
-                        {% csrf_token %}
-                        <input type="submit" value="Delete">
-                    </form>
-                </button>
-                </div>
-    </div>
+            </div>
+            <br>
+            <div class="buttons" id="buttonsid" style="display: flex;">
+                <a href="/roles/{{ role.id }}/edit"><button class="btn">Edit</button></a>  
+                <form method="POST">
+                    {% csrf_token %}
+                    <input class="btn" type="submit" value="Delete">
+                </form>
+            </div>
         </div>
-
-
-
+    </div>
 </div>
 {% endblock %}
