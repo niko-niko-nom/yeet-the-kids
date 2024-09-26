@@ -1,11 +1,11 @@
 from django import forms
-from .models import User
 
-class NewUserForm(forms.Form):
+class NewUserForm (forms.Form):
     username = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Enter your name'
+        'placeholder': 'Enter a new name'
     }))
+
 
 class UserForm(forms.Form):
     GENDERS = [
@@ -22,7 +22,17 @@ class UserForm(forms.Form):
     
     username = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
         'class': 'form-control',
+        'placeholder': 'Enter your username'
+    }))
+
+    first_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
+        'class': 'form-control',
         'placeholder': 'Enter your name'
+    }))
+
+    last_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'Enter your family name'
     }))
     
     email = forms.EmailField(max_length=75, widget=forms.EmailInput(attrs={

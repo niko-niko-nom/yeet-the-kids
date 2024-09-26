@@ -45,6 +45,8 @@ def edit_profile(request, current_name):
     form = UserForm(initial={
         'pfp': user.pfp,
         'username': user.username,
+        'first_name': user.first_name,
+        'last_name': user.last_name,
         'email': user.email,
         'age': user.birthday,
         'city': user.city,
@@ -63,14 +65,25 @@ def edit_profile(request, current_name):
 
 @login_required
 def user_profile_list(request):
+
+    form = NewUserForm(
+    )
+
     if request.method == 'POST':
         form = NewUserForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('list_profiles') 
-    
-    else:
-        form = NewUserForm()
+        if not form.is_valid():
+            return render(request, 'list.html', {'form': form})
         
+        user = User()
+        user.username = form.cleaned_data['username']
+        
+        user.save()
+        profiles = User.objects.all()
+        messages.success(request, "Dit profiel is succesvol aangemaakt!")
+        return render(request, 'list.html', {'profiles': profiles, 'form': form})
+
+
     profiles = User.objects.all()
     return render(request, 'list.html', {'profiles': profiles, 'form': form})
+
+

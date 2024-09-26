@@ -1,5 +1,6 @@
 {% extends 'core/base.html' %}
 {% load static from static %}
+
 {% block title %}Alle Collega's{% endblock %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'profiles_list.css' %}">
@@ -20,17 +21,18 @@
                 <div class="initials">+</div>
             </div>
             <div class="basic-info-block">
-                <form method="POST">
+                <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
-                    <label for="id_first_name">First Name:</label>
-                    {{ form }}<br>
-                    <button type="submit">Opslaan</button>
+                    <label for="id_first_name">Voeg een nieuwe user toe:</label><br>
+                    {{ form.username.error }}
+                    {{ form.username }}<br>
+                    <input type="submit" value="Opslaan">
                 </form>
             </div>
         </div>
 
         {% for profile in profiles %}
-        <a href="/profiles/{{ profile.first_name }}" class="user-profile-link">
+        <a href="/profiles/{{ profile.username }}" class="user-profile-link">
             <div class="user">
                 <div class="initials-icon">
                     <div class="initials">{{ profile.first_name|make_list|first }}.{{ profile.last_name|make_list|first }}.</div>

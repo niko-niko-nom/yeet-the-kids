@@ -1,8 +1,8 @@
 const pollData = {
-    "Ja, bombardeer groepje één punt nul (kans op faillissement Kaas Inc.)": 0,
-    "Nee, ga in gesprek met de Old Amsterdam Kaas": 0,
-    "Nee, laat Miku het geheime recept van Old Amsterdam Kaas stelen.": 0,
-    "Ja, bombardeer Old Amsterdam kaas terwijl team één punt nul daar een rondleiding heeft.": 0
+    "Ja, bombardeer groepje één punt nul (kans op faillissement Kaas Inc.)": 20,
+    "Nee, ga in gesprek met de Old Amsterdam Kaas": 5.5,
+    "Nee, laat Miku het geheime recept van Old Amsterdam Kaas stelen.": 5.5,
+    "Ja, bombardeer Old Amsterdam kaas terwijl team één punt nul daar een rondleiding heeft.": 69
 };
 
 function submitPoll() {

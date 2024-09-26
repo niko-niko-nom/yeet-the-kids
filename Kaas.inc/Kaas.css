@@ -198,12 +198,13 @@ transition: 0.2s;
 }
 
 #poll-results {
-  margin-top: 20px;
+  background-color: transparent;
+  margin-top: px;
 }
 
 .bar {
   width: 100%;
-  background-color: #f4f4f4;
+  background-color: yellow;
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 10px;
@@ -211,10 +212,10 @@ transition: 0.2s;
 
 .bar-inner {
   height: 20px;
-  background-color: #00aaff;
+  background-image: linear-gradient(yellow, orange);
   width: 0%;
   text-align: center;
-  color: white;
+  color: linear-gradient(yellow, orange);
   line-height: 20px;
   transition: width 0.5s ease;
 }
