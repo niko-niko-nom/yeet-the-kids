@@ -6,9 +6,23 @@
 {% block content %}
 <form method="POST">
     <div class="container">
+        {% if role != None %}
+            <div class="page-header">
+                <a class="back-button" href={% url 'role' id=role.id %}>
+                    &#8592;
+                </a>
+                Edit {{ role.title }}
+            </div>
+        {% else %}
+            <div class="page-header">
+                <a class="back-button" href={% url 'roles' %}>
+                    &#8592;
+                </a>
+                Create a new role
+            </div>
+        {% endif %}
         <div class="role-info">
             {% csrf_token %}
-            <h2 id="CEO">CEO</h2>
             <br>
             <div style="display: flex; flex-wrap: wrap; gap: 4px">
                 <div class="open-rollen">
