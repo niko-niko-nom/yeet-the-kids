@@ -1,7 +1,7 @@
 from django import forms
 
 class NewUserForm (forms.Form):
-    username = forms.Charfield(max_length=100, widget=forms.TextInput(attrs={
+    username = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Enter a new name'
     }))
