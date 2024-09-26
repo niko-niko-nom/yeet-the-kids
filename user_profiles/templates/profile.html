@@ -18,7 +18,7 @@
             <div class="profile-row" id="row1">
                 <div class="rounded-card" id="profile-pfp">
                     {% if user.pfp.url != None %}
-                        <img class="square" src="{{ user.pfp.url }}" alt="Profile pic of {{ profile.username }}">
+                        <img class="square" src="{{ user.pfp.url }}" alt="Profile pic of {{ user.username }}">
                     {% endif %}
                 </div>
                 <div class="rounded-card" id="profile-info">
@@ -28,7 +28,7 @@
                     </div>
                     <div class="info">
                         <div class="profile-info-box-q" id="profile-age">Verjaardag</div>
-                        <div class="profile-info-box" id="profile-age">{{ user.age }}</div>
+                        <div class="profile-info-box" id="profile-age">{{ user.birthday }}</div>
                     </div>
                     <div class="info">
                         <div class="profile-info-box-q" id="profile-city">Woonplaats</div>
