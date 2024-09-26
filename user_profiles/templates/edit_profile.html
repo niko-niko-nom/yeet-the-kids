@@ -20,6 +20,9 @@
               {% csrf_token %}
               <div class="rounded-card" id="profile-pfp">
                 <h1><label for="{{ form.pfp.label }}">Upload uw profielfoto:</label></h1><br>
+                <a class="btn" href="{% url 'upload_profile_picture' current_name=profile.username %}">
+                    Change
+                </a>
               </div>
               <div class="rounded-card" id="profile-info">
                 <h1>Uw Informatie</h1>
