@@ -45,6 +45,8 @@ def edit_profile(request, current_name):
     form = UserForm(initial={
         'pfp': user.pfp,
         'username': user.username,
+        'first_name': user.first_name,
+        'last_name': user.last_name,
         'email': user.email,
         'age': user.birthday,
         'city': user.city,
@@ -75,8 +77,9 @@ def user_profile_list(request):
         user.username = form.cleaned_data['username']
         
         user.save()
-        messages.success(request, "Dit profiel is succesvol bijgewerkt!")
-        return redirect("profile", current_name=user.username)
+        profiles = User.objects.all()
+        messages.success(request, "Dit profiel is succesvol aangemaakt!")
+        return render(request, 'list.html', {'profiles': profiles, 'form': form})
 
     profiles = User.objects.all()
     return render(request, 'list.html', {'profiles': profiles, 'form': form})

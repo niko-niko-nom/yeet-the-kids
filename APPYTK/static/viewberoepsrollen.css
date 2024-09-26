@@ -110,28 +110,22 @@ footer p {
 /* main page */
 
 .container{
-    margin-top: 100px;
     margin-left: 100px;
     margin-right: 100px;
     background-color: transparent;
     text-align: center;
     padding: 20px;
-    
 }
 
-#CEO{
- 
+#CEO {
     background: rgba(0, 0, 0, o,5);
     font-size: xx-large;
     padding: 10px;
     text-align: left;
-
-
 }
 
 .open-rollen{
     background-color: transparent;
-    float: inline-start;
     padding-left: 50px;
     padding-right: 500px;
     padding-top: 20px;
@@ -149,7 +143,6 @@ footer p {
 
 .open-count{
     background-color: transparent;
-    float: left;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 20px;

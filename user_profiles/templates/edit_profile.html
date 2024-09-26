@@ -26,11 +26,27 @@
                 <h1>Uw Informatie</h1>
                 <div id="form-labels-inputs">
                   <div class="yet-another-class">
-                    <label for="{{ form.username.label }}">Uw naam:</label><br>
+                    <label for="{{ form.username.label }}">Uw username:</label><br>
                     <div class="space-filler"> </div>
                     <div class="profile-edit-inputs">
                       {{ form.username.error }}
                       {{ form.username }}<br>
+                    </div>
+                  </div>
+                  <div class="yet-another-class">
+                    <label for="{{ form.first_name.label }}">Uw voornaam:</label><br>
+                    <div class="space-filler"> </div>
+                    <div class="profile-edit-inputs">
+                      {{ form.first_name.error }}
+                      {{ form.first_name }}<br>
+                    </div>
+                  </div>
+                  <div class="yet-another-class">
+                    <label for="{{ form.last_name.label }}">Uw achternaam:</label><br>
+                    <div class="space-filler"> </div>
+                    <div class="profile-edit-inputs">
+                      {{ form.last_name.error }}
+                      {{ form.last_name }}<br>
                     </div>
                   </div>
                   <div class="yet-another-class">

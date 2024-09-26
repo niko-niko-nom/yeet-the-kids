@@ -32,7 +32,7 @@
         </div>
 
         {% for profile in profiles %}
-        <a href="/profiles/{{ profile.first_name }}" class="user-profile-link">
+        <a href="/profiles/{{ profile.username }}" class="user-profile-link">
             <div class="user">
                 <div class="initials-icon">
                     <div class="initials">{{ profile.first_name|make_list|first }}.{{ profile.last_name|make_list|first }}.</div>

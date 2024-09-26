@@ -6,8 +6,9 @@ from . import forms
 # Create your views here.
 class RoleListView(View):
     def get(self, request):
-        roles = models.Roles.objects.all()
-        return render(request, "roles.html", {'roles':roles})
+        roles = models.Roles.objects.filter(number=0)
+        availableRoles = models.Roles.objects.filter(number__gt=0)
+        return render(request, "roles.html", {'roles': roles, 'available': availableRoles})
     
 class RolesView(View):
     def get(self, request, id):
@@ -21,8 +22,9 @@ class RolesView(View):
 class EditRole(View):
     def get(self, request, id):
         role = models.Roles.objects.get(id=id)
-        form = forms.Editform(initial={"title" : role.title, "text": role.text})
-        return render(request, "edit_roles.html", {'form':form,})
+        form = forms.Editform(initial={"title" : role.title, "text" : role.text, "number" :role.number})
+        return render(request, "edit_roles.html", {'form':form, 'role': role})
+
     def post(self, request, id):
         form = forms.Editform(request.POST)
 
@@ -31,6 +33,7 @@ class EditRole(View):
         role = models.Roles.objects.get(id=id)
         role.title = form.cleaned_data['title']
         role.text = form.cleaned_data['text']
+        role.number = form.cleaned_data['number']
         role.save()
         return redirect('role', id=role.id)
 
@@ -45,7 +48,7 @@ class CreateRoles(View):
         if not form.is_valid():
             return render(request, "edit_roles.html", {'form':form})
         
-        role = models.Roles(title=form.cleaned_data["title"], text=form.cleaned_data["text"])
+        role = models.Roles(title=form.cleaned_data["title"], text=form.cleaned_data["text"], number=form.cleaned_data['number'])
         role.save()
 
         return redirect("role", id=role.id)
