@@ -84,6 +84,11 @@ def user_profile_list(request):
     profiles = User.objects.all()
     return render(request, 'list.html', {'profiles': profiles, 'form': form})
 
+@login_required
+def dashboard(request):
+    profiles = User.objects.all()    
+    return render(request, 'dashboard.html', {'profiles': profiles})
+
 
 def upload_profile_picture(request, current_name):
     form = UploadProfilePicture()
