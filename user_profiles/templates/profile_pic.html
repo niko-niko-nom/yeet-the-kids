@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+{% load static from static %}
+{% block title %}{{ user.username }}s Profile{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+{% endblock %}
+{% block content %}
+<!-- Main Content -->
+<div id="main-content">
+    <div>
+        <div class="page-header">
+            <a class="back-button" href={% url 'user_profile_list' %}>
+                &#8592;
+            </a>
+            Profiles
+        </div>
+        <div id="profile-container">
+            <div class="profile-row" id="row1">
+                <div class="rounded-card" id="profile-pfp">
+                    {{ form.pic }}
+                    <img src="" alt="Profile picture of {{ user.username }}" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

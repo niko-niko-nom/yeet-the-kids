@@ -83,8 +83,13 @@ def user_profile_list(request):
 
 
 def upload_profile_picture(request, current_name):
+    form = UploadProfilePicture()
+
     if request.method == 'POST':
         form = UploadProfilePicture(request.POST, request.FILES)
+        if not form.is_valid():
+            return render(request, 'profile_pic.html', {'form': form})
         return redirect("profile", current_name=current_name)
 
-    if not form.is_valid():
+    return render(request, 'profile_pic.html', {'form': form})
+
