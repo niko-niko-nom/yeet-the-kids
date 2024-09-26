@@ -1,11 +1,11 @@
 from django import forms
-from .models import User
 
-class NewUserForm(forms.Form):
-    username = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
+class NewUserForm (forms.Form):
+    username = forms.Charfield(max_length=100, widget=forms.TextInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Enter your name'
+        'placeholder': 'Enter a new name'
     }))
+
 
 class UserForm(forms.Form):
     GENDERS = [

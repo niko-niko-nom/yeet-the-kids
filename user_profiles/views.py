@@ -63,14 +63,24 @@ def edit_profile(request, current_name):
 
 @login_required
 def user_profile_list(request):
+
+    form = NewUserForm(
+    )
+
     if request.method == 'POST':
         form = NewUserForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('list_profiles') 
-    
-    else:
-        form = NewUserForm()
+        if not form.is_valid():
+            return render(request, 'list.html', {'form': form})
         
+        user = User()
+        user.username = form.cleaned_data['username']
+        
+        user.save()
+        messages.success(request, "Dit profiel is succesvol bijgewerkt!")
+        return redirect("profile", current_name=user.username)
+
+
     profiles = User.objects.all()
     return render(request, 'list.html', {'profiles': profiles, 'form': form})
+
+
