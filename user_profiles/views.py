@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .forms import UserForm, NewUserForm
+from .forms import UserForm, NewUserForm, UploadProfilePicture
 from .models import User
 
 @login_required
@@ -64,8 +64,7 @@ def edit_profile(request, current_name):
 @login_required
 def user_profile_list(request):
 
-    form = NewUserForm(
-    )
+    form = NewUserForm()
 
     if request.method == 'POST':
         form = NewUserForm(request.POST)
@@ -79,8 +78,13 @@ def user_profile_list(request):
         messages.success(request, "Dit profiel is succesvol bijgewerkt!")
         return redirect("profile", current_name=user.username)
 
-
     profiles = User.objects.all()
     return render(request, 'list.html', {'profiles': profiles, 'form': form})
 
 
+def upload_profile_picture(request, current_name):
+    if request.method == 'POST':
+        form = UploadProfilePicture(request.POST, request.FILES)
+        return redirect("profile", current_name=current_name)
+
+    if not form.is_valid():
