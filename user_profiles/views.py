@@ -78,8 +78,9 @@ def user_profile_list(request):
         user.username = form.cleaned_data['username']
         
         user.save()
-        messages.success(request, "Dit profiel is succesvol bijgewerkt!")
-        return redirect("profile", current_name=user.username)
+        profiles = User.objects.all()
+        messages.success(request, "Dit profiel is succesvol aangemaakt!")
+        return render(request, 'list.html', {'profiles': profiles, 'form': form})
 
 
     profiles = User.objects.all()
