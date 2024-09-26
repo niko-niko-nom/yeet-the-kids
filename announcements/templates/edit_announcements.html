@@ -7,14 +7,14 @@
 {% block content %}
 <div class="container">
     {% if announcement != None %}
-    <div class="announcement-header">
+    <div class="page-header">
         <a class="back-button" href={% url 'announcement' id=announcement.id %}>
             &#8592;
         </a>
         Edit {{ announcement.title }}
     </div>
     {% else %}
-    <div class="announcement-header">
+    <div class="page-header">
         <a class="back-button" href={% url 'announcements' %}>
             &#8592;
         </a>

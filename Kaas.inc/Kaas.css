@@ -182,22 +182,39 @@ background: var(--darker);
 transition: 0.2s;
 
 }
-
-.poll2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(orange,yellow);
-  height:150px;
-  font-size: 12px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
+.poll h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
-.stem6{
-  align-items: center;
-  justify-content: center;
-  display: flex;
+.poll label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
+.poll input {
+  margin-right: 10px;
+}
+
+#poll-results {
+  margin-top: 20px;
+}
+
+.bar {
+  width: 100%;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.bar-inner {
+  height: 20px;
+  background-color: #00aaff;
+  width: 0%;
+  text-align: center;
+  color: white;
+  line-height: 20px;
+  transition: width 0.5s ease;
+}

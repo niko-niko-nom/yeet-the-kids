@@ -90,7 +90,6 @@ header img {
     height: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 75px;
 }
 
 .all-profiles {
@@ -102,6 +101,7 @@ header img {
     align-items: center;
     flex-wrap: wrap;
     gap: 25px;
+    margin: 0 auto;
 }
 
 .user {

@@ -71,3 +71,44 @@ footer p {
     justify-content: center;
     gap: 5px;
 }
+
+/* Messages styles */
+#messages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1200;
+    margin: 15px;
+}
+
+.messages {
+    background-color: var(--kids);
+    color: var(--light);
+    font-weight: bold;
+    height: auto;
+    width: 50%;
+    border-radius: var(--borderRadius);
+    padding: 15px;
+    text-align: center;
+}
+
+.page-header {
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.back-button {
+    top: -0.45em;
+    left: 0;
+    position: absolute;
+    font-size: 60px;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
