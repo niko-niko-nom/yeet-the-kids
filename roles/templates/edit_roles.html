@@ -4,28 +4,32 @@
 <link rel="stylesheet" href="{% static 'viewberoepsrollen.css' %}">
 {% endblock %}
 {% block content %}
-<div class="container">
-    <div class="role-info">
-        <h2 id="CEO">CEO</h2>
-        <br>
-        <div class="open-rollen">
-            <span></span>   <i class='bx bx-right-arrow-alt'></i> 
-        </div>  
-        <div  class="open-count">
-            <input type="number">
+<form method="POST">
+    <div class="container">
+        <div class="role-info">
+            {% csrf_token %}
+            <h2 id="CEO">CEO</h2>
+            <br>
+            <div class="open-rollen">
+                Title
+                {{ form.title }}
+                <i class='bx bx-right-arrow-alt'></i> 
+            </div>  
+            <div style="flex-grow: 1"></div>
+            <div  class="open-count">
+                Count
+                {{ form.number }}
+            </div>
+            <br>
         </div>
-        <br>
     </div>
-</div>
 
-<div class="leden">
-    <h2 id="Leden-header">Leden</h2>
-    <div>
-
-        <div class="client" id="client1">
-            <div class="client-photo"><img
-                    src="https://i.pinimg.com/236x/16/8c/57/168c57546129c909fd793a07bfacd064.jpg" /></div>
-            <div class="client-name">Miku</div>
+    <div class="leden">
+        <h2 id="Leden-header">Leden</h2>
+        <div>
+            <div class="client" id="client1">
+                <div class="client-photo"><img src="https://i.pinimg.com/236x/16/8c/57/168c57546129c909fd793a07bfacd064.jpg" /></div>
+                <div class="client-name">Miku</div>
             </div>
             <br>
             <div class="client" id="client2">
@@ -36,13 +40,11 @@
                 <br>
                 <div class="buttons" id="buttonsid">
                     <button class="btn">delete</button>
-                    <button class="btn">apply</button>
+                    <input class="btn" type="submit" value="apply">
                 </div>
-
-    </div>
+            </div>
         </div>
-
-
-
-</div>
+    </div>
+</form>
+<div style="height: 75px;"></div>
 {% endblock %}
