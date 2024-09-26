@@ -48,7 +48,7 @@ def edit_profile(request, current_name):
         'first_name': user.first_name,
         'last_name': user.last_name,
         'email': user.email,
-        'age': user.birthday,
+        'birthday': user.birthday,
         'city': user.city,
         'gender': user.gender,
         'pronouns': user.pronouns,
@@ -67,7 +67,6 @@ def edit_profile(request, current_name):
 def user_profile_list(request):
 
     form = NewUserForm()
-
     if request.method == 'POST':
         form = NewUserForm(request.POST)
         if not form.is_valid():
