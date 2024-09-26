@@ -325,6 +325,18 @@ header img {
     display: none !important;
 }
 
+#profile-pfp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square {
+    height: 75% !important;
+    width: 75% !important;
+    object-fit: cover;
+}
+
 /* When screen is thinner than 1200px */
 @media screen and ( max-width: 1200px) {
 
