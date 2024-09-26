@@ -44,13 +44,8 @@ class CreateRoles(View):
     def post(self, request):
         form = forms.Editform(request.POST)
 
-        print("hallo")
-
         if not form.is_valid():
-            print("o jee")
             return render(request, "edit_roles.html", {'form':form})
-
-        print("hallo 1")
         
         role = models.Roles(title=form.cleaned_data["title"], text=form.cleaned_data["text"], number=form.cleaned_data['number'])
         role.save()
