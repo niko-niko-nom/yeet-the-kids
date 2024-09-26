@@ -17,7 +17,9 @@
         <div id="profile-container">
             <div class="profile-row" id="row1">
                 <div class="rounded-card" id="profile-pfp">
-                    <img class="square" src="{{ profile.pfp.url }}" alt="Profile picture of {{ user.username }}" />
+                {% if profile.pfp.url != None %}
+                    <img class="square" src="{{ profile.pfp.url }}" alt="Profile pic of {{ profile.username }}">
+                {% endif %}
                 </div>
                 <div class="rounded-card" id="profile-info">
                     <div class="info">
