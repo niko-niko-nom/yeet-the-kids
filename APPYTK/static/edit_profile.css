@@ -321,6 +321,10 @@ header img {
     margin-bottom: -35px;
 }
 
+#invisible {
+    display: none !important;
+}
+
 /* When screen is thinner than 1200px */
 @media screen and ( max-width: 1200px) {
 
