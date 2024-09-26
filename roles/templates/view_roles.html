@@ -9,10 +9,7 @@
     {{role.text}}
     <a href="/roles/{{ role.id }}/edit">Edit</a>
 
-    <form method="POST">
-        {% csrf_token %}
-        <input type="submit" value="Delete">
-    </form>
+    
 </div>
 
 
@@ -46,7 +43,12 @@
                 <br>
                 <div class="buttons" id="buttonsid">
                     <a href="/roles/{{ role.id }}/edit"><button class="btn">Edit</button></a>  
-                    <button class="btn">apply</button>
+                    <button class="btn">
+                        <form method="POST">
+                        {% csrf_token %}
+                        <input type="submit" value="Delete">
+                    </form>
+                </button>
                 </div>
     </div>
         </div>
