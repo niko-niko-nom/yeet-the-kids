@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .forms import UserData
+from .forms import UserForm, NewUserForm
 from .models import User
 
 @login_required
@@ -30,7 +30,7 @@ def edit_profile(request, current_name):
     form = None
 
     if request.method == 'POST':
-        form = UserData(request.POST)
+        form = UserForm(request.POST)
         if not form.is_valid():
             return render(request, 'edit_profile.html', {'form': form})
         
@@ -42,7 +42,7 @@ def edit_profile(request, current_name):
             messages.success(request, "Dit profiel is succesvol bijgewerkt!")
             return redirect("profile", current_name=user.username)
 
-    form = UserData(initial={
+    form = UserForm(initial={
         'pfp': user.pfp,
         'username': user.username,
         'email': user.email,

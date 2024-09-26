@@ -11,5 +11,8 @@ def home(request):
 
 @login_required
 def hboict(request):
-    announcements = Announcement.objects.order_by("-id")[:3]
     return render(request, "hboict.html")
+
+@login_required
+def scrum(request):
+    return render(request, "scrum.html")
