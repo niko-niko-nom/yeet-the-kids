@@ -29,15 +29,11 @@
             </div>
             <div class="rounded-card left-card" id="roles">
                 <h1>Beschikbare Rollen</h1>
-                <a href="" class="roll-link">
-                    <div class="role" id="role1">Kaaskop</div>
+                {% for role in roles %}
+                <a href="{% url 'role' id=role.id %}" class="roll-link">
+                    <div class="role" id="role1">{{ role.title }}</div>
                 </a>
-                <a href="" class="roll-link">
-                    <div class="role" id="role1">Kaastester</div>
-                </a>
-                <a href="" class="roll-link">
-                    <div class="role" id="role1">CCO (Chief Cheese Officer)</div>
-                </a>
+                {% endfor %}
                 <h2><a href="{% url 'roles' %}">Meer...</a></h2>
             </div>
             <div class="rounded-card right-card" id="profiles">
