@@ -5,6 +5,12 @@
 {% endblock %}
 {% block content %}
 <div class="container">
+    <div class="page-header">
+        <a class="back-button" href={% url 'home' %}>
+            &#8592;
+        </a>
+        Beschikbare Rollen
+    </div>
     <h2>Beschikbare Rollen</h2>
     <ul class="cards">
       {% for role in available %}
