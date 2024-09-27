@@ -5,9 +5,15 @@
 {% endblock %}
 {% block content %}
 <div class="container">
+    <div class="page-header">
+        <a class="back-button" href={% url 'home' %}>
+            &#8592;
+        </a>
+        Beschikbare Rollen
+    </div>
     <h2>Beschikbare Rollen</h2>
     <ul class="cards">
-        {% for role in roles %}
+      {% for role in available %}
       <li class="card">
         <div>
           <h3 class="card-title">{{ role.title }} </h3>
@@ -25,18 +31,21 @@
     <h2>Rollen</h2>
 
     <ul class="cards">
-        <li class="card">
-          <div>
-            <h3 class="card-title">KaasChief</h3>
-            <div class="card-content">
-              <p>.blah blah blah</p>
-            </div>
+      {% for role in roles %}
+      <li class="card">
+        <div>
+          <h3 class="card-title">{{ role.title }} </h3>
+          <div class="card-content">
+            <p>{{ role.text }}</p>
           </div>
-          <div class="card-link-wrapper">
-            <a href="" class="card-link">Learn More</a>
-          </div>
-        </li>
+        </div>
+        <div class="card-link-wrapper">
+          <a href="{% url 'role' id=role.id %}" class="card-link">Learn More</a>
+        </div>
+      </li>   
+      {% endfor %}
       </ul>
 
+    <a href="{% url 'new role' %}" class="add-button">+</a>
   </div>
 {% endblock %}

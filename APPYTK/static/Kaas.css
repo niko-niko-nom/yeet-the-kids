@@ -1,20 +1,20 @@
 :root {
-    --yeet: yellow;
-    --the: orange;
-    --kids: #e43d82;
-    --light: #fef5f7;
-    --dark: #1a4c5d;
-    --darker: rgb(255, 132, 0);
-    --borderRadius: 18px;
+  --yeet: yellow;
+  --the:orange;
+  --kids: #e43d82;
+  --light: #fef5f7;
+  --dark: #1a4c5d;
+  --darker: rgb(255, 132, 0);
+  --borderRadius: 18px;
 }
 
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
 }
 
 html {
@@ -23,191 +23,199 @@ html {
     font-family: "Fjalla One", sans-serif;
 }
 
-/* header elements */
-body {
-    background-image: url('/static/images/kaaswallpaper.jpg');
-    display: flex;
-    flex-direction: column;
-    min-height: 125vh;
+ /* header elements */
+body{
+  background-image: url('/static/images/kaaswallpaper.jpg');
+  display: flex;
+  flex-direction: column;
+  min-height: 125vh;
 }
 
-header {
-    background-color: var(--the);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    font-size: auto;
-    z-index: 1000;
+ header {
+  background-color: var(--the);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-size: auto;
+  z-index: 1000;
 }
 
 nav {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    color: var(--light);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  color: var(--light);
 }
 
 nav a {
-    height: 100%;
-    text-decoration: none;
-    color: var(--light);
+  height: 100%;
+  text-decoration: none;
+  color: var(--light);
 }
 
 nav div {
-    height: 100%;
-    width: auto;
-    padding: 0 25px 0 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
+  height: 100%;
+  width: auto;
+  padding: 0 25px 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
 
 nav div:hover {
-    box-shadow: inset 0 0 0 4px var(--yeet),
-        inset 0 0 0 8px var(--the);
-    background: var(--darker);
-    transition: 0.2s;
+  box-shadow: inset 0 0 0 4px var(--yeet), 
+              inset 0 0 0 8px var(--the);
+  background: var(--darker);
+  transition: 0.2s;
 }
 
 header img {
-    max-height: 60px;
-    padding: 5px;
+  max-height: 60px;
+  padding: 5px;
 }
 
-#main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#main-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    margin-top: 18.5px;
-    padding: 60px;
-    gap: 25px;
-    display: flex;
-    flex-direction: column;
+  margin-top: 18.5px;
+  padding: 60px;
+  gap: 25px;
+  display:flex;
+  flex-direction: column;
 }
 
 .kaasknop {
-    height: 100%;
-    width: 100%;
-    background-color: yellow;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
+  height: 100%;
+  width: 100%;
+  background-color: yellow;
+ display: flex;
+ justify-content: center;
+ align-items: center; 
+ flex-direction: column;
+  
 
 }
 
 .maindiv {
-    height: auto;
-    min-height: 15PX;
-    background-image: linear-gradient(yellow, orange);
-    padding: 15px;
+height: auto;
+min-height: 15PX;
+background-image: linear-gradient(yellow, orange);
+padding: 15px;
 }
 
 #banner {
-    display: flex;
-    justify-content: center;
-    height: 65px;
-    flex-direction: row;
+  display:flex;
+  justify-content: center;
+  height: 65px;
+  flex-direction: row;
 }
 
-#banner img {
-    height: 100%;
-    transition: 0.5s;
+#banner img{
+  height: 100%;
+  transition: 0.5s;
 }
 
-#banner img:hover {
-    transform: scale(1.8);
+#banner img:hover{
+  transform: scale(1.8);
 }
 
 .mainfooter {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffff00;
-    padding: -5px;
-    margin-left: 60px;
-    margin-right: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffff00;
+  padding: -5px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 .footer2 {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-footer {
-    margin-top: auto;
+footer{
+  margin-top: auto;
 }
 
-.stemknop {
-    display: flex;
-    justify-content: center;
-    height: 150px;
-    align-items: center;
-    background-color: orange
+.stemknop{
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  align-items: center;
+  background-color:orange
 }
 
-.stemcss {
-    text-decoration: none;
-    color: white;
-    font-family: "Fjalla One", sans-serif;
-    font-size: 45px;
+.stemcss{
+  text-decoration: none;
+  color: white;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 45px;
 }
 
-.stemcss {
-    height: 100%;
-    width: auto;
-    padding: 0 25px 0 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
+.stemcss{
+  height: 100%;
+  width: auto;
+  padding: 0 25px 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 
 }
 
 .stemcss:hover {
-    box-shadow: inset 0 0 0 4px var(--yeet),
-        inset 0 0 0 8px var(--the);
-    background: var(--darker);
-    transition: 0.2s;
+  box-shadow: inset 0 0 0 4px var(--yeet), 
+  inset 0 0 0 8px var(--the);
+background: var(--darker);
+transition: 0.2s;
 
 }
-
-.poll2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(orange, yellow);
-    height: auto;
-    font-size: 17.5px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
+.poll h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
-.stem6 {
-    align-items: center;
-    justify-content: center;
-    display: flex;
+.poll label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
-.bars {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    font-size: 50px;
-    height: 100px;
-    background-image: linear-gradient(orange, yellow);
+.poll input {
+  margin-right: 10px;
+}
 
+#poll-results {
+  background-color: transparent;
+  margin-top: px;
+}
+
+.bar {
+  width: 100%;
+  background-color: yellow;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.bar-inner {
+  height: 20px;
+  background-image: linear-gradient(yellow, orange);
+  width: 0%;
+  text-align: center;
+  color: linear-gradient(yellow, orange);
+  line-height: 20px;
+  transition: width 0.5s ease;
 }

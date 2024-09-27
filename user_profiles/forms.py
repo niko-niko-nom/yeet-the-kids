@@ -15,11 +15,6 @@ class UserForm(forms.Form):
         ('nb', 'Non-Binair'),
     ]
     
-    # pfp = forms.ImageField(widget=forms.FileInput(attrs={
-    #     'class': 'form-control',
-    #     'accept': 'image/*'
-    # }))
-    
     username = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Enter your username'
@@ -93,4 +88,10 @@ class UserForm(forms.Form):
     trivia5 = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Fun fact 5'
+    }))
+
+class UploadProfilePicture(forms.Form):
+    pfp = forms.FileField(widget=forms.FileInput(attrs={
+        'class': 'form-control',
+        'accept': 'image/*'
     }))

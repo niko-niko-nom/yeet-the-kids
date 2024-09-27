@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+{% load static from static %}
+{% block title %}{{ user.username }}s Profile{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+{% endblock %}
+{% block content %}
+<!-- Main Content -->
+<div id="main-content">
+    <div>
+        <div class="page-header">
+            <a class="back-button" href="{% url 'edit_profile' current_name=profile.username %}">
+                &#8592;
+            </a>
+            Profiles
+        </div>
+        <div id="profile-container" style="padding-top: 0px">
+            <div class="profile-row" id="row1">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="rounded-card" id="profile-pfp">
+                        {{ form.pfp }}
+                        {% if profile.pfp.url != None %}
+                            <img class="square" src="{{ profile.pfp.url }}" alt="Profile picture of {{ user.username }}" />
+                        {% endif %}
+                    </div>
+                    <input class="btn" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

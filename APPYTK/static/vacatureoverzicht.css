@@ -123,11 +123,14 @@ footer p {
   }
   
   .cards {
+    max-width: 1100px;
+    width: 100%;
+    margin: 16px;
     display: grid;
-    grid-auto-columns: 100%;
+    grid-auto-columns: 15em;
     grid-column-gap: 10px;
     grid-auto-flow: column;
-    padding: 25px 0px;
+    padding: 25px 25px;
     list-style: none;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
@@ -199,25 +202,33 @@ footer p {
   .cards::-webkit-scrollbar-track {
     background: var(--darker);
   }
-  
-  @media (min-width: 500px) {
-    .cards {
-      grid-auto-columns: calc(50% - 10px);
-      grid-column-gap: 20px;
-    }
-  }
-  
-  @media (min-width: 700px) {
-    .cards {
-      grid-auto-columns: calc(calc(100% / 3) - 20px);
-      grid-column-gap: 30px;
-    }
-  }
-  
-  @media (min-width: 1100px) {
-    .cards {
-      grid-auto-columns: calc(25% - 30px);
-      grid-column-gap: 40px;
-    }
-  }
-  
+  .add-button {
+    background-color: #40E0D0;
+    /* Turquoise color */
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    /* Set a fixed width */
+    height: 50px;
+    /* Set a fixed height */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    /* Align the button to the bottom right */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Ensure the plus sign is centered */
+    margin-bottom: 40px;
+}
+
+.add-button:hover {
+    background-color: #005555;
+}

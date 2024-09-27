@@ -152,11 +152,6 @@ footer p {
     background-color: #005555;
 }
 
-
-.add button:hover {
-    background-color: #005555;
-}
-
 .center {
     max-width: 800px;
     margin: 16px auto;

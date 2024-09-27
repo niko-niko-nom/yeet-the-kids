@@ -14,8 +14,6 @@ class User(AbstractUser):
     pfp = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
     
     # Name and basic info
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
     city = models.CharField(max_length=100)
     birthday = models.DateField(default=datetime.datetime.now())
     gender = models.CharField(max_length=10, choices=GENDERS)

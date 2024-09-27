@@ -26,4 +26,4 @@ urlpatterns = [
     path("announcements/", include("announcements.urls")),
     path("roles/", include("roles.urls")),
     path("kaas/", include("kaasinc.urls")),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_URL)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_URL) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

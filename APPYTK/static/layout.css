@@ -112,3 +112,11 @@ footer p {
     color: black;
     text-decoration: none;
 }
+
+.square {
+    border-radius: 16px;
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
