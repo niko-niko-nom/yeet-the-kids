@@ -9,7 +9,7 @@
   <div id="main-content">
       <div>
         <div class="page-header">
-            <a class="back-button" href={% url 'profile' current_name=profile.username %}>
+            <a class="back-button" href="{% url 'profile' current_name=profile.username %}">
                 &#8592;
             </a>
             Edit profile
@@ -20,12 +20,17 @@
               {% csrf_token %}
               <div class="rounded-card" id="profile-pfp">
                 <h1><label for="{{ form.pfp.label }}">Upload uw profielfoto:</label></h1><br>
-                {{ form.pfp }}<br>
+                {% if profile.pfp.url != None %}
+                    <img class="square" src="{{ profile.pfp.url }}" alt="Profile pic of {{ profile.username }}">
+                {% endif %}
+                <a class="btn" href="{% url 'upload_profile_picture' current_name=profile.username %}">
+                    Change
+                </a>
               </div>
               <div class="rounded-card" id="profile-info">
                 <h1>Uw Informatie</h1>
                 <div id="form-labels-inputs">
-                  <div class="yet-another-class">
+                  <div class="yet-another-class" id="invisible">
                     <label for="{{ form.username.label }}">Uw username:</label><br>
                     <div class="space-filler"> </div>
                     <div class="profile-edit-inputs">
@@ -111,21 +116,26 @@
             <div class="profile-row" id="row3">
               <div class="rounded-card" id="profile-trivia">
                 <h1>Trivia</h1>
-                <label for="{{ form.trivia1.label }}">Een leuk feitje over u.</label><br>
-                {{ form.trivia1.error }}<br>
-                {{ form.trivia1 }}<br>
-                <label for="{{ form.trivia2.label }}">Een leuker feitje over u.</label><br>
-                {{ form.trivia2.error }}<br>
-                {{ form.trivia2 }}<br>
-                <label for="{{ form.trivia3.label }}">Een nóg leuker feitje over u.</label><br>
-                {{ form.trivia3.error }}<br>
-                {{ form.trivia3 }}<br>
-                <label for="{{ form.trivia4.label }}">Een haast onmogelijk leuk feitje over u.</label><br>
-                {{ form.trivia4.error }}<br>
-                {{ form.trivia4 }}<br>
-                <label for="{{ form.trivia5.label }}">Het allerleukste feitje over u.</label><br>
-                {{ form.trivia5.error }}<br>
-                {{ form.trivia5 }}<br>
+                <label for="{{ form.trivia1.label }}">Een leuk feitje over u.</label>
+                {{ form.trivia1.error }}
+                {{ form.trivia1 }}
+                <br>
+                <label for="{{ form.trivia2.label }}">Een leuker feitje over u.</label>
+                {{ form.trivia2.error }}
+                {{ form.trivia2 }}
+                <br>
+                <label for="{{ form.trivia3.label }}">Een nóg leuker feitje over u.</label>
+                {{ form.trivia3.error }}
+                {{ form.trivia3 }}
+                <br/>
+                <label for="{{ form.trivia4.label }}">Een haast onmogelijk leuk feitje over u.</label>
+                {{ form.trivia4.error }}
+                {{ form.trivia4 }}
+                <br>
+                <label for="{{ form.trivia5.label }}">Het allerleukste feitje over u.</label>
+                {{ form.trivia5.error }}
+                {{ form.trivia5 }}
+                <br>
               </div>
               <div class="rounded-card" id="profile-edit-box">
                 <input type="submit" value="Save Changes">

@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'viewberoepsrollen.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="role-info">
+        <h2 id="CEO">CEO</h2>
+        <div class="open-rollen">
+            <span></span> <i class='bx bx-right-arrow-alt'></i> 
+        </div>  
+        <div class="open-count">
+            <input type="number">
+        </div>
+    </div>
+</div>
+
+<div class="leden">
+    <h2 id="Leden-header">Leden</h2>
+    <div class="client-list">
+        {% for client in clients %}
+        <div class="client" id="client{{ client.id }}">
+            <div class="client-photo">
+                <img src="{{ client.photo }}" alt="Client {{ client.id }}">
+            </div>
+            <div class="client-name">{{ client.name }}</div>
+        </div>
+        {% endfor %}
+        <div class="buttons" id="buttonsid">
+            <button class="btn">Delete</button>
+            <button class="btn">Apply</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

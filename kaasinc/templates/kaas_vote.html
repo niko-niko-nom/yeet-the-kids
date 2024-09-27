@@ -2,33 +2,48 @@
 {% load static from static %}
 
 {% block content %}
-
-    <div class="maindiv">
-        Welkom bij Kaas Incorporated!
-
-        Dit is de plek waar jullie, onze gewaardeerde klanten, kunnen stemmen op welke concurrent we deze week
-        zullen uitroeien. Zoals al op de hoofdpagina is verteld, laten we bij Kaas Incorporated niets aan het toeval
-        over. Wij zijn vastberaden om de kaasmarkt volledig te domineren, en dat doen we door onze concurrenten
+<div class="maindiv">
+    <p>
+        Welkom bij Kaas Incorporated! Dit is de plek waar jullie, onze gewaardeerde klanten, kunnen stemmen op
+        welke concurrent we deze week zullen uitroeien.
+        Wij zijn vastberaden om de kaasmarkt volledig te domineren, en dat doen we door onze concurrenten
         systematisch van de kaart te bombarderen.
+    </p>
+    <p>
+        Elke week kiezen jullie welke rivaal we zullen aanpakken en met de grond gelijkmaken. Jullie stem
+        bepaalt welk bedrijf deze week wordt geëlimineerd, zodat Kaas Incorporated de onbetwiste leider blijft.
+    </p>
+    <p>Breng je stem uit en help ons de concurrentie te verpletteren!</p>
+</div>
 
-        Elke week kiezen jullie welke rivaal we zullen aanpakken en met de grond gelijkmaken. Jullie stem bepaalt
-        welk bedrijf deze week wordt geëlimineerd, zodat Kaas Incorporated de onbetwiste leider blijft.
-
-        Breng je stem uit en help ons de concurrentie te verpletteren!
+<div class="poll-container">
+    <h2>Wat moet Kaas INC. deze week doen?</h2>
+    <div class="poll">
+        <label>
+            <input type="radio" name="poll"
+                value="Ja, bombardeer groepje één punt nul (kans op faillissement Kaas Inc.)">
+            Ja, bombardeer groepje één punt nul (kans op faillissement Kaas Inc.)
+        </label><br>
+        <label>
+            <input type="radio" name="poll" value="Nee, ga in gesprek met de Old Amsterdam Kaas ">
+            Nee, ga in gesprek met de Old Amsterdam Kaas
+        </label><br>
+        <label>
+            <input type="radio" name="poll"
+                value="Nee, laat Miku het geheime recept van Old Amsterdam Kaas stelen.">
+            Nee, laat Miku het geheime recept van Old Amsterdam Kaas stelen.
+        </label><br>
+        <label>
+            <input type="radio" name="poll"
+                value="Ja, bombardeer Old Amsterdam kaas terwijl team één punt nul daar een rondleiding heeft.">
+            Ja, bombardeer Old Amsterdam kaas terwijl team één punt nul daar een rondleiding heeft.
+        </label>
     </div>
+    <button onclick="submitPoll()">Stem</button>
 
-    <div class="poll2">
-        <form method="POST">
-            <div class="stem6">
-                <h2>Breng hier uw stem uit:</h2>
-            </div>
-            {% csrf_token %}
-            {{ form }}
-            <input type="submit" value="Stem" />
-        </form>
+    <div id="poll-results">
+        <!-- De resultaten van de poll worden hier weergegeven -->
     </div>
-
-    <div class="bars"> 
-       
-    </div>
+</div>
+<script src="{% static 'kaas.js' %}"></script>
 {% endblock %}
